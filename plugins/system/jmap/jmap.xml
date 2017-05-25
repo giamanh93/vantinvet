@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - JSitemap utilities</name>
+	<author>Joomla! Extensions Store</author>
+	<creationDate>August 2016</creationDate>
+	<copyright>Copyright (C) 2016 - Joomla! Extensions Store. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@storejextensions.org</authorEmail>
+	<authorUrl>http://storejextensions.org</authorUrl>
+	<version>4.2</version>
+	<description>JSitemap utilities plugin</description>
+	
+	<files>
+		<filename plugin="jmap">jmap.php</filename>
+		<filename>index.html</filename>
+	</files>
+ 
+	<params>
+		
+	</params>
+
+</extension>

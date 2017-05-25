@@ -1,0 +1,9 @@
+.treeview .hitarea{background:none;}
+.treeview li{list-style-type:none;background:none;}
+.treeview li.lastCollapsable,.treeview li.lastExpandable{background:none;}
+.jmap_filetree span.folder{background:none;padding:1px;}
+.jmap_filetree li.expandable span.folder{background:none}
+.treeview .expandable-hitarea{background-position: -32px -45px;}
+div.jmapcolumn>ul>li>span{font-weight:bold;text-transform: uppercase;}
+div.jmapcolumn a:link, div.jmapcolumn a:visited, div.jmapcolumn a:hover {color:#000;}
+div.jmapcolumn>ul>li>span{font-weight:bold;text-transform: uppercase;color:#000;text-shadow: 2px 2px #CFCFCF;}

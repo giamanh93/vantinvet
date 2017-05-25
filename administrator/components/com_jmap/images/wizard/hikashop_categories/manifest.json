@@ -1,0 +1,20 @@
+{
+	"postfields":{
+		"option":"com_hikashop",
+		"table_maintable":"#__hikashop_category",
+		"titlefield":"category_name",
+		"id":"category_id",
+		"idfield_as":"cid",
+		"additionalparams_maintable":"category_alias AS name",
+		"where1_maintable":"category_published",
+		"where1_value_maintable":"1",
+		"where2_maintable":"category_type",
+		"where2_value_maintable":"product",
+		"orderby_maintable":"category_left",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"ctrl=category&task=listing"
+	}
+}

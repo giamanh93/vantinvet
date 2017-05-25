@@ -1,0 +1,42 @@
+label.hasHtaccessPopover {
+	min-width: 180px;
+	padding-bottom: 8px;
+}
+
+#htaccess_contents {
+	width: 100%;
+	min-height: 480px;
+	margin-top: 20px;
+}
+
+#htaccess_controls, div.paths {
+	margin: 12px 0 0 0;
+}
+
+div.paths input {
+	min-width: 280px;
+}
+
+#htaccess_adder {
+	margin: 0;
+}
+
+#htaccess_controls ul.errorlist {
+	float: none;
+	display: inline-block;
+	margin: 0 0 0 2px;
+	padding: 0 0 0 2px;
+}
+
+#htaccess_controls input.error {
+	border-color: #F00;
+}
+
+#htaccess_prev_versioning span.label {
+	margin: 0 0 0 3px;
+	font-size: 12px;
+}
+
+#htaccess_directive {
+	margin-bottom: 0;
+}

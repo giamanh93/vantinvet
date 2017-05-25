@@ -1,0 +1,711 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.btn-primary,
+button,
+input[type='submit'],
+input[type='button'],
+submit {
+  background-color: #e36161;
+}
+a:not(.btn) {
+  color: #444;
+}
+a:not(.btn):hover {
+  color: #e36161;
+}
+ul.link-follow li a:hover {
+  color: #fff;
+  background-color: #e36161;
+}
+.chzn-container .chzn-results .highlighted,
+.chzn-container .chzn-results .result-selected {
+  color: #e36161;
+}
+input.highlight-button:hover,
+input[type='submit'].highlight-button:hover {
+  background-color: #e36161 !important;
+}
+#sp-main-menu li li:not(.sp-menu-group) a {
+  background: url(../../images/presets/preset3/black-dot.png) no-repeat 0 14px;
+}
+#checkoutForm button:hover,
+#checkoutForm input.details-button:hover,
+#checkoutForm button.details-button:hover,
+#checkoutForm button.btn-login:hover,
+#checkoutForm input.btn-login:hover,
+.cart-view button:hover,
+.cart-view input.details-button:hover,
+.cart-view button.details-button:hover,
+.cart-view button.btn-login:hover,
+.cart-view input.btn-login:hover,
+.vmshop-cart-account button:hover,
+.vmshop-cart-account input.details-button:hover,
+.vmshop-cart-account button.details-button:hover,
+.vmshop-cart-account button.btn-login:hover,
+.vmshop-cart-account input.btn-login:hover {
+  background-color: #e36161;
+}
+.module.mod_top_menu ul.nav li.active a,
+#sp-bottom-wrapper ul.nav li.active a {
+  color: #e36161 !important;
+}
+.custom_link_follow3 .custom-content .shapes,
+.custom_contact_us .custom-content .shapes {
+  background-color: #e36161;
+}
+ul.gallery .gallery-caption .caption-body a:hover {
+  color: #e36161;
+  border: 1px solid #e36161;
+}
+div.gallery-filters a.active,
+div.gallery-filters a:hover {
+  background-color: #e36161;
+}
+.vina-title h1.header,
+h1.page-user-title,
+h2.page-user-title {
+  color: #e36161;
+}
+.vm-product-rating-container .amount a:hover {
+  color: #e36161 !important;
+}
+.block-mini-cart .mini-cart .mini-cart-content .show_cart a:hover {
+  background-color: #e36161;
+}
+.block-mini-cart:hover .icon-cart {
+  background-color: #e36161;
+  border-color: #e36161;
+}
+body {
+  color: #444;
+}
+body.bg {
+  background-color: #fff;
+}
+.vina-camera-slider-wrapper .camera_caption .content-slideshow a.btn-buy:hover {
+  border: 1px solid #e36161;
+  background-color: #e36161;
+}
+.module.mode_slider_home2 .vina-camera-slider-wrapper .vina-camera-slider .camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span {
+  background: url(../../images/presets/preset3/sequence_act.png) no-repeat;
+}
+.module.mode_slider_home2 .vina-camera-slider-wrapper .camera_caption .content-slideshow a.btn-buy:hover {
+  background-color: #e36161;
+}
+.module h3.vina-header span {
+  background-color: #e36161;
+}
+.module .vina-manufacturers-virtuemart .vina-prev,
+.module	.vina-manufacturers-virtuemart .vina-next,
+#vina_related_product .buttons a#prev_FredSel,
+#vina_related_product .buttons a#next_FredSel {
+  background: url(../../images/presets/preset3/btn-slider.png) no-repeat;
+  background-position: 100% 0;
+}
+.module.mod-style1 .moduletable .vina-carousel-virtuemart.owl-theme .owl-controls .owl-prev,
+.module.mod-style1 .moduletable .vina-carousel-virtuemart.owl-theme .owl-controls .owl-next,
+.module.mod-style1 .vina-carousel-content.owl-theme .owl-controls .owl-prev,
+.module.mod-style1 .vina-carousel-content.owl-theme .owl-controls .owl-next {
+  background: url(../../images/presets/preset3/btn-slider.png) no-repeat;
+  background-position: 100% 0;
+}
+.module .tab ul.nav-tabs li:hover a,
+.module .tab ul.nav-tabs li.active a {
+  background-color: #e36161 !important;
+}
+#sp-top-wrapper a:hover {
+  color: #e36161;
+}
+#cur_form .bootstrap-select .dropdown-menu li.selected >a span.text,
+.mod-languages .bootstrap-select .dropdown-menu li.selected >a span.text {
+  color: #e36161;
+}
+#cur_form .bootstrap-select .dropdown-menu >li >a:hover span.text,
+#cur_form .bootstrap-select .dropdown-menu >li >a:focus span.text,
+.mod-languages .bootstrap-select .dropdown-menu >li >a:hover span.text,
+.mod-languages .bootstrap-select .dropdown-menu >li >a:focus span.text {
+  color: #e36161;
+}
+#cur_form .bootstrap-select:hover button span,
+.mod-languages .bootstrap-select:hover button span {
+  color: #e36161;
+}
+.module.custom_language .btn:hover a {
+  color: #e36161 !important;
+}
+.module.custom_language .btn:hover .caret {
+  border-top: 4px solid #e36161;
+}
+.module.custom_language .dropdown-menu>li>a:hover,
+.module.custom_language .dropdown-menu>li>a:focus,
+.module.custom_language .dropdown-submenu:hover>a,
+.module.custom_language .dropdown-submenu:focus>a,
+.module.custom_language .dropdown-menu li.result-selected a {
+  color: #e36161 !important;
+}
+#cur_form .bootstrap-select .dropdown-menu li.selected >a span.text {
+  color: #e36161;
+}
+#cur_form .bootstrap-select .dropdown-menu >li >a:hover span.text,
+#cur_form .bootstrap-select .dropdown-menu >li >a:focus span.text {
+  color: #e36161;
+}
+#cur_form .bootstrap-select:hover button span {
+  color: #e36161;
+}
+#cur_form .bootstrap-select:hover button span.caret {
+  border-top: 4px solid #e36161;
+}
+.breadcrumb > li > span:last-child {
+  color: #e36161;
+}
+.vm-pagination ul li.pagination-active a {
+  color: #e36161;
+}
+.vina-carousel-virtuemart .item a:hover {
+  color: #e36161 !important;
+}
+.vina-carousel-virtuemart .item .vm-details-button a {
+  color: #e36161 !important;
+}
+.vina-carousel-virtuemart .item .vm-details-button a:hover {
+  color: #fff !important;
+}
+.product-price .vm-display span.PricesalesPrice {
+  color: #e36161;
+}
+.product .actions .vm-addtocart-button .addtocart-area .addtocart-bar span.addtocart-button input.addtocart-button {
+  border: 1px solid #e36161;
+  color: #e36161;
+}
+.product .actions .vm-addtocart-button .addtocart-area .addtocart-bar span.addtocart-button input.addtocart-button:hover {
+  color: #fff;
+  background-color: #e36161;
+}
+.product .actions .vm-details-button a {
+  border: 1px solid #e36161;
+  color: #e36161;
+}
+.product .actions .vm-details-button a:hover {
+  color: #fff;
+  background-color: #e36161;
+}
+span.addtocart-button input.addtocart-button:hover,
+span.addtocart-button input.notify-button:hover {
+  background-color: #e36161;
+}
+.productdetails .tab-block ul.nav li.active a,
+.productdetails .tab-block ul.nav li:hover a {
+  background-color: #e36161;
+}
+.vm-product-media-container .additional-images .additional-images-inner:hover {
+  background: url(../../images/presets/preset3/zoom_thumbnail.png) no-repeat center top;
+}
+.vm-product-media-container .additional-images .additional-images-inner:hover img {
+  border: 3px solid #e36161;
+}
+.vm-product-details-container .vm-product-details-inner .manufacturer a {
+  color: #e36161;
+}
+.vm-product-details-container .icons a:hover,
+.vm-product-details-container .icons a:not(.btn):hover {
+  background-color: #e36161;
+}
+#sp-header-wrapper {
+  background-color: #ffffff;
+  background-image: -moz-linear-gradient(top,#ffffff,#fff);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#fff));
+  background-image: -webkit-linear-gradient(top,#ffffff,#fff);
+  background-image: -o-linear-gradient(top,#ffffff,#fff);
+  background-image: linear-gradient(to bottom,#ffffff,#fff);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+}
+#sp-header-wrapper .logo {
+  background-image: url(../../images/presets/preset3/logo.png);
+}
+.box-col-inner:hover .pull-left {
+  background-color: #e36161;
+  border-color: #e36161;
+}
+#sp-main-menu ul.level-0 > li:hover,
+#sp-main-menu ul.level-0 > li.active {
+  background-color: #e36161;
+}
+#sp-main-menu li li:not(.sp-menu-group):hover > a,
+#sp-main-menu li li:not(.sp-menu-group).active > a {
+  color: #e36161 !important;
+}
+#sp-main-menu li.sp-menu-group.active .sp-menu-group a.active {
+  color: #e36161;
+}
+.sp-submenu .sp-submenu-wrap {
+  border-bottom: 3px solid #e36161;
+}
+#sp-feature-wrapper #feature {
+  color: #e36161;
+}
+a.expand:hover {
+  color: #e36161 !important;
+}
+.module.mod_search_product .btn_search:hover {
+  color: #e36161;
+}
+.module.custom_contact_us .custom-content ul li span {
+  background: #e36161;
+}
+.vina-carousel-content .item .text-block h3.title a:hover {
+  color: #e36161 !important;
+}
+.vina-carousel-content .item .text-block span.readmore a {
+  color: #e36161 !important;
+}
+#sp-left .module .tagspopular ul li a:hover,
+#sp-right .module .tagspopular ul li a:hover {
+  border-color: #e36161;
+  text-decoration: none;
+  color: #fff;
+  background-color: #e36161;
+}
+#sp-left .module .mod-content .vina-ticker-virtuemart .vina-item a:hover,
+#sp-right .module .mod-content .vina-ticker-virtuemart .vina-item a:hover {
+  color: #e36161 !important;
+}
+#sp-left .module.mod_carousel_content .vina-carousel-content.owl-theme .owl-controls .owl-prev:hover,
+#sp-left .module.mod_carousel_content .vina-carousel-content.owl-theme .owl-controls .owl-next:hover,
+#sp-right .module.mod_carousel_content .vina-carousel-content.owl-theme .owl-controls .owl-prev:hover,
+#sp-right .module.mod_carousel_content .vina-carousel-content.owl-theme .owl-controls .owl-next:hover {
+  background-color: #e36161;
+  border: 1px solid #e36161;
+}
+.module.highlighted {
+  background: #3498DB;
+}
+.module.highlighted a {
+  color: #fff !important;
+}
+#sp-our-team .carousel-control:hover,
+.our-project .carousel-control:hover,
+.our-partners .carousel-control:hover {
+  border: 1px solid #e36161 !important;
+  background: #e36161 !important;
+}
+#sp-our-team .carousel-control:hover i,
+.our-project .carousel-control:hover i,
+.our-partners .carousel-control:hover i {
+  color: #fff !important;
+}
+.testimonials-partners #carousel-testimonials .carousel-control:hover,
+.carousel-control:hover {
+  background: #e36161 !important;
+}
+.testimonials-partners #carousel-testimonials .carousel-control:hover i,
+.carousel-control:hover i {
+  color: #fff !important;
+}
+.page-header {
+  color: #e36161;
+}
+.page-header a {
+  color: #e36161;
+}
+.progress-striped .bar {
+  background-color: #e36161;
+}
+#vina_about_us .carousel .item .incon_bg {
+  background: #e36161;
+}
+#vina_about_us .carousel .carousel-control {
+  color: #e36161;
+}
+#vina_about_us .carousel .carousel-control:hover {
+  background: #e36161;
+}
+#vina_about_us .skill ul li {
+  border-left: 2px solid #e36161;
+}
+#vina_company .img-polaroid .info_team ul li a:hover {
+  background: #e36161;
+}
+#vina_pricing_table .pricing_table .thumbnail button {
+  background: #e36161;
+}
+#vina_contact_us ul.social li a {
+  border: 4px solid #fae3e3;
+  background: #e36161;
+}
+#vina_contact_us ul.social li a:hover {
+  border: 4px solid #e36161;
+}
+#vina_contact_us ul.social li a:hover em {
+  color: #e36161;
+}
+#vina_contact_us .map span em {
+  color: #e36161;
+}
+div.vina-treeview-virtuemart .treeview .hover {
+  color: #e36161 !important;
+}
+.sp-mobile-menu {
+  background: #000;
+}
+.sp-mobile-menu ul li a {
+  color: #fff;
+}
+.sp-mobile-menu ul li a:hover,
+.sp-mobile-menu ul li a.active {
+  color: #e36161;
+}
+.icon-color:before {
+  color: #e36161;
+}
+.sp-border {
+  border-top: 1px solid #661212;
+}
+.sp-border::after {
+  background: #b01f1f;
+}
+#fancybox-content div > a {
+  background-color: #e36161;
+}
+.acysubbuttons input.subbutton:hover {
+  background-color: #e36161;
+}
+.vmshop-account h1.header {
+  color: #e36161;
+}
+.vmshop-account.account-login .buttons-set .vina-button:hover,
+.vmshop-account.account-login .buttons-set input:hover,
+.vmshop-account.account-logout .buttons-set .vina-button:hover,
+.vmshop-account.account-logout .buttons-set input:hover {
+  background-color: #e36161;
+}
+a.link-registration {
+  color: #e36161;
+}
+#checkoutForm button:hover {
+  background-color: #e36161;
+}
+#checkoutForm .vm-continue-shopping .continue_link:hover {
+  background-color: #e36161;
+}
+#checkoutForm .billto-shipto i {
+  background: #e36161;
+}
+#checkoutForm .cart-summary tbody .tb-total .vm-continue-shopping .continue_link:hover {
+  color: #fff;
+  background-color: #e36161;
+}
+#checkoutForm .cart-summary tfoot {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#checkoutForm .cart-summary tfoot a {
+  color: #e36161 !important;
+}
+#checkoutForm .checkout-button-top button:hover {
+  background: #e36161;
+}
+#checkoutForm .billto-shipto a.details {
+  color: #e36161 !important;
+}
+#checkoutForm .fieldset-customer .vm-fieldset-tos div.terms-of-service a {
+  color: #e36161 !important;
+}
+#form-login input[type='submit']:hover,
+#form-login input.btn-login:hover,
+#com-form-login input[type='submit']:hover,
+#com-form-login input.btn-login:hover {
+  background: #e36161;
+}
+#userForm button:hover,
+#paymentForm button:hover,
+#adminForm button:hover {
+  background: #e36161;
+}
+#user-registration button:hover {
+  background: #e36161;
+}
+div.login button:hover,
+div.logout button:hover {
+  background: #e36161;
+}
+div.login a,
+div.logout a {
+  color: #e36161 !important;
+}
+div.profile .btn-toolbar a.btn:hover {
+  background: #e36161;
+}
+.virtuemart_search .button:hover {
+  background-color: #e36161;
+}
+#searchForm .btn-group .btn:hover {
+  background-color: #e36161;
+}
+#sp-footer-wrapper .sp-totop:hover {
+  background: #e36161;
+}
+#footer .copyright a {
+  color: #e36161;
+}
+.additional-images img:hover {
+  border: 1px solid #e36161;
+}
+.style-layout2 .vina-carousel-virtuemart .item.product:hover,
+.style-layout3 .vina-carousel-virtuemart .item.product:hover {
+  border: 1px solid #e36161;
+}
+.style-layout2 .product.vm-col:hover,
+.style-layout3 .product.vm-col:hover {
+  border: 1px solid #e36161;
+}
+.module.mod-style2 .vina-carousel-content .item {
+  border-bottom: 2px solid #e36161;
+}
+.module.mod-style2 .vina-carousel-content .item .text-block div.blog-time {
+  color: #e36161;
+}
+#sp-left .module .mod-content div.vina-treeview-virtuemart .treeview li > a.hover,
+#sp-right .module .mod-content div.vina-treeview-virtuemart .treeview li > a.hover {
+  color: #e36161 !important;
+}
+#sp-left .module .mod-content div.vina-treeview-virtuemart ul.level0 > li:hover > a,
+#sp-left .module .mod-content div.vina-treeview-virtuemart ul.level0 > li.collapsable > a,
+#sp-right .module .mod-content div.vina-treeview-virtuemart ul.level0 > li:hover > a,
+#sp-right .module .mod-content div.vina-treeview-virtuemart ul.level0 > li.collapsable > a {
+  color: #e36161 !important;
+}
+.style-layout3 .product .actions .vm-addtocart-button .addtocart-area .addtocart-bar span.addtocart-button input.addtocart-button:hover {
+  border: 2px solid #e36161;
+}
+#sp-left .module.mod-style3.mod_treeview_vm3 h3.header,
+#sp-right .module.mod-style3.mod_treeview_vm3 h3.header {
+  background-color: #e36161 !important;
+}
+#sp-left .module.mod-style3.mod_treeview_vm3 .mod-content,
+#sp-right .module.mod-style3.mod_treeview_vm3 .mod-content {
+  padding: 0;
+}
+#sp-left .module.mod-style3.mod_treeview_vm3 .mod-content div.vina-treeview-virtuemart .treeview li > a.hover,
+#sp-right .module.mod-style3.mod_treeview_vm3 .mod-content div.vina-treeview-virtuemart .treeview li > a.hover {
+  color: #e36161 !important;
+}
+#sp-left .module.mod-style3.mod_treeview_vm3 .mod-content div.vina-treeview-virtuemart ul.level0 > li:hover > a,
+#sp-left .module.mod-style3.mod_treeview_vm3 .mod-content div.vina-treeview-virtuemart ul.level0 > li.collapsable > a,
+#sp-right .module.mod-style3.mod_treeview_vm3 .mod-content div.vina-treeview-virtuemart ul.level0 > li:hover > a,
+#sp-right .module.mod-style3.mod_treeview_vm3 .mod-content div.vina-treeview-virtuemart ul.level0 > li.collapsable > a {
+  color: #e36161 !important;
+  border-left-color: #e36161 !important;
+}
+.module.mod-style3 .vina-carousel-virtuemart.owl-theme .owl-controls .owl-prev,
+.module.mod-style3 .vina-carousel-virtuemart.owl-theme .owl-controls .owl-next,
+.module.mod-style3 .vina-carousel-content.owl-theme .owl-controls .owl-prev,
+.module.mod-style3 .vina-carousel-content.owl-theme .owl-controls .owl-next,
+.module.mod-style4 .vina-carousel-virtuemart.owl-theme .owl-controls .owl-prev,
+.module.mod-style4 .vina-carousel-virtuemart.owl-theme .owl-controls .owl-next,
+.module.mod-style4 .vina-carousel-content.owl-theme .owl-controls .owl-prev,
+.module.mod-style4 .vina-carousel-content.owl-theme .owl-controls .owl-next {
+  background-color: #e36161;
+}
+.module.mod-style3 .vina-manufacturers-virtuemart .vina-prev,
+.module.mod-style3 .vina-manufacturers-virtuemart .vina-next,
+.module.mod-style4 .vina-manufacturers-virtuemart .vina-prev,
+.module.mod-style4 .vina-manufacturers-virtuemart .vina-next {
+  background-color: #e36161;
+}
+.style-layout4 #sp-left .module h3.header,
+.style-layout4 #sp-right .module h3.header {
+  background-color: #e36161;
+}
+.style-layout4 #sp-left .module .mod-content .vina-carousel-virtuemart .owl-controls .owl-next,
+.style-layout4 #sp-left .module .mod-content .vina-carousel-virtuemart .owl-controls .owl-prev,
+.style-layout4 #sp-right .module .mod-content .vina-carousel-virtuemart .owl-controls .owl-next,
+.style-layout4 #sp-right .module .mod-content .vina-carousel-virtuemart .owl-controls .owl-prev {
+  background-color: #e36161;
+}
+.pagination ul li.pagination-active a {
+  color: #e36161;
+}
+.tags span a:hover,
+.tags span .label-info[href]:hover,
+.tags span .badge-info[href]:hover {
+  background-color: #e36161;
+}
+#comments-form .btn div:hover,
+#comments-report-form .btn div:hover {
+  background-color: #e36161;
+}
+#adminForm #ui-tabs button.reset-value:hover {
+  background-color: #e36161;
+}
+#member-registration .form-actions .btn:hover,
+#member-registration .form-actions .btn-primary:hover,
+#member-registration button:hover,
+#member-registration .btn:hover,
+#member-registration .btn-danger:hover,
+#member-profile .form-actions .btn:hover,
+#member-profile .form-actions .btn-primary:hover,
+#member-profile button:hover,
+#member-profile .btn:hover,
+#member-profile .btn-danger:hover,
+#contact-form .form-actions .btn:hover,
+#contact-form .form-actions .btn-primary:hover,
+#contact-form button:hover,
+#contact-form .btn:hover,
+#contact-form .btn-danger:hover {
+  background-color: #e36161;
+}
+#login-form .control-group button:hover,
+#login-form .control-group .btn:hover {
+  background-color: #e36161;
+}
+.cart-view form.inline td input.button:hover {
+  background-color: #e36161;
+}
+#sp-left .module .cf_wrapp_all .cf_wrapper_inner .cf_filters_list li:hover a,
+#sp-right .module .cf_wrapp_all .cf_wrapper_inner .cf_filters_list li:hover a {
+  color: #e36161;
+}
+#sp-left .module .cf_wrapp_all .cf_wrapper_inner .cf_filters_list li .cf_sel_opt,
+#sp-right .module .cf_wrapp_all .cf_wrapper_inner .cf_filters_list li .cf_sel_opt {
+  color: #e36161;
+}
+.vina-button-3 {
+  color: #e36161 !important;
+}
+.vina-button-3:hover {
+  color: #fff !important;
+  border: 1px solid #e36161;
+  background-color: #e36161;
+}
+.our-team .team-item .team-social-link ul li a:hover {
+  border: 1px solid #e36161;
+  color: #e36161;
+}
+#sp-our-experience .mod-inner .custom .bg-opacity:before {
+  background-color: #e36161;
+}
+.vina-our-work .list-work .work-item:hover {
+  background: #e36161;
+}
+.vina-list-1 .list-item:hover .list-img {
+  background-color: #e36161;
+}
+.vina-list-1 .list-item:hover .list-img:before {
+  border-bottom: 40.5px solid #e36161;
+}
+.vina-list-1 .list-item:hover .list-img:after {
+  border-top: 40.5px solid #e36161;
+}
+.vina-list-2 .list-left-item:hover .list-2-img:before,
+.vina-list-2 .list-right-item:hover .list-2-img:before {
+  background: #e36161;
+}
+.our-price .price-item h3 sub {
+  color: #e36161;
+  background: #fff;
+}
+.our-price .price-item:hover h3 {
+  color: #fff;
+  background: #e36161;
+}
+.our-price .price-item:hover h3 sub {
+  color: #fff;
+  background: #323232;
+}
+.our-price .price-item:hover ul li.buy .vina-button-2 {
+  background: #e36161 !important;
+}
+#vina_contact_us .contact_us h3 {
+  border-left: 2px solid #e36161;
+}
+#vina_contact_us .contact_us .qlform input.submit:hover {
+  background: #e36161;
+}
+#vina_contact_us .vina-title {
+  border-left: 2px solid #e36161;
+}
+#vina_contact_us ul li a:hover {
+  border: 1px solid #e36161;
+}
+#vina_contact_us ul.social li a {
+  border: 4px solid #fae3e3;
+  background: #e36161;
+}
+#vina_contact_us ul.social li a:hover {
+  border: 4px solid #e36161;
+}
+#vina_contact_us ul.social li a:hover em {
+  color: #e36161;
+}
+#vina_contact_us .map span em {
+  color: #e36161;
+}
+.rtl #sp-main-menu li li:not(.sp-menu-group) a {
+  background: url(../../images/presets/preset3/black-dot-rtl.png) no-repeat 100% 14px;
+}
+.rtl #sp-main-menu li li:not(.sp-menu-group) a:hover,
+.rtl #sp-main-menu li li:not(.sp-menu-group) a.active {
+  background-position: 100% -8px !important;
+}
+.vm-wishlist button,
+.vm-wishlist .addtofav_aws_icon,
+.vm-details-icon a {
+  border: 1px solid #e36161;
+  color: #e36161;
+}
+.vm-wishlist button:hover,
+.vm-wishlist .addtofav_aws_icon:hover,
+.vm-details-icon a:hover {
+  background-color: #e36161;
+}
+.vm-wishlist .addtofav_aws_icon_active {
+  background-color: #e36161;
+}
+.vina-carousel-virtuemart .item .vm-details-icon a {
+  color: #e36161 !important;
+}
+.vm-product-details-container .btn-wishlist .addtofav_aws_icon_active {
+  background-color: #e36161;
+}
+.vm-product-details-container div#vmcompare:hover,
+.vm-product-details-container .btn-wishlist .addtofav_aws_icon:hover {
+  background-color: #e36161;
+}
+.vm-product-details-container span.addtocart-button:hover {
+  background-color: #e36161;
+}
+.vm-product-details-container span.addtocart-button:hover input {
+  background-color: #e36161;
+}
+.fav_table button.art-button:hover {
+  background-color: #e36161;
+}

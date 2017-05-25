@@ -1,0 +1,7 @@
+{
+	"categories_table":"#__jea_types",
+	"categories_table_id_field":"id",
+	"holdon_params":true,
+	"name_params":{"properties":"filter_type_id"},
+	"additional_categories_needles":"properties"
+}

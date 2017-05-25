@@ -1,0 +1,6 @@
+{
+	"categories_table":"#__mijoshop_category_description",
+	"categories_table_id_field":"category_id",
+	"name_params":{"category":"path", "product":"product_id"},
+	"views_rescue":{"jsitemap_category_id":"product", "path":"category"}
+}

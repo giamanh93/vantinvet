@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+
+<!-- Author Block -->
+	<name>Vina Article Carousel</name>
+	<author>VinaGecko.com</author>
+	<creationDate>July 15, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>admin@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.0.0</version>
+
+<!-- Description Block -->
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+			We are pleased to announce that we have released new module for <strong>Joomla 3.x</strong>: <strong>Vina Article Carousel</strong>. This module will help you to show more articles of <strong>Content Component</strong> in beautiful <strong>responsive carousel slider</strong>. It has options for setting the pagination/sliding speed, enabling/disabling autoplay, showing bullet navigation and more. Module is very flexible, easy to install and configure!<br/><br/>
+			<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_carousel_content">mod_vina_carousel_content.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+		<folder>libs</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_carousel_content.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params">
+			<!-- Basic Block -->
+			<fieldset name="basic">
+				<field
+                    name="moduleWidth"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_MWIDTH"
+                    default="100%"
+                    description="VINA_CAROUSEL_CONTENT_MWIDTH_DESC" />
+				<field
+                    name="moduleHeight"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_MHEIGHT"
+                    default="auto"
+                    description="VINA_CAROUSEL_CONTENT_MHEIGHT_DESC" />
+				<field
+                    name="moduleMargin"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_MMARGIN"
+                    default="0px"
+                    description="VINA_CAROUSEL_CONTENT_MMARGIN_DESC" />
+				<field
+                    name="modulePadding"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_MPADDING"
+                    default="10px 5px"
+                    description="VINA_CAROUSEL_CONTENT_MPADDING_DESC" />
+				<field
+					name="bgImage"
+					type="media" 
+					label="VINA_CAROUSEL_CONTENT_BACKGROUND_IMAGE" 
+					description="VINA_CAROUSEL_CONTENT_BACKGROUND_IMAGE_DESC" 
+					size="30"
+					default="" />
+				<field 
+                    name="isBgColor" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_IS_BG_COLOR" 
+                    description="VINA_CAROUSEL_CONTENT_IS_BG_COLOR_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="bgColor"
+					type="color" 
+					label="VINA_CAROUSEL_CONTENT_BG_COLOR" 
+					description="VINA_CAROUSEL_CONTENT_BG_COLOR_DESC" 
+					size="30"
+					default="#CCCCCC" />
+				
+				<field type="spacer" name="@item" hr="true" />
+				<field
+                    name="itemMargin"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_IMARGIN"
+                    default="0 5px"
+                    description="VINA_CAROUSEL_CONTENT_IMARGIN_DESC" />
+				<field
+                    name="itemPadding"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_IPADDING"
+                    default="10px"
+                    description="VINA_CAROUSEL_CONTENT_IPADDING_DESC" />
+				<field 
+                    name="isItemBgColor" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_IS_ITEM_BGCOLOR" 
+                    description="VINA_CAROUSEL_CONTENT_IS_ITEM_BGCOLOR_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="itemBgColor"
+					type="color" 
+					label="VINA_CAROUSEL_CONTENT_ITEM_BGCOLOR" 
+					description="VINA_CAROUSEL_CONTENT_ITEM_BGCOLOR_DESC" 
+					size="30"
+					default="#FFFFFF" />
+				<field
+					name="itemTextColor"
+					type="color" 
+					label="VINA_CAROUSEL_CONTENT_ITEM_TEXT_COLOR" 
+					description="VINA_CAROUSEL_CONTENT_ITEM_TEXT_COLOR_DESC" 
+					size="30"
+					default="#333333" />
+				<field
+					name="itemLinkColor"
+					type="color" 
+					label="VINA_CAROUSEL_CONTENT_ITEM_LINK_COLOR" 
+					description="VINA_CAROUSEL_CONTENT_ITEM_LINK_COLOR_DESC" 
+					size="30"
+					default="#0088CC" />
+			</fieldset>
+			
+			<!-- Source Block -->
+			<fieldset name="carousel">
+				<field
+                    name="items"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_ITEMS"
+                    default="4"
+                    description="VINA_CAROUSEL_CONTENT_ITEMS_DESC" />
+				<field
+                    name="itemsDesktop"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_ITEMS_DESKTOP"
+                    default="[1170,4]"
+                    description="VINA_CAROUSEL_CONTENT_ITEMS_DESKTOP_DESC" />
+				<field
+                    name="itemsDesktopSmall"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_ITEMS_DESKTOP_SMALL"
+                    default="[980,3]"
+                    description="VINA_CAROUSEL_CONTENT_ITEMS_DESKTOP_SMALL_DESC" />
+				<field
+                    name="itemsTablet"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_ITEMS_TABLET"
+                    default="[800,3]"
+                    description="VINA_CAROUSEL_CONTENT_ITEMS_TABLET_DESC" />
+				<field
+                    name="itemsTabletSmall"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_ITEMS_TABLET_SMALL"
+                    default="[650,2]"
+                    description="VINA_CAROUSEL_CONTENT_ITEMS_TABLET_SMALL_DESC" />
+				<field
+                    name="itemsMobile"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_ITEMS_MOBILE"
+                    default="[450,1]"
+                    description="VINA_CAROUSEL_CONTENT_ITEMS_MOBILE_DESC" />
+				
+				<field type="spacer" name="@carousel" hr="true" />
+				<field
+                    name="singleItem"
+                    type="radio"
+                    default="0"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_SINGLE_ITEM"
+                    description="VINA_CAROUSEL_CONTENT_SINGLE_ITEM_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="itemsScaleUp"
+                    type="radio"
+                    default="0"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_ITEMS_SCALEUP"
+                    description="VINA_CAROUSEL_CONTENT_ITEMS_SCALEUP_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="slideSpeed"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_SLIDE_SPEED"
+                    default="200"
+                    description="VINA_CAROUSEL_CONTENT_SLIDE_SPEED_DESC" />
+				<field
+                    name="paginationSpeed"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_PAGINATION_SPEED"
+                    default="800"
+                    description="VINA_CAROUSEL_CONTENT_PAGINATION_SPEED_DESC" />
+				<field
+                    name="rewindSpeed"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_REWIND_SPEED"
+                    default="1000"
+                    description="VINA_CAROUSEL_CONTENT_REWIND_SPEED_DESC" />
+				<field
+                    name="autoPlay"
+                    type="text"
+                    label="VINA_CAROUSEL_CONTENT_AUTOPLAY"
+                    default="5000"
+                    description="VINA_CAROUSEL_CONTENT_AUTOPLAY_DESC" />
+				<field
+                    name="stopOnHover"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_STOP_ON_HOVER"
+                    description="VINA_CAROUSEL_CONTENT_STOP_ON_HOVER_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="navigation"
+                    type="radio"
+                    default="0"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_NAVIGATION"
+                    description="VINA_CAROUSEL_CONTENT_NAVIGATION_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="rewindNav"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_REWIN_NAV"
+                    description="VINA_CAROUSEL_CONTENT_REWIN_NAV_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="scrollPerPage"
+                    type="radio"
+                    default="0"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_SCROLL_PER_PAGE"
+                    description="VINA_CAROUSEL_CONTENT_SCROLL_PER_PAGE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="pagination"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_PAGINATION"
+                    description="VINA_CAROUSEL_CONTENT_PAGINATION_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="paginationNumbers"
+                    type="radio"
+                    default="0"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_PAGINATION_NUMBERS"
+                    description="VINA_CAROUSEL_CONTENT_PAGINATION_NUMBERS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="responsive"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_RESPONSIVE"
+                    description="VINA_CAROUSEL_CONTENT_RESPONSIVE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="autoHeight"
+                    type="radio"
+                    default="0"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_AUTO_HEIGHT"
+                    description="VINA_CAROUSEL_CONTENT_AUTO_HEIGHT_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="mouseDrag"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_MOUSE_DRAG"
+                    description="VINA_CAROUSEL_CONTENT_MOUSE_DRAG_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="touchDrag"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAROUSEL_CONTENT_TOUCH_DRAG"
+                    description="VINA_CAROUSEL_CONTENT_TOUCH_DRAG_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+			</fieldset>
+			
+			<!-- Source Block -->
+			<fieldset name="source">
+				<field
+					name="show_front"
+					type="list"
+					default="show"
+					label="VINA_CAROUSEL_CONTENT_SHOW_FEATURED"
+					description="VINA_CAROUSEL_CONTENT_SHOW_FEATURED_DESC">
+						<option value="show">JSHOW</option>
+						<option value="hide">JHIDE</option>
+						<option value="only">Only show Featured Articles</option>
+				</field>
+				<field 
+					name="count" 
+					type="text" 
+					default="6"
+					label="VINA_CAROUSEL_CONTENT_COUNT"
+					description="VINA_CAROUSEL_CONTENT_COUNT_DESC" />
+				<field
+					name="category_filtering_type" 
+					type="list"
+					default="1"
+					label="VINA_CAROUSEL_CONTENT_FILTER_TYPE"
+					description="VINA_CAROUSEL_CONTENT_FILTER_TYPE">
+						<option value="1">Include</option>
+						<option value="0">Exclude</option>
+				</field>
+				<field 
+					name="catid" 
+					type="category" 
+					extension="com_content"
+					multiple="true"
+					size="5"
+					label="JCATEGORY"
+					description="VINA_CAROUSEL_CONTENT_CATEGORY_DESC">
+						<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				<field
+					name="show_child_category_articles" 
+					type="list"
+					default="0"
+					label="VINA_CAROUSEL_CONTENT_SHOW_CHILD"
+					description="VINA_CAROUSEL_CONTENT_SHOW_CHILD_DESC">
+						<option value="1">Include</option>
+						<option value="0">Exclude</option>
+				</field>
+				<field
+					name="levels"
+					type="text"
+					default="1"
+					label="VINA_CAROUSEL_CONTENT_CATDEPTH"
+					description="VINA_CAROUSEL_CONTENT_CATDEPTH_DESC" />
+				<field name="filteringspacer1" type="spacer" hr="true" />
+				<field 
+					name="author_filtering_type" 
+					type="list"
+					default="1"
+					label="VINA_CAROUSEL_CONTENT_AUTHOR_FILTER"
+					description="VINA_CAROUSEL_CONTENT_AUTHOR_FILTER_DESC">
+						<option value="1">Include</option>
+						<option value="0">Exclude</option>
+				</field>
+				<field 
+					name="created_by" 
+					type="sql"
+					multiple="true" 
+					size="5"
+					label="VINA_CAROUSEL_CONTENT_AUTHOR"
+					description="VINA_CAROUSEL_CONTENT_AUTHOR_DESC"
+					query="select id, name, username from #__users where id IN (select distinct(created_by) from #__content) order by name ASC"
+					key_field="id" value_field="name">
+					<option value="">JOPTION_SELECT_AUTHORS</option>
+				</field>
+				<field 
+					name="author_alias_filtering_type" 
+					type="list"
+					default="1"
+					label="VINA_CAROUSEL_CONTENT_AUTHORALIASFILTERING"
+					description="VINA_CAROUSEL_CONTENT_AUTHORALIASFILTERING_DESC">
+						<option value="1">Include</option>
+						<option value="0">Exclude</option>
+				</field>
+				<field 
+					name="created_by_alias" 
+					type="sql"
+					multiple="true" 
+					size="5"
+					label="VINA_CAROUSEL_CONTENT_AUTHORALIAS"
+					description="VINA_CAROUSEL_CONTENT_AUTHORALIAS_DESC"
+					query="select distinct(created_by_alias) from #__content where created_by_alias != '' order by created_by_alias ASC"
+					key_field="created_by_alias" value_field="created_by_alias">
+						<option value="">JOPTION_SELECT_AUTHOR_ALIASES</option>
+				</field>
+				<field name="filteringspacer2" type="spacer" hr="true" />
+				<field 
+					name="excluded_articles" 
+					type="textarea"
+					cols="10" 
+					rows="3"
+					label="VINA_CAROUSEL_CONTENT_EXCLUDEDARTICLES"
+					description="VINA_CAROUSEL_CONTENT_EXCLUDEDARTICLES_DESC" />
+				<field name="filteringspacer3" type="spacer" hr="true" />
+				<field 
+					name="date_filtering" 
+					type="list" 
+					default="off"
+					label="VINA_CAROUSEL_CONTENT_DATEFILTERING"
+					description="VINA_CAROUSEL_CONTENT_DATEFILTERING_DESC">
+						<option value="off">Off</option>
+						<option value="range">Date Range</option>
+						<option value="relative">Relative Date</option>
+				</field>
+				<field 
+					name="date_field" 
+					type="list" 
+					default="a.created"
+					label="VINA_CAROUSEL_CONTENT_DATERANGEFIELD"
+					description="VINA_CAROUSEL_CONTENT_DATERANGEFIELD_DESC">
+						<option value="a.created">Created Date</option>
+						<option value="a.modified">Modified Date</option>
+						<option value="a.publish_up">Start Publishing Date</option>
+				</field>
+				<field 
+					name="start_date_range" 
+					type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="VINA_CAROUSEL_CONTENT_STARTDATE"
+					description="VINA_CAROUSEL_CONTENT_STARTDATE_DESC"
+					size="22"
+					filter="user_utc" />
+				<field 
+					name="end_date_range" 
+					type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="VINA_CAROUSEL_CONTENT_ENDDATE"
+					description="VINA_CAROUSEL_CONTENT_ENDDATE_DESC"
+					size="22"
+					filter="user_utc" />
+				<field 
+					name="relative_date" 
+					type="text" 
+					default="30"
+					label="VINA_CAROUSEL_CONTENT_RELATIVEDATE"
+					description="VINA_CAROUSEL_CONTENT_RELATIVEDATE_DESC" />
+				<field name="filteringspacer4" type="spacer" hr="true" />
+				<field 
+					name="article_ordering" 
+					type="list"
+					default="a.title"
+					label="VINA_CAROUSEL_CONTENT_ARTICLEORDERING"
+					description="VINA_CAROUSEL_CONTENT_ARTICLEORDERING_DESC">
+						<option value="a.ordering">Article Manager Order</option>
+						<option value="fp.ordering">Featured Articles Order</option>
+						<option value="a.hits">Hits</option>
+						<option value="a.title">Title</option>
+						<option value="a.id">ID</option>
+						<option value="a.alias">Alias</option>
+						<option value="a.created">Created Date</option>
+						<option value="modified">Modified Date</option>
+						<option value="publish_up">Start Publishing Date</option>
+						<option value="a.publish_down">Finish Publishing Date</option>
+				</field>
+				<field 
+					name="article_ordering_direction" 
+					type="list"
+					default="ASC"
+					label="VINA_CAROUSEL_CONTENT_ARTICLEORDERINGDIR"
+					description="VINA_CAROUSEL_CONTENT_ARTICLEORDERINGDIR_DESC">
+						<option value="DESC">Descending</option>
+						<option value="ASC">Ascending</option>
+				</field>
+			</fieldset>
+			
+			<!-- Display Block -->
+			<fieldset name="display">
+				<field 
+					name="showImage" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CAROUSEL_CONTENT_SHOW_IMAGE" 
+					description="VINA_CAROUSEL_CONTENT_SHOW_IMAGE_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="resizeImage" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CAROUSEL_CONTENT_RESIZE_IMAGE" 
+					description="VINA_CAROUSEL_CONTENT_RESIZE_IMAGE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field 
+					name="imagegWidth" 
+					type="text" 
+					default="375"
+					label="VINA_CAROUSEL_CONTENT_IMAGE_WIDTH"
+					description="VINA_CAROUSEL_CONTENT_IMAGE_WIDTH_DESC" />
+				<field 
+					name="imagegHeight" 
+					type="text" 
+					default="200"
+					label="VINA_CAROUSEL_CONTENT_IMAGE_HEIGHT"
+					description="VINA_CAROUSEL_CONTENT_IMAGE_HEIGHT_DESC" />
+				<field 
+					name="showTitle" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CAROUSEL_CONTENT_SHOW_TITLE" 
+					description="VINA_CAROUSEL_CONTENT_SHOW_TITLE_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="show_date" 
+					type="radio" 
+					default="0" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CAROUSEL_CONTENT_SHOW_CREATED_DATE" 
+					description="VINA_CAROUSEL_CONTENT_SHOW_CREATED_DATE_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="show_category" 
+					type="radio" 
+					default="0" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CAROUSEL_CONTENT_SHOW_CATEGORY" 
+					description="VINA_CAROUSEL_CONTENT_SHOW_CATEGORY_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="show_hits" 
+					type="radio" 
+					default="0" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CAROUSEL_CONTENT_SHOW_HITS" 
+					description="VINA_CAROUSEL_CONTENT_SHOW_HITS_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="show_introtext" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CAROUSEL_CONTENT_SHOW_INTROTEXT" 
+					description="VINA_CAROUSEL_CONTENT_SHOW_INTROTEXT_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="introtext_limit" 
+					type="text" 
+					default="250"
+					label="VINA_CAROUSEL_CONTENT_INTROTEXTLIMIT"
+					description="VINA_CAROUSEL_CONTENT_INTROTEXTLIMIT_DESC" />
+				<field
+					name="show_readmore"
+					label="JGLOBAL_SHOW_READMORE_LABEL"
+					description="JGLOBAL_SHOW_READMORE_DESC"
+					type="radio"
+					default="1"
+					class="btn-group btn-group-yesno">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+			</fieldset>
+			
+			<!-- Advanced Block -->
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,11 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"adiacency",
+	"categories_table":"#__fwg_projects",
+	"category2category_table":"#__fwg_projects",
+	"category_table_id_field":"id",
+	"category_table_name_field":"name",
+ 	"parent_field":"parent",
+ 	"child_field":"id",
+ 	"category_condition":["gid=0"]
+}

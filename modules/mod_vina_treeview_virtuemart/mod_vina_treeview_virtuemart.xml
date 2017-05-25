@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+
+<!-- Author Block -->
+	<name>Vina Treeview for VirtueMart</name>
+	<author>VinaGecko.com</author>
+	<creationDate>November 28, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>admin@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.0.1</version>
+
+<!-- Description Block -->
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+			<strong>Vina Treeview for VirtueMart</strong> is a great module for <strong>Joomla 3.x and VirtueMart 3.x</strong> component. It's allows display <strong>VirtueMart categories</strong> in a tree view, like a file explorer. It helps readers to reach the root categories and also subcategories they want to view products.<br>
+			<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules.html" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins.html" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates.html" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_treeview_virtuemart">mod_vina_treeview_virtuemart.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_treeview_virtuemart.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params">
+			<!-- Basic Block -->
+			<fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+                <field 
+					name="parentCategoryID" 
+					type="vmcategories" 
+					value_field="category_name" 
+					label="VINA_TREEVIEW_VMART_PARENT_CATEGORY" 
+					description="VINA_TREEVIEW_VMART_PARENT_CATEGORY_DESC" />
+				<field
+                    name="sort"
+                    type="list"
+                    default="id"
+                    label="VINA_TREEVIEW_VMART_SORT"
+                    description="VINA_TREEVIEW_VMART_SORT_DESC">
+						<option value="category_name">VINA_TREEVIEW_VMART_NAME</option>
+						<option value="category_description">VINA_TREEVIEW_VMART_DESC</option>
+						<option value="c.ordering">VINA_TREEVIEW_VMART_ORDERING</option>
+						<option value="c.category_shared">VINA_TREEVIEW_VMART_SHARED</option>
+						<option value="c.published">VINA_TREEVIEW_VMART_PUBLISHED</option>
+                </field>                
+                <field
+                    name="ordering"
+                    type="radio"
+					class="btn-group btn-group-yesno"
+                    default="asc"
+                    label="VINA_TREEVIEW_VMART_ORDERING"
+                    description="VINA_TREEVIEW_VMART_ORDERING_DESC">
+						<option value="asc">VINA_TREEVIEW_VMART_ASCENDING</option>
+						<option	value="desc">VINA_TREEVIEW_VMART_DESCENDING</option>
+                </field>
+				<field 
+					name="showCountItems" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TREEVIEW_VMART_COUNT_ITEMS" 
+					description="VINA_TREEVIEW_VMART_COUNT_ITEMS_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="useCache" 
+					type="radio" 
+					default="0" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TREEVIEW_VMART_USE_CACHE" 
+					description="VINA_TREEVIEW_VMART_USE_CACHE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				
+				<field type="spacer" name="@style" hr="true" />
+				<field 
+					name="moduleStyle" 
+					type="list" 
+					default="" 
+					label="VINA_TREEVIEW_VMART_STYLE" 
+					description="VINA_TREEVIEW_VMART_STYLE_DESC">
+						<option value="">Default</option>
+						<option value="filetree">File Tree</option>
+						<option value="treeview-red">Tree View Red</option>
+                </field>
+				<field 
+					name="showControl" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TREEVIEW_VMART_SHOW_CONTROL" 
+					description="VINA_TREEVIEW_VMART_SHOW_CONTROL_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="animated" 
+					type="list" 
+					default="normal" 
+					label="VINA_TREEVIEW_VMART_ANIMATED" 
+					description="VINA_TREEVIEW_VMART_ANIMATED_DESC">
+						<option value="slow">Slow</option>
+						<option value="normal">Normal</option>
+						<option value="fast">Fast</option>
+                </field>
+				<field 
+					name="collapsed" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TREEVIEW_VMART_COLLAPSED" 
+					description="VINA_TREEVIEW_VMART_COLLAPSED_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field 
+					name="unique" 
+					type="radio" 
+					default="0" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TREEVIEW_VMART_UNIQUE" 
+					description="VINA_TREEVIEW_VMART_UNIQUE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field 
+					name="persist" 
+					type="radio" 
+					default="cookie" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TREEVIEW_VMART_PERSIST" 
+					description="VINA_TREEVIEW_VMART_PERSIST_DESC">
+						<option value="location">Location</option>
+						<option value="cookie">Cookie</option>
+                </field>
+			</fieldset>
+			
+			<!-- Advanced Block -->
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

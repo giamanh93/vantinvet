@@ -1,0 +1,24 @@
+{
+	"postfields":{
+		"option":"com_rsblog",
+		"table_maintable":"#__rsblog_categories",
+		"titlefield":"title",
+		"id":"id",
+		"idfield_as":"category",
+		"use_alias":"1",
+		"where1_maintable":"parent_id",
+		"where1_operator_maintable":"!=",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"lft",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"substitutions":[
+		["`#__rsblog_categories`.`access` IN {aid}","(`#__rsblog_categories`.`access` = '' OR `#__rsblog_categories`.`access` = '0' OR `#__rsblog_categories`.`access` LIKE '%0%')"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"posts",
+		"guess_sef_itemid":"1"
+	}
+}

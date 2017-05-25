@@ -1,0 +1,447 @@
+@CHARSET "UTF-8";
+
+.cf_flt_wrapper {
+	margin-bottom: 10px;
+}
+
+.cf_flt_header {
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 1.1em;
+	padding-bottom: 3px;
+	font-weight: bold;
+}
+
+.headexpand {
+	float: left;
+	width: 14px;
+	height: 15px;
+	margin-right: 5px;
+}
+
+/*Fonts*/
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?51759646');
+  src: url('font/fontello.eot?51759646#iefix') format('embedded-opentype'),
+       url('font/fontello.woff?51759646') format('woff'),
+       url('font/fontello.ttf?51759646') format('truetype'),
+       url('font/fontello.svg?51759646#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?51759646#fontello') format('svg');
+  }
+}
+*/
+
+ [class^="cficon-"]:before, [class*=" cficon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+
+}
+.cficon-search:before { content: '\e800'; } /* 'i �' */
+
+/*end of fonts*/
+
+/*The clear option*/
+.cf_li_clear {
+	display: block;
+	float: none !important;
+}
+
+.headexpand_show {
+	background: url(arrows_exp.png) left bottom no-repeat;
+}
+
+.headexpand_hide {
+	background: url(arrows_exp.png) left top no-repeat;
+}
+
+/*Smart search*/
+.cf_flt_wrapper label {
+	display: inline !important;
+}
+
+.cf_filters_list li {
+	line-height: 1.3em;
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style: none;
+	background-image: none;
+}
+
+.cf_filters_list li .cf_option {
+	text-decoration: none;
+	padding: 1px 5px;
+}
+
+/*selected option*/
+.cf_filters_list li .cf_sel_opt {
+	font-weight: bold;
+}
+
+.cf_invisible {
+	display: none;
+}
+
+/*Category tree*/
+.cfLiLevel1 {
+	margin-left: 15px !important;
+}
+
+.cfLiLevel2 {
+	margin-left: 30px !important;
+}
+
+.cfLiLevel3 {
+	margin-left: 40px !important;
+}
+
+.cfLiLevel4 {
+	margin-left: 50px !important;
+}
+
+.cfLiLevel5 {
+	margin-left: 60px !important;
+}
+
+
+/*end category tree*/
+.cf_flt_wrapper select {
+	min-width: 120px;
+	min-width:50px;
+	width: 80%;
+}
+
+.cf_wrapper_input_text {
+	padding-bottom: 10px;
+	display:inline-block;
+}
+
+/*1 input*/
+.cf_wrapper_input_text_1 input[type="search"]{
+	width:70%;
+}
+
+/*2 inputs - range*/
+.cf_wrapper_input_text_2 input[type="search"]{
+	width:25%;
+	min-width:50px;
+}
+
+.cf_message {
+	position: absolute;
+	color: #fff;
+	width: 150px;
+	padding: 5px;
+	background: #ff0000;
+	-webkit-border-radius: 5px;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius: 5px;
+	-moz-border-radius-topleft: 0;
+	border-radius: 5px;
+	border-top-left-radius: 0;
+	display: none;
+	z-index: 1500;
+}
+
+/*The image links */
+.cf_img_wrapper {
+	
+}
+
+.cf_img_wrapper a {
+	padding: 0px;
+	margin: 0px !important;
+	background: none;
+}
+
+.cf_img_wrapper a img {
+	padding: 0px;
+	margin: 0px !important;
+	background: none;
+}
+
+.cf_img_wrapper a:hover {
+	
+}
+
+.cf_img_caption {
+	display: block;
+	text-align: center;
+	clear: both;
+}
+
+.cf_sel_opt img {
+	border: 1px solid #bbbbbb;
+}
+
+/*Color Buttons*/
+.cf_colorbtn_list li {
+	float: left;
+	padding: 0px !important;
+}
+
+.cf_color_btn {
+	display: block;
+	height: 21px !important;
+	width: 25px !important;
+	padding: 1px !important;
+	border: 1px solid #666666;
+	margin: 2px 4px 4px 2px !important;
+}
+
+.cf_color_inner{
+	height: 21px !important;
+	display:inline-block;
+	float:left;
+	margin:0px !important;
+	padding:0px !important;
+}
+
+.cf_colorbtn_list .cf_sel_opt {
+	border: 2px solid #ffffff;
+	outline: #000000 solid 1px;
+	padding: 0px !important;
+}
+
+.cf_colorbtn_list .cf_disabled_opt {
+	opacity: 0.4;
+}
+
+
+
+
+/*Buttons*/
+.cf_btn_list li {
+	float: left;
+	padding: 0px !important;
+}
+
+.cf_btn_list li {
+	float: left;
+	padding: 0px !important;
+}
+
+.cf_button, .cf_button:active, .cf_button:visited, .cf_button:link   {
+	display: inline-block;
+	background: #F6F6F6;
+	box-shadow: inset 0px -4px 2px #e3e3e3;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px; text-align : center;
+	font-size: 1em;
+	margin: 2px 4px 4px 0px !important;
+	color: #555555 !important;
+	height: 18px !important;
+	line-height: 18px;
+	padding: 0px 8px !important;
+	text-align: center;
+}
+
+.cf_button:hover {
+	background: #F6F6F6 !important;
+	box-shadow: inset 0 0 2px #bbbbbb !important;
+}
+
+.cf_btn_list .cf_sel_opt {
+	border: 1px solid #666666;
+	color: #777777 !important;
+}
+
+.cf_btn_list .cf_disabled_opt {
+	opacity: 0.8;
+	box-shadow: 0 0 0 #888;
+}
+
+.cf_btn_list .cf_disabled_opt:hover{
+	background: #F4F4F4 !important;
+	box-shadow: 0 0 0 #888 !important;
+}
+
+/*Sliders*/
+/** To do convert the percentage width to px*/
+.cf_filtering_slider_gutter {
+	float: left;
+	width: 150px;
+	display: block;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.cf_filtering_slider_gutter_item {
+	position: relative;
+	float: left;
+	width: 9px;
+	height: 30px;
+}
+
+.cf_slider_gutter_l {
+	background: url(range_edges_sprite.gif) center left no-repeat;
+}
+
+.cf_slider_gutter_m {
+	width: 132px;
+	background: url(slider_rptr.gif) center repeat-x;
+	height: 30px;
+}
+
+.cf_slider_gutter_r {
+	background: url(range_edges_sprite.gif) center right no-repeat;
+}
+
+/*Knobs*/
+.knob_wrapper {
+	float: left;
+	height: 36px;
+}
+
+.cf_filtering_knob {
+	position: absolute;
+	height: 30px;
+	width: 20px;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.cf_filtering_knob_from {
+	clear: left;
+	background: url(slider_knob_from.png) center 0px no-repeat;
+}
+
+.cf_filtering_knob_from:hover {
+	background-position: center -32px;
+}
+
+.cf_filtering_knob_to {
+	background: url(slider_knob_to.png) center -28px no-repeat;
+}
+
+.cf_filtering_knob_to:hover {
+	background-position: center 4px;
+}
+
+/* For Clip */
+.slider_bkg_img {
+	position: absolute;
+	height: 8px;
+	margin: 11px 9px 0px -8px;
+	width: 148px;
+	background: url(bkg_slider.gif) no-repeat;
+}
+
+.cf_search_button {
+	padding-left:10px;
+	padding-right:10px;
+	min-height:1em;	
+	cursor: pointer;
+	display:inline-block;
+}
+
+
+.cftooltip {
+	
+}
+
+.cf_smart_search {
+	margin-bottom: 5px;
+}
+
+.cf_apply_button {
+	display: block;
+	margin-top: 5px;
+}
+
+.cf_ajax_loader {
+	position: absolute;
+	z-index:100000;
+	background-color: #efefef;
+	opacity: 0.6;
+}
+
+#cf_res_ajax_loader {
+	display: none;
+	position: absolute;
+	z-index:100000;
+	width: 100%;
+	min-height: 200px;
+	background-color: #ffffff;
+	background-position: center 80px !important;
+	opacity: 0.5;
+}
+
+/*------------RTL-------------*/
+.cf_flt_wrapper_rtl .cf_filtering_slider_gutter {
+	float: right
+}
+
+.cf_flt_wrapper_rtl .slider_bkg_img {
+	margin: 11px -8px 0px 9px;
+}
+
+.cf_flt_wrapper_rtl .cfLiLevel1 {
+	margin-right: 15px !important;
+}
+
+.cf_flt_wrapper_rtl .cfLiLevel2 {
+	margin-right: 30px !important;
+}
+
+.cf_flt_wrapper_rtl .cfLiLevel3 {
+	margin-right: 40px !important;
+}
+
+/*---------RTL ends----------*/
+
+/*The matches of the smart search*/
+.cf_match {
+	font-weight: bold;
+	background: #f2f2f2;
+	border: 1px solid #dddddd;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+/*counter*/
+.cf_flt_counter {
+	color: #666666;
+	display: inline-block;
+}
+
+/*disabled*/
+.cf_disabled_opt {
+	color: #666;
+}
+
+.cf_disabled_opt_image {
+	color: #666;
+	opacity: 0.8;
+}
+
+/*Reset All*/
+.cf_resetAll_link {
+	font-size: 1.1em;
+}
+
+.cf_hide {
+	display: none;
+}

@@ -1,0 +1,9 @@
+{
+	"categories_table":"#__fwg_projects",
+	"categories_table_id_field":"id",
+	"categories_parent_id":"parent",
+	"holdon_params":true,
+	"name_params":{"gallery":"id"},
+	"additional_categories_needles":"gallery",
+	"fallback_views":["galleries"]
+}

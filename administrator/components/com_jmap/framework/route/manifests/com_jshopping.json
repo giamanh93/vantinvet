@@ -1,0 +1,8 @@
+{
+	"categories_table":"#__jshopping_categories",
+	"categories_table_id_field":"category_id",
+	"categories_parent_id":"category_parent_id",
+	"views_rescue":{"category_id":"products", "product_id":"product"},
+	"name_params":{"products":"category_id", "product":"product_id"},
+	"fallback_views":["category"]
+}

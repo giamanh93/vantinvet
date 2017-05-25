@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template" client="site" method="upgrade">
+    <name>vina_bonnie</name>
+    <creationDate>February 2015</creationDate>
+    <author>vinagecko.com</author>
+    <authorEmail>support@vinagecko.com</authorEmail>
+    <authorUrl>http://VinaGecko.com</authorUrl>
+    <copyright>Copyright (coffee) 2015 VinaGecko.com. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+    <version>2.1</version>
+    <description>
+		<![CDATA[
+			<p>Vina Bonnie - Premium Multipurpose VirtueMart 3 Template</p>
+			<p>Vina Bonnie is a premium responsive multipurpose VirtueMart 3 Template which perfectly fits for any eCommerce website. Not only standing out in design, Bonnie also impressed users by its features and functions. The most powerful and trendy features, including Mega Menu; Ajax Products Filter to filter product by Categories, Manufacturers, Price, Color, Size  which don't need reload the page; Category Treeview show all categories bring customers go everywhere in your store; Camera Image Slider with nice images and css3 effects bring great experience; Product Carousel extension shows kinds of products in responsive carousel such as featured products, new products, most viewed products, discount products; Customers also can communicate with you through Twitter and Blog;</p>
+			<p>Aside from just looking beautifully polished and clean design, it comes packed with features and options, powerful Helix II Framework, 4 Home Page layout, Google Fonts support, Drag & Drop Layout Builder AND 7 popular Joomla 3.x Extensions from VinaGecko.com: Vina Camera Image Slider, Vina Article Carousel, Vina Product Carousel for Virtuemart, Vina Category Menu for Virtuemart, Vina Manufacturers Carousel for Virtuemart, Vina Product Ticker for Virtuemart and Vina Treeview for Virtuemart. It's easily configured various modules positions and a lot other best and selected extensions help you to develop your site in no time.</p>			
+			<h3>Main Features:</h3>
+			<ul class="arrow">
+				<li> Responsive Design: This means that you only need one template for the desktop, iPad, iPhone and other mobile devices.</li>
+				<li> 4 Home Page Layout: Vina Bonnie comes with 4 beautiful home page for online shop, that's easily fits for any kind online shop.</li>
+				<li> Fully Support VirtueMart 3: Built with the experience of more than 10 years VirtueMart 3 provides you with a powerful and comprehensive eCommerce solution. Vina Bonnie is Fully Support it!</li>
+				<li> Layout Builder: Allows anyone to customize the existing theme in any shape or dimensions without having any programming language!</li>
+				<li> Mega Menu: allows you to display a ton of content in menu item including text, images, module and articles.</li>
+				<li> Off-Canvas Menu: used primarily with Mobile and touch devices and can provide an extremely useful and beautiful experience for your users.</li>
+				<li> Rich typography: Advanced Typography based on Bootstrap would enable you styling your Tables, Forms, and Buttons along with other elements to make your website more beautiful.</li>
+				<li> Shortcode Support: Useful Shortcode installed by using which anybody can add lots of extra features on website without coding knowledge.</li>
+				<li> RTL Language Support: Supports RTL (Right to Left) Language based Designs like Arabic, Farsi & Hebrew.</li>
+				<li> HTML5 Base Template: We brought HTML5 in Our Templates to make elegant, modern and SEO friendly website that would be fully functional & represents awesome typography.</li>
+				<li> Built With Less CSS: You can reduce over requests to browsers while making CSS development and it makes your whole website more powerful and speedier than ever.</li>
+				<li> Use Helix Framework: Helix Framework is one of the best light and feature rich responsive framework for Joomla Templating.</li>
+				<li> 7 Premium Extensions from VinaGecko: Vina Camera Image Slider, Vina Article Carousel, Vina Product Carousel for Virtuemart, Vina Category Menu for Virtuemart, Vina Manufacturers Carousel for Virtuemart, Vina Product Ticker for Virtuemart and Vina Treeview for Virtuemart are the popular extensions for Joomla 3.x. Now you can use it in Vina Bonnie template.</li>
+				<li> Fully Support JComment component: JComments is a powerful and easy to use AJAX based comment system for Joomla. Vina Bonnie is Fully Support it!</li>
+				<li> CSS & Javascript Compression: Helix decreases your website loading time drastically by using Advanced CSS & JS compression systems that works with all types of browsers.</li>
+				<li> Google Analytics: Users can easily integrate Google Analytics Code on their website and can maintain all the features that Google Analytics are providing.</li>
+				<li> Powered By BootStrap: Bootstrap is made upon responsive CSS Designs with less code which enhances the overall look of your website.</li>
+			</ul>
+			<strong>Note:</strong> Demo images are not included in the quickstart package and have been replaced with placeholder images.
+		]]>
+	</description>
+    <languages>
+        <language tag="en-GB">en-GB.tpl_vina_bonnie.ini</language>
+    </languages>
+    <positions>
+		<position>top1</position>
+		<position>top2</position>
+        <position>logo</position>		
+		<position>header-block</position>
+		<position>mini-cart</position>
+        <position>menu</position>
+        <position>search</position>
+		<position>feature</position>
+		<position>feature-full</position>	
+		<position>banner-top-right</position>
+        <position>banner-top</position>		
+		<position>banner-middle</position>		
+		<position>banner-bottom</position>		
+		<position>banner-left</position>
+		<position>banner-right</position>
+		<position>tabs-product</position>
+		<position>tabs-category1</position>
+		<position>tabs-category2</position>
+		<position>tab-featured-products</position>
+		<position>tab-most-viewed</position>
+		<position>tab-new-products</position>		
+		<position>tab-new-arrival</position>
+		<position>tab-onsale</position>
+		<position>tab-featured-layout4</position>
+		<position>tab-books</position>
+		<position>tab-sports</position>
+		<position>tab-medical</position>		
+		<position>tab-laptop</position>
+		<position>tab-notebooks</position>
+		<position>tab-tablets</position>
+		<position>tab-fashion</position>
+		<position>tab-accessories</position>
+		<position>tab-watches</position>		
+		<position>tab-laptop-layout34</position>
+		<position>tab-notebooks-layout34</position>
+		<position>tab-tablets-layout34</position>
+		<position>tab-fashion-layout34</position>
+		<position>tab-accessories-layout34</position>
+		<position>tab-watches-layout34</position>		
+		<position>latest-blog</position>
+		<position>our-brands</position>
+		<position>about-us</position>
+		<position>recent-tweet</position>
+		<position>newsletters</position>
+        <position>user1</position>
+        <position>user2</position>
+        <position>user3</position>
+        <position>user4</position>
+		<position>our-project</position>
+		<position>our-team</position>
+		<position>our-services</position>
+		<position>our-experience</position>
+		<position>our-working</position>
+		<position>our-price</position>
+		<position>testimonials-partners</position>		
+		<position>our-portfolio</position>
+		<position>more-about-us</position>
+		<position>brands-clients</position>		
+        <position>contact</position>
+		<position>main-content-layout3</position>
+		<position>main-content-layout4</position> 
+        <position>left</position>
+        <position>right</position>        
+        <position>slider</position>
+        <position>position1</position>
+        <position>position2</position>
+        <position>position3</position>
+        <position>position4</position>
+        <position>position5</position>
+        <position>position6</position>
+        <position>position7</position>
+        <position>position8</position>		
+		<position>link-follow1</position>
+		<position>link-follow2</position>
+		<position>link-follow3</position>
+        <position>bottom1</position>
+        <position>bottom2</position>
+        <position>bottom3</position>
+        <position>bottom4</position>
+		<position>bottom5</position>
+        <position>breadcrumb</position>
+        <position>footer1</position>
+        <position>footer2</position>
+    </positions>
+	
+    <files>
+        <file>index.html</file>
+        <file>index.php</file>
+        <file>favicon.ico</file>
+        <file>template_preview.png</file>
+        <file>template_thumbnail.png</file>
+        <file>templateDetails.xml</file>
+        <file>error.php</file>
+        <file>offline.php</file>
+        <file>component.php</file>
+        <file>en-GB.tpl_vina_bonnie.ini</file>
+        <folder>css/</folder>
+        <folder>features/</folder>
+        <folder>fonts/</folder>
+        <folder>html/</folder>
+        <folder>images/</folder>
+        <folder>js/</folder>
+        <folder>layout/</folder>
+        <folder>less/</folder>
+		<folder>shortcodes/</folder>
+    </files>
+    <config>
+        <fields name="params">
+
+            <fieldset name="overviews" addfieldpath="/plugins/system/helix/fields">
+                <field type="asset" />
+                <field type="include" file="overview.php" />
+            </fieldset>
+
+            <fieldset name="basic" addfieldpath="/plugins/system/helix/fields">
+			
+				<field type="group" title="LAYOUT" />
+				 <!-- layout type -->
+                <field name="layout_width" type="list" default="1200" label="WIDTH">
+					<option value="1200">1200 (px)</option>
+                    <option value="1170">1170 (px)</option>
+                    <option value="940">940 (px)</option>
+                </field>
+				<field name="layout_type" type="radio" default="responsive" label="TYPE">
+                    <option value="responsive">Responsive</option>
+                    <option value="fixed">Fixed</option>
+                </field>
+
+                <field type="group" title="LOGO" />
+				<!-- logo type -->
+                <field name="logo_type" class="parent logotype" type="radio" default="image" label="TYPE">
+                    <option value="image">Image</option>
+                    <option value="text">Text</option>
+                    <option value="no">None</option>
+                </field>
+                <field name="logo_position" class="child logotype logotype_image logotype_text" type="modpos" default="logo" client_id="0" label="POSITION" maxlength="50" />
+
+                <!-- logo image -->
+                <field name="logo_type_image" class="child logotype logotype_image" type="media" preview="true" label="IMAGE" />
+
+                <!-- logo text -->
+                <field name="logo_type_text" class="child logotype logotype_text" type="text" default="Helix" label="TEXT" />
+                <field name="logo_type_slogan" class="child logotype logotype_text" type="text" default="Joomla! Templates Framework" label="SLOGAN" />
+
+                <!-- logo width, height -->
+                <field name="logo_width" size="40" class="child logotype logotype_image logotype_text logotype_css" type="text" default="199" label="WIDTH" />
+                <field name="logo_height" size="40" class="child logotype logotype_image logotype_text logotype_css" type="text" default="56" label="HEIGHT" />
+
+                <!-- Footer -->
+				<field type="group" title="FOOTER" />
+				<field name="footer_position" type="modpos" default="footer1" client_id="0" label="POSITION" maxlength="50" />
+				
+				<field name="showcp" type="radio" class="parent copyright" default="1" label="COPYRIGHT">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+                <field name="copyright" class="child copyright copyright_1" type="textarea" rows="6" cols="30" default="Copyright ©  {VinaGecko.com}. All Rights Reserved." label="TEXT" />
+				
+                <field name="show_helix_logo" type="radio" default="0" label="HELIX_LOGO">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+				
+                <field name="jcredit" type="radio" default="0" label="JCREDIT">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+				
+                <field type="group" title="Brand Info" />
+				<field name="credit_link" type="radio" default="0" label="CREDIT_TEXT" class="parent credit_text">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+				<field name="credit_text" class="child credit_text credit_text_1" type="textarea" rows="6" cols="30" default="Designed by {JoomShaper}" label="TEXT" filter="raw" />
+				
+                <field name="validator" type="radio" default="0" label="VALIDATOR">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+				
+				<field type="group" title="Goto Top Settings" />
+				<field name="showtop" type="radio" default="1" label="GOTO_TOP" class="parent totop">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+				<field name="totop_position" type="modpos" class="child totop totop_1" default="footer2" client_id="0" label="POSITION" maxlength="50" />
+             
+            </fieldset>
+			 <!--End Basic Tab-->
+			 
+            <fieldset name="preset"  addfieldpath="/plugins/system/helix/fields">
+                <field type="group" title="PRESET" />
+
+                <field name="preset" type="presets"  default="preset1" label="PRESET" />
+
+                <field type="group" title="PRESET_SETTINGS" />
+				
+				<!--Start Preset1-->
+                <field name="preset1_header" class="preset1" type="picker" default="#fff" label="Header Color" />
+                <field name="preset1_bg" class="preset1" type="picker" default="#fff" label="Background Color" />
+                <field name="preset1_text" class="preset1" type="picker" default="#444" label="Text Color" />
+                <field name="preset1_link" class="preset1" type="picker" default="#189f2b" label="Link Color" />
+				<!--End Preset1-->
+				
+				<!--Start Preset2-->
+                <field name="preset2_header" class="preset2" type="picker" default="#fff" label="Header Color" />
+                <field name="preset2_bg" class="preset2" type="picker" default="#fff" label="Background Color" />
+                <field name="preset2_text" class="preset2" type="picker" default="#444" label="Text Color" />
+                <field name="preset2_link" class="preset2" type="picker" default="#c30303" label="Link Color" />
+				<!--End Preset2-->
+				
+				<!--Start Preset3-->
+                <field name="preset3_header" class="preset3" type="picker" default="#fff" label="Header Color" />
+                <field name="preset3_bg" class="preset3" type="picker" default="#fff" label="Background Color" />
+                <field name="preset3_text" class="preset3" type="picker" default="#444" label="Text Color" />
+                <field name="preset3_link" class="preset3" type="picker" default="#e36161" label="Link Color" />
+				<!--End Preset3-->	
+				
+				<!--Start Preset4-->
+                <field name="preset4_header" class="preset4" type="picker" default="#fff" label="Header Color" />
+                <field name="preset4_bg" class="preset4" type="picker" default="#fff" label="Background Color" />
+                <field name="preset4_text" class="preset4" type="picker" default="#444" label="Text Color" />
+                <field name="preset4_link" class="preset4" type="picker" default="#0bd9a9" label="Link Color" />
+				<!--End Preset4-->	
+
+            </fieldset>
+			<!--End Preset-->
+			
+            <fieldset name="layout" addfieldpath="/plugins/system/helix/fields">
+                <field type="layout" name="layout" />
+            </fieldset>
+          <!--End Layout-->	
+
+            <!--Start Menu Tab-->
+            <fieldset name="menu">
+
+                <field type="group" title="Select Menu" />
+                <field name="menu" type="menu" default="mainmenu" label="" />
+                <field type="group" title="Menu Settings" />
+
+                <field name="menutype" type="list" default="mega" label="MENU_TYPE">
+                    <option value="mega">Mega Menu</option>
+                    <option value="drop">Dropline Menu</option>
+                    <option value="split">Split Menu</option>
+                </field>
+
+                <field name="menu_col_width" type="text" default="200" label="DROP_COL_WIDTH" />
+                <field name="show_menu_image" class="parent menuimage" type="radio" default="1" label="SHOW_MENU_IMAGE">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+
+                <field name="menu_image_position" class="child menuimage menuimage_1" type="radio" default="1" label="MENU_IMAGE_POSITION">
+                    <option value="0">Background Image</option>
+                    <option value="1">Image Source</option>
+                </field>
+
+                <field name="submenu_position" type="list" default="0" label="Submenu Position">
+                    <option value="0">Default</option>
+                    <option value="1">Center</option>
+                </field>
+
+				<field type="group" title="Menu Offsets" />
+                <field name="init_x" type="text" default="0" label="X_OFFSET1" />
+                <field name="init_y" type="text" default="0" label="Y_OFFSET1" />
+                <field name="sub_x" type="text" default="0" label="X_OFFSET2" />
+                <field name="sub_y" type="text" default="0" label="Y_OFFSET2" />
+            </fieldset>
+            <!--End Menu Tab-->
+
+            <!--Start Font Tab-->
+            <fieldset name="fonts">
+                <field type="group" title="Body Font" />
+					<field name="body_font" type="text" default="" label="BODY_FONT" />
+					<field name="body_selectors" type="textarea" rows="6" cols="30" label="SELECTORS" />
+                <field type="group" title="Header Font" />
+					<field name="header_font" type="text" default="" label="HEADER_FONT" />
+					<field name="header_selectors" type="textarea" default="" rows="6" cols="30" label="SELECTORS" />
+                <field type="group" title="Others Font"  />
+					<field name="other_font" type="text" default="" label="OTHER_FONT" />
+					<field name="other_selectors" type="textarea" rows="6" cols="30" label="SELECTORS" />
+            </fieldset>
+            <!--End Font Tab-->
+
+            <!--Start Advanced Tab-->
+            <fieldset name="advanced">
+                <field type="group" title="CACHE_SETTINGS" />
+                <field name="cache_time" size="40" type="text" default="60" label="CACHE_TIME" />
+                <field name="compress_css" type="radio" default="0" label="CSS_COMPRESS">
+                    <option value="0">Disable</option>
+                    <option value="1">Enable</option>
+                </field>
+                <field name="compress_js" type="radio" default="0" label="JS_COMPRESS">
+                    <option value="0">Disable</option>
+                    <option value="1">Enable</option>
+                </field>
+                <field type="group" title="LINE_GA" />
+                <field name="enable_ga" class="parent analytics" type="radio" default="0" label="Enable">
+                    <option value="0">No</option>
+                    <option value="1">YES</option>
+                </field>
+                <field name="ga_code" class="child analytics analytics_1" type="text" default="" label="GA_CODE" />
+				
+                <field type="group" title="LOAD_JQUERY" />
+                <field name="loadjquery" class="parent loadjquery" type="radio" default="0" label="FORCE_LOAD">
+                    <option value="0">No</option>
+                    <option value="1">YES</option>
+                </field>
+				
+				<field name="loadfromcdn" class="child loadjquery loadjquery_1" type="radio" default="0" label="USE_CDN">
+                    <option value="0">No</option>
+                    <option value="1">YES</option>
+                </field>
+				
+				<field type="group" title="LESS" />
+				 <field name="lessoption" class="" type="radio" default="1" label="Enable">
+                    <option value="0">No</option>
+                    <option value="1">YES</option>
+                </field>
+				
+				<field type="group" title="COMPONENT_AREA" />
+				<field name="hide_component_area" class="" type="radio" default="0" label="HIDE_FRONTPAGE">				
+                    <option value="0">No</option>
+                    <option value="1">YES</option>
+                </field>
+				
+				<field type="group" title="Scroll Effect" />
+				<field name="scroll_effect" class="" type="radio" default="0" label="Use Scroll Effect">				
+                    <option value="0">No</option>
+                    <option value="1">YES</option>
+                </field>
+				<field name="effect" class="" type="list" default="fadeInDown" label="Scroll Effect">				
+                    <option value="random">Random</option>
+                    <option value="fadeInDown">Fade In Down</option>
+					<option value="pulse">Pulse</option>
+					<option value="bounceIn">BounceIn</option>
+					<option value="fadeIn">FadeIn</option>
+					<option value="flipInX">FlipInX</option>
+                </field>				             
+                <!--End Advanced Tab-->
+				
+            </fieldset>	
+			
+        </fields>
+    </config>
+</extension>

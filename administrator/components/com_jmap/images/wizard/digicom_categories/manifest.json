@@ -1,0 +1,16 @@
+{
+	"postfields":{
+		"option":"com_digicom",
+		"table_maintable":"#__categories",
+		"titlefield":"title",
+		"id":"id",
+		"where1_maintable":"extension",
+		"where1_value_maintable":"com_digicom",
+		"orderby_maintable":"lft",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"category"
+	}
+}

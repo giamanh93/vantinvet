@@ -1,0 +1,154 @@
+/**
+ * @package Sample Jshopping
+ * @author VinaGecko.com http://VinaGecko.com
+ * @copyright Copyright (C) 2014 www.VinaGecko.com
+ * @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+*/
+
+a, a:hover {
+	text-decoration:none;
+	.transition(all 200ms);
+}
+
+//Page header
+.page-header{
+	padding-bottom: 10px;
+	margin: 0 0 20px;
+}
+
+//Entry meta
+.entry-meta {
+	&.muted{
+		background:darken(@bg_color, 5%);
+		padding:5px;
+		margin-bottom:20px;
+		font-size:12px;
+		>span,
+		>time{
+			margin:0 5px;
+		}
+	}
+	ul {
+		margin:0 5px;
+		&.actions {
+			float:right;
+			li {
+				display:inline-block;
+				&.print-icon {
+					a {
+						&::before {
+							content:"\f02f";
+						}
+					}
+				}
+				
+				&.email-icon {
+					a {
+						&::before {
+							content:"\f003";
+						}
+					}
+				}
+				
+				&.edit-icon {
+					a {
+						&::before {
+							content:"\f044";
+						}
+					}
+				}
+				a {
+					font-family:FontAwesome;
+					display:block;
+					font-size:14px;
+					margin-left:5px;
+					img {
+						display:none;
+					}	
+				}
+				
+				//Joomla 3.0
+				a{
+					span{
+						display:none;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+section {
+	&.blog {
+		&:not(.column-1) {
+			.post {
+				.entry-content {
+					.pull-left, .pull-right {
+						float: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//Page navigation
+ul {
+	&.pagenav {
+		list-style:none;
+		padding: 0;
+		clear: both;
+		margin-top: 10px;
+		margin-left: 0;
+		overflow: hidden;
+		.pagenav-prev {
+			float:left;
+		}
+		.pagenav-next {
+			float:right;
+		}
+	}
+}
+
+//Joomla Core
+dl {
+	dt,dd {
+		display:inline;
+	}
+}
+
+//Labels
+label{
+	&.invalid{
+		color:lighten(@red,10%);
+	}
+}
+
+//upload file
+#editor-xtd-buttons{
+	display: inline-block;
+	margin-right: 10px;
+}
+.button2-left{
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 15px;
+}
+.toggle-editor{
+	display: inline-block;
+}
+
+.edit {
+	.modal{
+		position:inherit;
+		top: auto;
+		left: auto;
+		width: auto;
+		margin-left:0;
+		border:none;
+		.border-radius(~'0');
+		box-shadow:none;
+	}
+}

@@ -1,0 +1,7 @@
+.treeview .hitarea{background:none;}
+.treeview li{list-style-type:none;background:none;}
+.treeview li.lastCollapsable,.treeview li.lastExpandable{background:none;}
+.jmap_filetree span.folder{background:none;padding:1px;}
+.jmap_filetree li.expandable span.folder{background:none}
+.treeview .expandable-hitarea{background-position: -32px -45px;}
+div.jmapcolumn>ul>li>span{font-weight:bold;text-transform: uppercase;}

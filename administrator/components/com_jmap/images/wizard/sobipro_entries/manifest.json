@@ -1,0 +1,46 @@
+{
+	"postfields":{
+		"option":"com_sobipro",
+		"table_maintable":"#__sobipro_object",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"sid",
+		"where1_maintable":"oType",
+		"where1_value_maintable":"entry",
+		"where2_maintable":"approved",
+		"where2_value_maintable":"1",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__sobipro_object",
+		"table_joinwith_jointable1":"#__sobipro_field_data",
+		"jointype_jointable1":"LEFT",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"sid",
+		"table_joinfrom_jointable2":"#__sobipro_object",
+		"table_joinwith_jointable2":"#__sobipro_relations",
+		"jointype_jointable1":"LEFT",
+		"field_joinfrom_jointable2":"id",
+		"field_joinwith_jointable2":"id",
+		"field_select_jointable2":"pid",
+		"table_joinfrom_jointable3":"#__sobipro_relations",
+		"table_joinwith_jointable3":"#__sobipro_language",
+		"jointype_jointable1":"LEFT",
+		"field_joinfrom_jointable3":"pid",
+		"field_joinwith_jointable3":"id",
+		"field_select_jointable3":"sValue",
+		"use_category_title_jointable3":"1",
+		"where1_jointable3":"sKey",
+		"where1_value_jointable3":"name",
+		"where2_jointable3":"language",
+		"where2_value_jointable3":"{languagetag}",
+		"orderby_jointable3":"sValue",
+		"orderby_direction_jointable3":"ASC"
+	},
+	
+	 "substitutions":[
+		["`#__sobipro_object`.`id` AS `sid`,","CONCAT_WS(':',`#__sobipro_object`.`id`,`#__sobipro_object`.`nid`) AS `sid`,"],
+		["`#__sobipro_object`.`name`,","IFNULL(`#__sobipro_field_data`.`baseData`,  `#__sobipro_object`.`name`)  AS `name`,"],
+		["LEFT JOIN `#__sobipro_field_data` ON `#__sobipro_object`.`id` = `#__sobipro_field_data`.`sid`", "LEFT JOIN `#__sobipro_field_data` ON `#__sobipro_object`.`id` = `#__sobipro_field_data`.`sid` AND `#__sobipro_field_data`.`lang` = {languagetag}  AND `#__sobipro_field_data`.`fid` IN (SELECT `#__sobipro_field`.`fid` FROM `#__sobipro_field` WHERE `#__sobipro_field`.`nid` = 'field_name')"],
+		["'{languagetag}'","{languagetag}"]
+	]
+}

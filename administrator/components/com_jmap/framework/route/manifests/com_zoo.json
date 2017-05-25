@@ -1,0 +1,7 @@
+{
+	"categories_table":"#__zoo_category",
+	"categories_table_id_field":"id",
+	"categories_parent_id":"parent",
+	"holdon_params":true,
+	"name_params":{"category":"category", "item":"item_id"}
+}

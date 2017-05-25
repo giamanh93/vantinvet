@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+
+	<name>COM_CUSTOMFILTERS</name>
+	<creationDate>2014-12-18</creationDate>
+	<author>breadkesigns</author>
+	<authorEmail>info@breakdesigns.net</authorEmail>
+	<authorUrl>http://www.breakdesigns.net</authorUrl>
+	<copyright>Copyright(c) 2012-2014 breakdesigns.net</copyright>
+	<license>GNU/GPL v.2</license>
+	<version>2.2.4</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Custom Filters is offering Search and Filtering functionalities to your ecommerce solution</description>
+   
+    <!--Runs on install/uninstall/update -->
+	<scriptfile>script.php</scriptfile>
+
+    <install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+    <uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<update> <!-- Runs on update; New in 1.6 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" name="Custom Filters PRO">http://breakdesigns.net/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=3</server>
+	</updateservers>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="components/com_customfilters">
+		<filename>index.html</filename>
+        <filename>controller.php</filename>
+		<filename>customfilters.php</filename>
+        <filename>router.php</filename>
+        <folder>assets</folder>
+        <folder>controllers</folder>
+        <folder>include</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+	</files>
+    <languages folder="language">
+        <language tag="cs-CZ">cs-CZ/cs-CZ.com_customfilters.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.mod_cf_filtering.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.mod_cf_filtering.sys.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.mod_cf_search.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.mod_cf_search.sys.ini</language>
+
+        <language tag="de-DE">de-DE/de-DE.com_customfilters.ini</language>
+        <language tag="de-DE">de-DE/de-DE.mod_cf_filtering.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_cf_filtering.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.mod_cf_search.sys.ini</language>
+
+        <language tag="el-GR">el-GR/el-GR.com_customfilters.ini</language>
+        <language tag="el-GR">el-GR/el-GR.mod_cf_filtering.ini</language>
+		<language tag="el-GR">el-GR/el-GR.mod_cf_filtering.sys.ini</language>
+        <language tag="el-GR">el-GR/el-GR.mod_cf_search.ini</language>
+		<language tag="el-GR">el-GR/el-GR.mod_cf_search.sys.ini</language>
+
+       	<language tag="en-GB">en-GB/en-GB.com_customfilters.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_cf_filtering.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_cf_filtering.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_cf_search.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_cf_search.sys.ini</language>
+
+        <language tag="es-ES">es-ES/es-ES.com_customfilters.ini</language>
+        <language tag="es-ES">es-ES/es-ES.mod_cf_filtering.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_cf_filtering.sys.ini</language>
+        <language tag="es-ES">es-ES/es-ES.mod_cf_search.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_cf_search.sys.ini</language>
+
+        <language tag="fr-FR">fr-FR/fr-FR.com_customfilters.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.mod_cf_filtering.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.mod_cf_filtering.sys.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.mod_cf_search.sys.ini</language>
+
+        <language tag="it-IT">it-IT/it-IT.com_customfilters.ini</language>
+        <language tag="it-IT">it-IT/it-IT.mod_cf_filtering.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_cf_filtering.sys.ini</language>
+        <language tag="it-IT">it-IT/it-IT.mod_cf_search.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_cf_search.sys.ini</language>
+
+        <language tag="nl-NL">nl-NL/nl-NL.com_customfilters.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.mod_cf_filtering.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_cf_filtering.sys.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.mod_cf_search.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_cf_search.sys.ini</language>
+
+        <language tag="pt-BR">pt-BR/pt-BR.com_customfilters.ini</language>
+        <language tag="pt-BR">pt-BR/pt-BR.mod_cf_filtering.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_cf_filtering.sys.ini</language>
+       	<language tag="pt-BR">pt-BR/pt-BR.mod_cf_search.sys.ini</language>
+
+        <language tag="ru-RU">ru-RU/ru-RU.com_customfilters.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.mod_cf_filtering.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_cf_filtering.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.mod_cf_search.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_cf_search.sys.ini</language>
+
+        <language tag="sv-SE">sv-SE/sv-SE.com_customfilters.ini</language>
+		<language tag="sv-SE">sv-SE/sv-SE.mod_cf_filtering.ini</language>
+		<language tag="sv-SE">sv-SE/sv-SE.mod_cf_filtering.sys.ini</language>
+        <language tag="sv-SE">sv-SE/sv-SE.mod_cf_search.sys.ini</language>
+	</languages>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_customfilters/assets/images/cf_logo_16.png">COM_CUSTOMFILTERS</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="administrator/components/com_customfilters">
+			<!-- Admin Main File Copy Section -->
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+			<filename>customfilters.php</filename>
+            <filename>index.html</filename>
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder> 
+            <folder>models</folder>
+            <folder>sql</folder>
+			<folder>views</folder>
+		</files>
+		
+		<!-- Language files -->
+		<languages folder="administrator/language">
+            <language tag="cs-CZ">cs-CZ/cs-CZ.com_customfilters.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_customfilters.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_customfilters.sys.ini</language>
+            <language tag="el-GR">el-GR/el-GR.com_customfilters.ini</language>
+			<language tag="el-GR">el-GR/el-GR.com_customfilters.sys.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_customfilters.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_customfilters.sys.ini</language>
+            <language tag="es-ES">es-ES/es-ES.com_customfilters.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_customfilters.sys.ini</language>
+            <language tag="fr-FR">fr-FR/fr-FR.com_customfilters.ini</language>
+            <language tag="fr-FR">fr-FR/fr-FR.com_customfilters.sys.ini</language>
+            <language tag="it-IT">it-IT/it-IT.com_customfilters.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_customfilters.sys.ini</language>
+            <language tag="nl-NL">nl-NL/nl-NL.com_customfilters.ini</language>
+		    <language tag="nl-NL">nl-NL/nl-NL.com_customfilters.sys.ini</language>
+            <language tag="pt-BR">pt-BR/pt-BR.com_customfilters.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_customfilters.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_customfilters.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_customfilters.sys.ini</language>
+            <language tag="sv-SE">sv-SE/sv-SE.com_customfilters.ini</language>
+			<language tag="sv-SE">sv-SE/sv-SE.com_customfilters.sys.ini</language>
+		</languages>
+	</administration>
+     <modules>
+        <module module="mod_cf_filtering" client="site" />
+     </modules>
+</extension>
+

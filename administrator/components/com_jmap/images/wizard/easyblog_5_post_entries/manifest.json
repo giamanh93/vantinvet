@@ -1,0 +1,36 @@
+{
+	"postfields":{
+		"option":"com_easyblog",
+		"table_maintable":"#__easyblog_post",
+		"titlefield":"title",
+		"id":"id",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__easyblog_post",
+		"table_joinwith_jointable1":"#__easyblog_post_category",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"post_id",
+		"table_joinfrom_jointable2":"#__easyblog_post_category",
+		"table_joinwith_jointable2":"#__easyblog_category",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"category_id",
+		"field_joinwith_jointable2":"id",
+		"field_select_jointable2":"title",
+		"field_as_jointable2":"cat_title",
+		"use_category_title_jointable2":"1",
+		"where1_jointable2":"published",
+		"where1_value_jointable2":"1",
+		"additionalparams_jointable2":"id AS jsitemap_category_id",
+		"orderby_jointable2":"lft",
+		"orderby_direction_jointable2":"ASC"
+	},
+	"substitutions":[
+		["`#__easyblog_post`.`language` = '*'","`#__easyblog_post`.`language` = '*' OR `#__easyblog_post`.`language` = '' OR ISNULL(`#__easyblog_post`.`language`)"],
+		["`#__easyblog_post`.`access` IN {aid}","`#__easyblog_post`.`access` = '0'"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"entry"
+	}
+}

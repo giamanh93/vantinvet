@@ -1,0 +1,12 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"multiadiacency",
+	"item2category_table":"#__eb_event_categories",
+	"item2category_catid_field":"category_id",
+	"categories_table":"#__eb_categories",
+	"category2category_table":"#__eb_categories",
+	"category_table_id_field":"id",
+	"category_table_name_field":"name",
+ 	"parent_field":"parent",
+ 	"child_field":"id"
+}

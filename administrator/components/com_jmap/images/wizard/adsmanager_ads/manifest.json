@@ -1,0 +1,38 @@
+{
+	"postfields":{
+		"option":"com_adsmanager",
+		"table_maintable":"#__adsmanager_ads",
+		"titlefield":"ad_headline",
+		"id":"id",
+		"orderby_maintable":"ad_headline",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__adsmanager_ads",
+		"table_joinwith_jointable1":"#__adsmanager_adcat",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"adid",
+		"field_select_jointable1":"catid",
+		"table_joinfrom_jointable2":"#__adsmanager_adcat",
+		"table_joinwith_jointable2":"#__adsmanager_categories",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"catid",
+		"field_joinwith_jointable2":"id",
+		"field_select_jointable2":"name",
+		"use_category_title_jointable2":"1",
+		"where1_jointable2":"published",
+		"where1_value_jointable2":"1",
+		"where2_jointable2":"usergroupsread",
+		"where2_value_jointable2":"1",
+		"orderby_jointable2":"ordering",
+		"orderby_direction_jointable2":"ASC"
+	},
+		
+	"substitutions":[
+		["`#__adsmanager_categories`.`usergroupsread` = '1'","(`#__adsmanager_categories`.`usergroupsread` = '1' OR `#__adsmanager_categories`.`usergroupsread` = '' OR ISNULL(`#__adsmanager_categories`.`usergroupsread`))"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"details",
+		"guess_sef_itemid":"1"
+	}
+}

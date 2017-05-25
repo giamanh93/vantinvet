@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<fieldset name="Basic" label="COM_CUSTOMFILTERS_BASIC_SETTINGS">
+
+		<field name="use_virtuemart_pages_vars" type="radio" default="1"
+			class="btn-group btn-group-yesno" label="COM_CUSTOMFILTERS_USE_VM_VARS_LABEL"
+			description="COM_CUSTOMFILTERS_USE_VM_VARS_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="returned_products" type="radio" default="parent"
+			class="btn-group" label="COM_CUSTOMFILTERS_RETURNED_PRODUCTS_LABEL"
+			description="COM_CUSTOMFILTERS_RETURNED_PRODUCTS_DESC">
+			<option value="parent">COM_CUSTOMFILTERS_PARENT_PRODUCTS</option>
+			<option value="child">COM_CUSTOMFILTERS_CHILD_PRODUCTS</option>
+		</field>
+
+		<field name="use_canonical_urls" type="radio" default="1"
+			class="btn-group btn-group-yesno" label="COM_CUSTOMFILTERS_USE_CANONICAL_LABEL"
+			description="COM_CUSTOMFILTERS_USE_CANONICAL_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="reset_results" type="list" default="0"
+			label="COM_CUSTOMFILTERS_RESET_RESULTS_LABEL" description="COM_CUSTOMFILTERS_RESET_RESULTS_DESC">
+			<option value="0">COM_CUSTOMFILTERS_NO_PRODUCT</option>
+			<option value="1">COM_CUSTOMFILTERS_ALL_PRODUCTS</option>
+		</field>
+
+		<field name="products_multiple_shoppers" type="radio"
+			class="btn-group btn-group-yesno" default="0"
+			label="COM_CUSTOMFILTERS_PRODUCTS_MULTIPLE_SHOPPERS_LABEL"
+			description="COM_CUSTOMFILTERS_PRODUCTS_MULTIPLE_SHOPPERS_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+
+	
+
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox" validate="rules" filter="rules" component="com_customfilters"
+			section="component" />
+	</fieldset>
+
+</config>

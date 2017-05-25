@@ -1,0 +1,36 @@
+{
+	"postfields":{
+		"option":"com_mtree",
+		"table_maintable":"#__mt_links",
+		"titlefield":"link_name",
+		"titlefield_as":"title",
+		"id":"link_id",
+		"use_alias":"1",
+		"where1_maintable":"link_approved",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"link_name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__mt_links",
+		"table_joinwith_jointable1":"#__mt_cl",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"link_id",
+		"field_joinwith_jointable1":"link_id",
+		"table_joinfrom_jointable2":"#__mt_cl",
+		"table_joinwith_jointable2":"#__mt_cats",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"cat_id",
+		"field_joinwith_jointable2":"cat_id",
+		"field_select_jointable2":"cat_name",
+		"use_category_title_jointable2":"1",
+		"orderby_jointable2":"cat_name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"substitutions":[
+		["`#__mt_links`.`state`","`#__mt_links`.`link_published`"]
+	],
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"task=viewlink"
+	}
+}

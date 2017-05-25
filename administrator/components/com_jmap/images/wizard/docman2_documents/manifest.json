@@ -1,0 +1,39 @@
+{
+	"postfields":{
+		"option":"com_docman",
+		"table_maintable":"#__docman_documents",
+		"titlefield":"title",
+		"id":"docman_document_id",
+		"idfield_as":"alias",
+		"where1_maintable":"enabled",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__docman_documents",
+		"table_joinwith_jointable1":"#__docman_categories",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"docman_category_id",
+		"field_joinwith_jointable1":"docman_category_id",
+		"field_select_jointable1":"title",
+		"field_as_jointable1":"cattitle",
+		"use_category_title_jointable1":"1",
+		"additionalparams_jointable1":"slug AS category_slug",
+		"where1_jointable1":"access",
+		"where1_value_jointable1":"{aid}",
+		"where2_jointable1":"enabled",
+		"where2_value_jointable1":"1",
+		"orderby_jointable1":"title",
+		"orderby_direction_jointable1":"ASC"
+	},
+	
+	"substitutions":[
+		["`#__docman_documents`.`docman_document_id`", "CONCAT_WS('-',`#__docman_documents`.`docman_document_id`,`#__docman_documents`.`slug`)"],
+		["`#__docman_categories`.`access` = '{aid}'", "`#__docman_categories`.`access` IN {aid}"],
+		["`#__docman_documents`.`access` IN {aid}","(`#__docman_documents`.`access` IN {aid} OR `#__docman_documents`.`access` = 0)"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"document",
+		"additionalquerystring":"layout=default"
+	}
+}

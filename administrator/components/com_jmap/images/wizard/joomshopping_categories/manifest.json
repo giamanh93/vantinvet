@@ -1,0 +1,22 @@
+{
+	"postfields":{
+		"option":"com_jshopping",
+		"table_maintable":"#__jshopping_categories",
+		"titlefield":"name_{langtag}",
+		"id":"category_id",
+		"where1_maintable":"category_publish",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"name_{langtag}",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"placeholders":{
+		"titlefield":["{langtag}","langtag"],
+		"orderby_maintable":["{langtag}","langtag"]
+	},
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"controller=category,task=view",
+		"guess_sef_itemid":"1"
+	}
+}

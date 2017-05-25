@@ -1,0 +1,9 @@
+{
+	"categories_table":"#__guru_categoryrel",
+	"categories_table_id_field":"child_id",
+	"categories_parent_id":"parent_id",
+	"holdon_params":true,
+	"name_params":{"gurupcategs":"cid", "guruprograms":"cid"},
+	"additional_categories_needles":"gurupcategs",
+	"additional_id_view":"guruprograms"
+}

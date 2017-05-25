@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>JMap</name>
+	<author>Joomla! Extensions Store</author>
+	<creationDate>August 2016</creationDate>
+	<copyright>Copyright (C) 2016 - Joomla! Extensions Store. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@storejextensions.org</authorEmail>
+	<authorUrl>http://storejextensions.org</authorUrl>
+	<version>4.2</version>
+	<description>COM_JMAP_INFO_MESSAGES</description>
+  
+	<scriptfile>installscript.php</scriptfile> 
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install> 
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files folder="site">
+		<!-- PRECACHE -->
+		<folder>precache</folder>
+		<!-- CONTROLLERS -->
+		<folder>controllers</folder>
+		<!-- MODELS -->
+		<folder>models</folder>
+		<!-- VIEWS -->
+		<folder>views</folder>
+		<!-- JS -->
+		<folder>js</folder>
+		<!-- XSLT -->
+		<folder>xslt</folder>
+		<!-- MANIFESTS -->
+		<folder>manifests</folder>
+		<!-- LANGUAGE -->
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>jmap.php</filename>
+		<filename>router.php</filename>
+	</files>
+
+	<administration>
+		<menu link="option=com_jmap" img="class:jmap-16x16">JMAP</menu> 
+		<files folder="admin">
+			<filename>jmap.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<folder>images</folder>
+			<filename>index.html</filename>
+			<!-- CACHE -->
+			<folder>cache</folder>
+			<!-- CONTROLLERS -->
+			<folder>controllers</folder>
+			<!-- MODELS -->
+			<folder>models</folder>
+			<!-- PLUGINS -->
+			<folder>plugins</folder>
+			<!-- JS -->
+			<folder>js</folder>
+			<!-- VIEWS -->
+			<folder>views</folder>
+			<!-- CSS files-->
+			<folder>css</folder>
+			<!-- JMap Framework -->
+			<folder>framework</folder>
+			<!-- TABLES ORM -->
+			<folder>tables</folder>
+			<!-- ASSETS -->
+			<folder>images</folder>
+			<!-- SQL files section -->
+			<folder>sql</folder> 
+			<!-- LANGUAGE -->
+			<folder>language</folder>
+		</files>
+	</administration>
+	
+	<!-- UPDATE SERVERS -->
+	<updateservers>
+		<server type="extension" priority="1" name="JSitemap Professional Update Server">http://storejextensions.org/updates/jsitemap_updater.xml</server>
+	</updateservers>
+</extension>

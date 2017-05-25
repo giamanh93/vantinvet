@@ -1,0 +1,102 @@
+/* Admin generic styles */
+
+table.admintable {
+	width: 100%;
+}
+
+table.admintable td.left_title {
+	width: 20% !important;
+}
+
+table.admintable td.right_details {
+	width: 80% !important;
+}
+
+table.admintable input, table.admintable textarea {
+	width: 50% !important;
+	min-width: 250px !important;
+}
+
+table.adminlist td label.label-sources {
+	margin-right: 5px;
+}
+
+table.adminlist td textarea.metainfo {
+	width: 100%;
+	height: 80px;
+}
+
+table.adminlist td select.robots_directive {
+	width: 160px;
+}
+
+table.adminlist td.link_loc {
+	word-break: break-word;
+}
+
+table.adminlist td.link_loc a {
+	min-width: 100px;
+}
+
+table.adminlist tr.subtitles td {
+	font-size: 12px;
+} 
+
+div.alert span.glyphicon-remove {
+	font-size: 11px;
+}
+
+table.adminlist span.labelmetainfo {
+	font-size: 12px;
+}
+
+table.adminlist button.btn[disabled=disabled] {
+	opacity: 0.3;
+}
+
+#jmap_alert_message {
+	position: fixed;
+	top: 35px;
+	right: 1%;
+	z-index: 99999;
+}
+
+#alert_append .input-group {
+	margin: 10px 0 10px 0;
+}
+
+span.input-group {
+	max-width: 380px;
+}
+
+label.jmap_inactive {
+	background: #e6e6e6 !important;
+	color: #333 !important;
+	border: 1px solid #CCC !important;
+}
+
+div.input-append.input-prepend.mediaimagefield {
+	width: 100%;
+}
+
+div.input-append.input-prepend.mediaimagefield input[id^=jform_media] {
+	max-width: 100px;
+}
+
+@media (min-width: 1400px) {
+	div.input-append.input-prepend.mediaimagefield input[id^=jform_media],
+	table.adminlist input[type=text].field-media-input.mediaimagefield {
+		width: auto;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	body.admin.com_jmap {
+		min-width: 1024px;
+	}
+}
+
+table.adminlist td.metaimage div.control-label {
+	display: none;
+}

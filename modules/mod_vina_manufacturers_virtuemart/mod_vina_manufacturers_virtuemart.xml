@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+
+<!-- Author Block -->
+	<name>Vina Manufacturers Carousel for VirtueMart</name>
+	<author>VinaGecko.com</author>
+	<creationDate>November 28, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>admin@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.0.0</version>
+	
+<!-- Description Block -->
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+			<strong>Vina Manufacturers Carousel for VirtueMart</strong> will help you to show more <strong>Manufacturers Logo and/or Manufacturers Name of VirtueMart Component</strong> in beautiful responsive carousel slider. It has options for setting the pagination/sliding speed, enabling/disabling autoplay, showing bullet navigation and more.<br>
+			<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+	
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_manufacturers_virtuemart">mod_vina_manufacturers_virtuemart.php</filename>
+		<filename>index.html</filename>
+		<folder>libs</folder>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_manufacturers_virtuemart.ini</language>
+	</languages>
+
+<!-- Config Block -->
+	<config>
+		<fields name="params">
+			<!-- Basic Block -->
+			<fieldset name="basic">
+				<field
+                    name="showImage"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_IMAGE"
+                    description="VINA_MANUFACTURERS_VMART_IMAGE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="linkOnImage"
+                    type="radio"
+                    default="0"
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_LINK_IMAGE"
+                    description="VINA_MANUFACTURERS_VMART_LINK_IMAGE_DESC">
+						<option value="0">Disable</option>
+						<option value="1">Enable</option>
+                </field>
+				<field
+                    name="showName"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_NAME"
+                    description="VINA_MANUFACTURERS_VMART_NAME_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+                    name="linkOnName"
+                    type="radio"
+                    default="1"
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_LINK_NAME"
+                    description="VINA_MANUFACTURERS_VMART_LINK_NAME_DESC">
+						<option value="0">Disable</option>
+						<option value="1">Enable</option>
+                </field>
+				
+				<field type="spacer" name="@module" hr="true" />
+				<field
+                    name="moduleWidth"
+                    type="text"
+                    label="VINA_MANUFACTURERS_VMART_WIDTH"
+                    default="100%"
+                    description="VINA_MANUFACTURERS_VMART_WIDTH_DESC" />
+				<field
+                    name="moduleHeight"
+                    type="text"
+                    label="VINA_MANUFACTURERS_VMART_HEIGHT"
+                    default="auto"
+                    description="VINA_MANUFACTURERS_VMART_HEIGHT_DESC" />
+				<field
+                    name="moduleMargin"
+                    type="text"
+                    label="VINA_MANUFACTURERS_VMART_MMARGIN"
+                    default="0px"
+                    description="VINA_MANUFACTURERS_VMART_MMARGIN_DESC" />
+				<field
+                    name="modulePadding"
+                    type="text"
+                    label="VINA_MANUFACTURERS_VMART_MPADDING"
+                    default="30px 0 0"
+                    description="VINA_MANUFACTURERS_VMART_MPADDING_DESC" />
+				<field
+                    name="itemMargin"
+                    type="text"
+                    label="VINA_MANUFACTURERS_VMART_IMARGIN"
+                    default="0 5px"
+                    description="VINA_MANUFACTURERS_VMART_IMARGIN_DESC" />
+				<field
+					name="bgImage"
+					type="media" 
+					label="VINA_MANUFACTURERS_VMART_BACKGROUND_IMAGE" 
+					description="VINA_MANUFACTURERS_VMART_BACKGROUND_IMAGE_DESC" 
+					size="30"
+					default="" />
+				<field 
+                    name="isBgColor" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_IS_BG_COLOR" 
+                    description="VINA_MANUFACTURERS_VMART_IS_BG_COLOR_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="bgColor"
+					type="color" 
+					label="VINA_MANUFACTURERS_VMART_BG_COLOR" 
+					description="VINA_MANUFACTURERS_VMART_BG_COLOR_DESC" 
+					size="30"
+					default="#dddddd" />
+				<field
+					name="captionBgColor"
+					type="color" 
+					label="VINA_MANUFACTURERS_VMART_CAPTION_BGCOLOR" 
+					description="VINA_MANUFACTURERS_VMART_CAPTION_BGCOLOR_DESC" 
+					size="30"
+					default="#ffd900" />
+				<field
+					name="captionColor"
+					type="color" 
+					label="VINA_MANUFACTURERS_VMART_CAPTION_COLOR" 
+					description="VINA_MANUFACTURERS_VMART_CAPTION_COLOR_DESC" 
+					size="30"
+					default="#ffffff" />
+				<field 
+                    name="pagination" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_PAGINATION" 
+                    description="VINA_MANUFACTURERS_VMART_PAGINATION_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="bgPagination"
+					type="color" 
+					label="VINA_MANUFACTURERS_VMART_BG_PAGINATION" 
+					description="VINA_MANUFACTURERS_VMART_BG_PAGINATION_DESC" 
+					size="30"
+					default="#ffffff" />
+				<field
+					name="colorPagination"
+					type="color" 
+					label="VINA_MANUFACTURERS_VMART_COLOR_PAGINATION" 
+					description="VINA_MANUFACTURERS_VMART_COLOR_PAGINATION_DESC" 
+					size="30"
+					default="#cccccc" />
+				<field
+					name="bgPaginationActive"
+					type="color" 
+					label="VINA_MANUFACTURERS_VMART_BG_PAGINATION_ACTIVE" 
+					description="VINA_MANUFACTURERS_VMART_BG_PAGINATION_ACTIVE_DESC" 
+					size="30"
+					default="#ffd900" />
+				<field
+					name="colorPaginationActive"
+					type="color" 
+					label="VINA_MANUFACTURERS_VMART_COLOR_PAGINATION_ACTIVE" 
+					description="VINA_MANUFACTURERS_VMART_COLOR_PAGINATION_ACTIVE_DESC" 
+					size="30"
+					default="#ffffff" />
+				<field 
+                    name="navigation" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_NAVIGATION" 
+                    description="VINA_MANUFACTURERS_VMART_NAVIGATION_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+			</fieldset>
+			
+			<!-- Carousel Block -->
+			<fieldset name="carousel">
+				<field
+					name="noItems"
+					type="text"
+					default="null"
+					label="VINA_MANUFACTURERS_VMART_NOITEMS"
+					description="VINA_MANUFACTURERS_VMART_NOITEMS_DESC" />
+				<field 
+                    name="circular" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_CIRCULAR" 
+                    description="VINA_MANUFACTURERS_VMART_CIRCULAR_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="infinite" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_INFINITE" 
+                    description="VINA_MANUFACTURERS_VMART_INFINITE_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="direction" 
+                    type="list" 
+                    default="left" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_DIRECTION" 
+                    description="VINA_MANUFACTURERS_VMART_DIRECTION_DESC">
+                        <option value="right">Right</option>
+                        <option value="left">Left</option>
+						<option value="up">Up</option>
+						<option value="down">Down</option>
+                </field>
+				<field 
+                    name="align" 
+                    type="list" 
+                    default="center" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_ALIGN" 
+                    description="VINA_MANUFACTURERS_VMART_ALIGN_DESC">
+                        <option value="center">Center</option>
+                        <option value="left">Left</option>
+						<option value="right">Right</option>
+                </field>
+				<field 
+                    name="auto" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_AUTO" 
+                    description="VINA_MANUFACTURERS_VMART_AUTO_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="mousewheel" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_MOUSEWHEEL" 
+                    description="VINA_MANUFACTURERS_VMART_MOUSEWHEEL_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="mouseSwipe" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_MOUSE_SWIPE" 
+                    description="VINA_MANUFACTURERS_VMART_MOUSE_SWIPE_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="touchSwipe" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_TOUCH_SWIPE" 
+                    description="VINA_MANUFACTURERS_VMART_TOUCH_SWIPE_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="scrollItems"
+					type="text"
+					default="null"
+					label="VINA_MANUFACTURERS_VMART_SCROLL_ITEMS"
+					description="VINA_MANUFACTURERS_VMART_SCROLL_ITEMS_DESC" />
+				<field 
+                    name="fx" 
+                    type="list" 
+                    default="directscroll" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_FX" 
+                    description="VINA_MANUFACTURERS_VMART_FX_DESC">
+                        <option value="none">None</option>
+                        <option value="scroll">Scroll</option>
+						<option value="directscroll">Directscroll</option>
+						<option value="fade">Fade</option>
+						<option value="crossfade">Crossfade</option>
+						<option value="cover">Cover</option>
+						<option value="cover-fade">Cover-fade</option>
+						<option value="uncover">Uncover</option>
+						<option value="uncover-fade">Uncover-fade</option>
+                </field>
+				<field 
+                    name="easing" 
+                    type="list" 
+                    default="linear" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_EASING" 
+                    description="VINA_MANUFACTURERS_VMART_EASING_DESC">
+                        <option value="linear">Linear</option>
+                        <option value="swing">Swing</option>
+						<option value="quadratic">Quadratic</option>
+						<option value="cubic">Cubic</option>
+						<option value="elastic">Elastic</option>
+                </field>
+				<field
+					name="duration"
+					type="text"
+					default="500"
+					label="VINA_MANUFACTURERS_VMART_DURATION"
+					description="VINA_MANUFACTURERS_VMART_DURATION_DESC" />
+				<field 
+                    name="pauseOnHover" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_MANUFACTURERS_VMART_PAUSE_HOVER" 
+                    description="VINA_MANUFACTURERS_VMART_PAUSE_HOVER_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+			</fieldset>
+			
+			<!-- Advanced Block -->
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

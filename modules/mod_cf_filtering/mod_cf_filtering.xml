@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>mod_cf_filtering</name>
+	<creationDate>2014-12-18</creationDate>
+	<author>breadkesigns</author>
+	<authorEmail>info@breakdesigns.net</authorEmail>
+	<authorUrl>http://www.breakdesigns.net</authorUrl>
+	<copyright>Copyright(c) 2014 breakdesigns.net</copyright>
+	<license>GNU/GPL v.2</license>
+	<version>2.2.4</version>
+	<description><![CDATA[<h3>Custom Filters <i style="font-size:12px">(v.2.2.4 <span style="font-size:9px">10 December 2014</span>)</i></h3>
+    <span><img src="../modules/mod_cf_filtering/assets/cf_logo.png"/></span>
+    ]]></description>
+	<files>
+		<filename module="mod_cf_filtering">mod_cf_filtering.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>optionsHelper.php</filename>
+		<filename>renderHelper.php</filename>
+		<filename>mod_cf_filtering.xml</filename>
+	</files>
+	<languages>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MOST_READ" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/administrator/components/com_customfilters/models/fields">
+					
+
+				<field name="dependency_direction" type="list" default="all"
+					label="MOD_CF_FILTERING_DEPENDENCY_DIR_LABEL" description="MOD_CF_FILTERING_DEPENDENCY_DIR_DESC">
+					<option value="all">MOD_CF_FILTERING_DEPENDENCY_DIR_ALL</option>
+					<option value="t-b">MOD_CF_FILTERING_DEPENDENCY_DIR_TOP_TO_BOTTOM
+					</option>
+				</field>
+
+				
+				<field name="disp_reset_all" type="radio" default="1"
+					class="btn-group btn-group-yesno" label="MOD_CF_FILTERING_DISP_RESET_LABEL"
+					description="MOD_CF_FILTERING_DISP_RESET_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="reset_all_reset_flt" type="list" default="virtuemart_manufacturer_id"
+					multiple="true" size="5" label="MOD_CF_FILTERING_RESET_FLT_LABEL"
+					description="MOD_CF_FILTERING_RESET_FLT_DESC">					
+					<option value="virtuemart_category_id">COM_MODULES_MOD_CF_FILTERING_CATEGORIES_FIELDSET_LABEL
+					</option>
+					<option value="virtuemart_manufacturer_id">COM_MODULES_MOD_CF_FILTERING_MANUFACTURERS_FIELDSET_LABEL
+					</option>
+
+				</field>
+
+
+				<field name="indexfltrs_by_search_engines" type="radio"
+					class="btn-group btn-group-yesno" default="0"
+					label="MOD_CF_FILTERING_INDEX_BY_SEARCH_ENGINES_LABEL" description="MOD_CF_FILTERING_INDEX_BY_SEARCH_ENGINES_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="filterlist" type="filterlist"
+					label="MOD_CF_FILTERING_FILTERLIST_LABEL" description="MOD_CF_FILTERING_FILTERLIST_DESC" />
+			</fieldset>	
+
+
+
+			<fieldset name="MOD_CF_FILTERING_CATEGORIES">
+				<field name="category_flt_published" type="radio" default="1"
+					class="btn-group btn-group-yesno" label="MOD_CF_FILTERING_PUBLISHED_LABEL"
+					description="MOD_CF_FILTERING_PUBLISHED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+
+				<field name="category_flt_disable_empty_filters" type="list"
+					default="1" label="MOD_CF_FILTERING_EMPTY_FILTER_OPTIONS_LABEL"
+					description="MOD_CF_FILTERING_EMPTY_FILTER_OPTIONS_DESC">
+					<option value="1">MOD_CF_FILTERING_SHOW_DISABLED</option>
+					<option value="0">MOD_CF_FILTERING_HIDE</option>
+					<option value="2">MOD_CF_FILTERING_SHOW_ENABLED</option>
+				</field>
+
+				<field name="category_flt_display_counter_results" type="radio"
+					class="btn-group btn-group-yesno" default="1"
+					label="MOD_CF_FILTERING_DISP_NUM_RESULTS_LABEL" description="MOD_CF_FILTERING_DISP_NUM_RESULTS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="category_flt_onchange_reset" type="list"
+					class="btn-group btn-group-yesno" default="filters"
+					label="MOD_CF_FILTERING_ONCHANGE_RESET_FLTRS_LABEL" description="MOD_CF_FILTERING_ONCHANGE_RESET_FLTRS_DESC">
+					<option value="0">JNONE</option>
+					<option value="filters">MOD_CF_FILTERING_FILTERS</option>					
+				</field>
+
+
+				<field type="spacer" class="cfspacer" name="myspacer_cat_other"
+					label="MOD_CF_FILTERING_OTHER_PARAMS" />
+
+				<field name="categories_disp_order" type="list" default="tree"
+					label="MOD_CF_FILTERING_CAT_DISP_ORDER" description="MOD_CF_FILTERING_CAT_DISP_ORDER_DESC">
+					<option value="ordering">MOD_CF_FILTERING_VM_CAT_ORDER_ORDERING
+					</option>
+					<option value="names">MOD_CF_FILTERING_VM_CAT_ORDER_NAMES</option>
+					<option value="tree">MOD_CF_FILTERING_VM_CAT_TREE</option>
+				</field>
+
+				<field name="category_flt_disp_type" type="list" default="3"
+					label="MOD_CF_FILTERING_DISP_TYPE_LABEL" description="MOD_CF_FILTERING_DISP_TYPE_DESC">
+					<option value="1">MOD_CF_FILTERING_SELECT</option>
+					<option value="2">MOD_CF_FILTERING_RADIO</option>					
+					<option value="4">MOD_CF_FILTERING_LINK</option>
+				</field>
+
+				<field name="category_flt_disp_vm_cat" type="text" default=""
+					size="50" label="MOD_CF_FILTERING_DISP_VMCAT_LABEL" description="MOD_CF_FILTERING_DISP_VMCAT_DESC" />
+
+				<field name="category_flt_exclude_vm_cat" type="text" default=""
+					size="50" label="MOD_CF_FILTERING_EXCLUDE_VMCAT_LABEL" description="MOD_CF_FILTERING_EXCLUDE_VMCAT_DESC" />
+				
+
+				<field name="category_flt_scrollbar_after" type="text"
+					default="" size="10" label="MOD_CF_FILTERING_SCROLLBAR_AFTER_LABEL"
+					description="MOD_CF_FILTERING_SCROLLBAR_AFTER_DESC" />
+
+				<field type="spacer" class="cfspacer" name="myspacer_cat_theming"
+					label="MOD_CF_FILTERING_THEMING_PARAMS" />
+
+				<field name="category_flt_tree_mode" type="radio" default="0"
+					label="MOD_CF_FILTERING_TREE_MODE_LABEL" description="MOD_CF_FILTERING_TREE_MODE_DESC">
+					<option value="0">MOD_CF_FILTERING_COLLAPSED</option>
+					<option value="1">MOD_CF_FILTERING_EXPANDED</option>
+				</field>
+			
+				<field name="category_flt_parent_link" type="radio" default="0"
+					class="btn-group btn-group-yesno" label="MOD_CF_FILTERING_PARENT_LINK_LABEL"
+					description="MOD_CF_FILTERING_PARENT_LINK_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field label="MOD_CF_FILTERING_CAT_TREE_COLLAPSED_ICON" name="category_flt_collapsed_icon"
+					type="media" preview="true" directory="stories/customfilters" />
+
+				<field label="MOD_CF_FILTERING_CAT_TREE_EXPANDED_ICON" name="category_flt_expanded_icon"
+					class="btn-group btn" type="media" preview="true" directory="stories/customfilters" />
+
+				<field name="category_flt_icon_position" type="radio" default="left"
+					class="btn-group" label="MOD_CF_FILTERING_ICON_POS_LABEL"
+					description="MOD_CF_FILTERING_ICON_POS_DESC">
+					<option value="left">MOD_CF_FILTERING_LEFT</option>
+					<option value="right">MOD_CF_FILTERING_RIGHT</option>
+				</field>
+				<field type="spacer" class="cfinfo" name=""
+					label="MOD_CF_FILTERING_TREE_INFO" />				
+			</fieldset>
+
+
+
+			<fieldset name="MOD_CF_FILTERING_MANUFACTURERS">
+				<field name="manuf_flt_published" type="radio" default="1"
+					class="btn-group btn-group-yesno" label="MOD_CF_FILTERING_PUBLISHED_LABEL"
+					description="MOD_CF_FILTERING_PUBLISHED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			
+				<field name="manuf_flt_disable_empty_filters" type="list"
+					default="1" label="MOD_CF_FILTERING_EMPTY_FILTER_OPTIONS_LABEL"
+					description="MOD_CF_FILTERING_EMPTY_FILTER_OPTIONS_DESC">
+					<option value="1">MOD_CF_FILTERING_SHOW_DISABLED</option>
+					<option value="0">MOD_CF_FILTERING_HIDE</option>
+					<option value="2">MOD_CF_FILTERING_SHOW_ENABLED</option>
+				</field>
+
+				<field name="manuf_flt_display_counter_results" type="radio"
+					class="btn-group btn-group-yesno" default="1"
+					label="MOD_CF_FILTERING_DISP_NUM_RESULTS_LABEL" description="MOD_CF_FILTERING_DISP_NUM_RESULTS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field type="spacer" class="cfspacer" name="myspacer_cat_other"
+					label="MOD_CF_FILTERING_OTHER_PARAMS" />
+
+				<field name="manuf_flt_disp_type" type="list" default="3"
+					label="MOD_CF_FILTERING_DISP_TYPE_LABEL" description="MOD_CF_FILTERING_DISP_TYPE_DESC">
+					<option value="1">MOD_CF_FILTERING_SELECT</option>
+					<option value="2">MOD_CF_FILTERING_RADIO</option>					
+					<option value="4">MOD_CF_FILTERING_LINK</option>
+					<option value="7">MOD_CF_FILTERING_IMAGE_LINK</option>
+				</field>				
+			</fieldset>
+			
+
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="cf_profiler" type="radio" default="0"
+					class="btn-group btn-group-yesno" label="MOD_CF_FILTERING_DEBUG_LABEL"
+					description="MOD_CF_FILTERING_DEBUG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+
+	</config>
+</extension>

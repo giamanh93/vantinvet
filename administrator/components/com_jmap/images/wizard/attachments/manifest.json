@@ -1,0 +1,14 @@
+{
+	"postfields":{
+		"option":"com_attachments",
+		"table_maintable":"#__attachments",
+		"titlefield":"display_name",
+		"id":"id",
+		"orderby_maintable":"display_name",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"task=download"
+	}
+}

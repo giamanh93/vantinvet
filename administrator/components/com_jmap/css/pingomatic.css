@@ -1,0 +1,90 @@
+#progressModal2 div.modal-dialog {
+	left: 50%;
+	right: auto;
+	width: 600px;
+	padding-top: 230px;
+	padding-bottom: 30px;
+}
+
+div.panel div.panel {
+	float: left;
+}
+
+div.panel p {
+	margin-bottom: 2px;
+}
+
+div.panel-group .panel+.panel {
+	margin: 0 0 0 15px;
+}
+
+div.panel a {
+	margin-left: 5px;
+}
+
+div#common span.controls label,div#specialized span.controls label {
+	margin-top: -6px;
+	padding: 3px 8px;
+}
+
+div.service_control {
+	margin-bottom: 8px;
+	padding: 5px;
+}
+
+div.service_control a:hover {
+	text-decoration: none;
+}
+
+div.service_control a label {
+	cursor: pointer;
+}
+
+label.label-primary {
+	display: inline-block;
+	margin: 4px;
+	padding-top: 4px;
+}
+
+label.validation.services {
+	margin-left: 5px;
+	display: inline-block;
+	padding: .4em .6em;
+}
+
+#pingomatic_iframe {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+label.hasClickPopover {
+	cursor: pointer;
+}
+
+.popover-title {
+	background-color: #f7f7f7 !important;
+	background: url('../images/close.png') no-repeat;
+	background-position: right top;
+	cursor: pointer;
+}
+
+.popover.right {
+	margin-left: 10px;
+	margin-top: 15px;
+	width: 300px;
+	max-width: 300px;
+}
+
+/* Override table width */
+table.admintable {
+	width: 85%;
+}
+
+#title {
+	width: 50% !important;
+}
+
+#linkurl,#rssurl {
+	width: 70% !important;
+}

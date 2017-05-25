@@ -1,0 +1,140 @@
+@CHARSET "UTF-8";
+
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icomoon.eot') format('eot'), 
+       url('../fonts/icomoon.woff') format('woff'), 
+       url('../fonts/icomoon.ttf') format('truetype'); 
+}
+
+.cf_edit_btn {
+	display: block;
+	float: right;
+	width: 18px;
+	height: 18px;
+	background: url(../images/edit.png) center center no-repeat;
+	border: none;
+}
+
+.cf_alias_input {
+	float: left;
+	width: 218px;
+}
+
+.cfDisplayTypes {
+	width: 90px;
+}
+
+.cf_edit_btn:hover {
+	text-decoration: none;
+}
+
+.icon-48-custom_filters {
+	background-image: url(../images/cf_logo_48.png);
+}
+
+#cf_info {
+	text-align: left;
+}
+
+#cf_versioninfo {
+	min-width: 130px;
+	min-height: 10px;
+}
+
+#cfoutdated {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+#cfupdated {
+	color: #007236;
+}
+
+.cfversion_no {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#cfupdate_toolbar {
+	display: none;
+	margin-top: 15px;
+}
+
+.cf_update_btn {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.order input{
+	width:80% !important;
+}
+
+.icon-32-optimize{
+	background: url(../images/icon-32-optimize.png) top center no-repeat;	
+}
+
+#cfOptimizerForm{
+	text-align:center;
+}
+
+#cfOptimizerForm #cf_optimizebtn{
+	padding:10px;
+	font-size:1.3em;
+}
+
+#cfOptimizerForm #cf_optimizebtn:hover{
+	background:#efefef;
+	cursor:pointer;
+}
+
+#optimizer_results{
+	margin:0px auto;
+	height:auto;
+	width:80%;
+	text-align:center;
+	padding:10% 0;
+}
+
+.cf_log_wrapper{
+	font-size:1.3em;
+}
+
+.cf_log_wrapper .msg_precentage{
+	font-size:1.5em;
+	color:green;
+}
+
+.cf_spinner{
+	background: url(../images/spinner2.gif) center center no-repeat;
+}
+
+#cf_copyright_footer {
+	margin-top: 5px;
+}
+
+#cf_jed {
+	float: right;
+}
+
+/*Modal link*/
+.cf_adv_settings {
+	display: block;
+}
+
+/*General*/
+.cfdisplay {
+	display: block;
+}
+
+.cfhide {
+	display: none !important;
+}
+
+[data-icon]:before {
+  font-family: icons; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}

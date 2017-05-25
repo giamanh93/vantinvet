@@ -1,0 +1,23 @@
+{
+	"c":"introtext",
+	"#__k2_items":"introtext",
+	"#__easyblog_post":"content",
+	"#__discuss_posts":"content",
+	"#__community_events":"description",
+	"#__hikashop_product":"product_description",
+	"#__mijoshop_product_description":"description",
+	"#__kunena_topics":"first_post_message",
+	"#__mt_links":"link_desc",
+	"#__eshop_productdetails":"product_desc",
+	"#__adsmanager_ads":"ad_text",
+	"#__jevents_vevdetail":"description",
+	"#__ohanah_events":"description",
+	"#__docman_documents":"description",
+	"#__phocadownload":"description",
+	"#__jdownloads_files":"description",
+	"#__djc2_items":"description",
+	"#__djcf_items":"description",
+	"#__digistore_products":"description",
+	"#__hwdms_media":"description",
+	"#__cddir_content":"introtext"
+}

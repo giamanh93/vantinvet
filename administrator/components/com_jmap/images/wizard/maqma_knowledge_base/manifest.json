@@ -1,0 +1,32 @@
+{
+	"postfields":{
+		"option":"com_maqmahelpdesk",
+		"table_maintable":"#__support_kb",
+		"titlefield":"kbtitle",
+		"id":"id",
+		"where1_maintable":"approved",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"ordering",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__support_kb",
+		"table_joinwith_jointable1":"#__support_kb_category",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"id_kb",
+		"table_joinfrom_jointable2":"#__support_kb_category",
+		"table_joinwith_jointable2":"#__support_category",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"id_category",
+		"field_joinwith_jointable2":"id",
+		"field_select_jointable2":"name",
+		"field_as_jointable2":"catname",
+		"use_category_title_jointable2":"1",
+		"additionalparams_jointable2":"id_workgroup",
+		"orderby_jointable2":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"task=kb_view"
+	}
+}

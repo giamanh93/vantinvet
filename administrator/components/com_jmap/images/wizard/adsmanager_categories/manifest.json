@@ -1,0 +1,22 @@
+{
+	"postfields":{
+		"option":"com_adsmanager",
+		"table_maintable":"#__adsmanager_categories",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"catid",
+		"where1_maintable":"usergroupsread",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"ordering",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"substitutions":[
+		["`#__adsmanager_categories`.`usergroupsread` = '1'","(`#__adsmanager_categories`.`usergroupsread` = '1' OR `#__adsmanager_categories`.`usergroupsread` = '' OR ISNULL(`#__adsmanager_categories`.`usergroupsread`))"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"list",
+		"guess_sef_itemid":"1"
+	}
+}

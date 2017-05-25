@@ -1,0 +1,15 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"multiadiacency",
+	"item2category_table":"#__mijoshop_product_to_category",
+	"item2category_catid_field":"category_id",
+	"categories_table":"#__mijoshop_category",
+	"additional_categories_table":"#__mijoshop_category_description",
+	"additional_categories_table_on_catid_field":"category_id",
+	"category2category_table":"#__mijoshop_category",
+	"category_table_id_field":"category_id",
+	"category_table_name_field":"name",
+ 	"parent_field":"parent_id",
+ 	"child_field":"category_id",
+ 	"additional_categories_table_condition":"`#__mijoshop_category_description`.`language_id` = $$$"
+}

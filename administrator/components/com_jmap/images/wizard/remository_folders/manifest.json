@@ -1,0 +1,14 @@
+{
+	"postfields":{
+		"option":"com_remository",
+		"table_maintable":"#__downloads_containers",
+		"titlefield":"name",
+		"id":"id",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"additionalquerystring":"func=select"
+	}
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CUSTOMFILTERS_RESULTS" option="COM_CUSTOMFILTERS_RESULTS">
+		<help key="JHELP_MENUS_MENU_ITEM_SEARCH_RESULTS" />
+		<message>
+			<![CDATA[COM_CUSTOMFILTERS_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+
+		<!-- Basic options. -->
+		<fieldset name="basic">
+
+			<field type="text" default="3" name="prod_per_row"
+				label="COM_CUSTOMFILTERS_PRD_PER_ROW_LABEL" description="COM_CUSTOMFILTERS_PRD_PER_ROW_DESC" />
+			
+			<field type="text" default="12,24,36,48,60,72" name="pagination_list_sequence"
+				label="COM_CUSTOMFILTERS_PAGINATION_LIST_SEQUENCE_LABEL" description="COM_CUSTOMFILTERS_PAGINATION_LIST_SEQUENCE_DESC" />
+				
+			<field type="text" default="24" name="pagination_default_value"
+				label="COM_CUSTOMFILTERS_PAGINATION_DEFAULT_VAL_LABEL" description="COM_CUSTOMFILTERS_PAGINATION_DEFAULT_VAL_DESC" />
+
+			<field name="display_child_products" type="radio" default="0" class="btn-group btn-group-yesno"
+				label="COM_CUSTOMFILTERS_DISPLAY_CHILD_PRODUCTS_LABEL" description="COM_CUSTOMFILTERS_DISPLAY_CHILD_PRODUCTS_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="cfresults_layout" type="componentlayout"
+				label="JGLOBAL_FIELD_LAYOUT_LABEL" description="JGLOBAL_FIELD_LAYOUT_DESC"
+				menuitems="true" extension="com_virtuemart" view="category" />
+		</fieldset>
+	</fields>
+</metadata>

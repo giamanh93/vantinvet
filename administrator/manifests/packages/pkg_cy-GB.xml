@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<extension type="package" version="3.3.0" method="upgrade">
+  <name>Welsh Language Pack</name> 
+  <packagename>cy-GB</packagename> 
+  <version>3.3.0.2</version> 
+  <url /> 
+  <packager>Welsh Language</packager> 
+  <packagerurl /> 
+  <description>3.3 Joomla Language Pack for Welsh</description> 
+  <files>
+    <file type="language" client="site" id="cy-GB">site_cy-GB.zip</file> 
+    <file type="language" client="administrator" id="cy-GB">admin_cy-GB.zip</file> 
+  </files>
+   <updateservers>
+        <server type="collection" priority="1" name="Accredited Joomla! Translations">http://update.joomla.org/language/translationlist_3.xml</server>
+    </updateservers>
+</extension>

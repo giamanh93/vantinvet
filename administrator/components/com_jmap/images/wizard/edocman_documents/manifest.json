@@ -1,0 +1,34 @@
+{
+	"postfields":{
+		"option":"com_edocman",
+		"table_maintable":"#__edocman_documents",
+		"titlefield":"title",
+		"id":"id",
+		"orderby_maintable":"ordering",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__edocman_documents",
+		"table_joinwith_jointable1":"#__edocman_document_category",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"document_id",
+		"field_select_jointable1":"category_id",
+		"field_as_jointable1":"catid",
+		"where1_jointable1":"is_main_category",
+		"where1_value_jointable1":"1",
+		"table_joinfrom_jointable2":"#__edocman_document_category",
+		"table_joinwith_jointable2":"#__edocman_categories",
+		"field_joinfrom_jointable2":"category_id",
+		"field_joinwith_jointable2":"id",
+		"field_select_jointable2":"title",
+		"field_as_jointable2":"cattitle",
+		"use_category_title_jointable2":"1",
+		"where1_jointable2":"published",
+		"where1_value_jointable2":"1",
+		"orderby_jointable2":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+
+	"querystringlinkparams":{
+		"view":"document"
+	}
+}

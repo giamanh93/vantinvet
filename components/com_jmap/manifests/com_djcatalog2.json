@@ -1,0 +1,10 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"adiacency",
+	"categories_table":"#__djc2_categories",
+	"category2category_table":"#__djc2_categories",
+	"category_table_id_field":"id",
+	"category_table_name_field":"name",
+ 	"parent_field":"parent_id",
+ 	"child_field":"id"
+}

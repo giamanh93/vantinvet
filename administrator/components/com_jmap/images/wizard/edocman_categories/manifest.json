@@ -1,0 +1,14 @@
+{
+	"postfields":{
+		"option":"com_edocman",
+		"table_maintable":"#__edocman_categories",
+		"titlefield":"title",
+		"id":"id",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"category"
+	}
+}

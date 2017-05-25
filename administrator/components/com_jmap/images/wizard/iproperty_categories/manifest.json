@@ -1,0 +1,19 @@
+{
+	"postfields":{
+		"option":"com_iproperty",
+		"table_maintable":"#__iproperty_categories",
+		"titlefield":"title",
+		"id":"id",
+		"use_alias":"1",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"substitutions":[
+		["`#__iproperty_categories`.`language` = '*'","`#__iproperty_categories`.`language` = '*' OR `#__iproperty_categories`.`language` = ''"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"cat"
+	}
+}

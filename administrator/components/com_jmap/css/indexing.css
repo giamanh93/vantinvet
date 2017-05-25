@@ -1,0 +1,57 @@
+/* Google indexing styles */
+
+span.label.label-icon span.badge.pull-right {
+	float: none !important;
+}
+
+span.input-expanded {
+	max-width: 500px;
+	margin: 0;
+}
+
+span.badge.active.white {
+	background-color: #FFF;
+	color: #428bca;
+	margin-left: 10px;
+}
+
+table.full.headerlist td select {
+	padding: 2px;
+	min-height: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: right;
+}
+
+table.selectinput tr td span.input-expanded {
+	margin-bottom: 10px;
+}
+
+table.headerlist.selectinput td select {
+	border-radius: 0 3px 3px 0 !important;
+	height: 28px!important;
+	min-height: 0;
+	margin-bottom: 0;
+}
+
+h3.googletitle {
+	color: #1a0dab;
+	font-weight: normal;
+}
+
+a.googlelink {
+	color: #006621;
+	max-width: 600px;
+	display: block;
+	word-wrap: break-word;
+}
+
+img.googlelogo {
+	position: absolute;
+	right: 50px;
+}
+
+#search {
+	width: 250px;
+}

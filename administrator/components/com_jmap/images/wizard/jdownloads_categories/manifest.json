@@ -1,0 +1,19 @@
+{
+	"postfields":{
+		"option":"com_jdownloads",
+		"table_maintable":"#__jdownloads_categories",
+		"titlefield":"title",
+		"id":"id",
+		"idfield_as":"catid",
+		"where1_maintable":"parent_id",
+		"where1_operator_maintable":"!=",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"lft",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"category",
+		"guess_sef_itemid":"1"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"postfields":{
+		"option":"com_jomclassifieds",
+		"table_maintable":"#__jomcl_categories",
+		"titlefield":"title",
+		"id":"id",
+		"use_alias":"1",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"category",
+		"guess_sef_itemid":"1"
+	}
+}

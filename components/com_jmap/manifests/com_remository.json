@@ -1,0 +1,10 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"adiacency",
+	"categories_table":"#__downloads_containers",
+	"category2category_table":"#__downloads_containers",
+	"category_table_id_field":"id",
+	"category_table_name_field":"name",
+ 	"parent_field":"parentid",
+ 	"child_field":"id"
+}

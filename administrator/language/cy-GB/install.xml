@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3.0" client="administrator" type="language" method="upgrade">
+	<name>Cymraeg (United Kingdom)</name>
+	<tag>cy-GB</tag>
+	<version>3.3.0.2</version>
+	<creationDate>2014-05-07</creationDate>
+	<author>Joomla! Project</author>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<copyright>Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>cy-GB administrator language pack - partial</description>
+	<files>
+		<filename>cy-GB.plg_captcha_recaptcha.ini</filename>
+		<filename>cy-GB.plg_content_pagebreak.ini</filename>
+		<filename>cy-GB.plg_content_vote.ini</filename>
+		<filename>cy-GB.plg_editors-xtd_article.ini</filename>
+		<filename>cy-GB.plg_editors-xtd_image.ini</filename>
+		<filename>cy-GB.plg_editors-xtd_pagebreak.ini</filename>
+		<filename>cy-GB.plg_editors-xtd_readmore.ini</filename>
+		<filename>cy-GB.plg_finder_categories.ini</filename>
+		<filename>cy-GB.plg_finder_contacts.ini</filename>
+		<filename>cy-GB.plg_finder_content.ini</filename>
+		<filename>cy-GB.plg_finder_newsfeeds.ini</filename>
+		<filename>cy-GB.plg_finder_tags.ini</filename>
+		<filename>cy-GB.plg_finder_weblinks.ini</filename>
+		<filename>cy-GB.plg_quickicon_extensionupdate.ini</filename>
+		<filename>cy-GB.plg_quickicon_joomlaupdate.ini</filename>
+		<filename>cy-GB.plg_search_categories.ini</filename>
+		<filename>cy-GB.plg_search_contacts.ini</filename>
+		<filename>cy-GB.plg_search_content.ini</filename>
+		<filename>cy-GB.plg_search_newsfeeds.ini</filename>
+		<filename>cy-GB.plg_search_weblinks.ini</filename>
+		<filename>cy-GB.plg_user_profile.ini</filename>
+		<filename>cy-GB.lib_joomla.ini</filename>
+		<filename>cy-GB.localise.php</filename>		
+		<filename>index.html</filename> 
+		<filename file="meta">cy-GB.xml</filename>	
+		<filename file="meta">install.xml</filename>
+	</files>
+	<params />
+</extension>

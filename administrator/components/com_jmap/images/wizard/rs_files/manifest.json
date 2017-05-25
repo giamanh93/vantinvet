@@ -1,0 +1,25 @@
+{
+	"postfields":{
+		"option":"com_rsfiles",
+		"table_maintable":"#__rsfiles_files",
+		"titlefield":"FilePath",
+		"titlefield_as":"title",
+		"id":"FilePath",
+		"idfield_as":"path",
+		"where1_maintable":"CanView",
+		"where1_operator_maintable":"=",
+		"where1_value_maintable":"",
+		"orderby_maintable":"FilePath",
+		"orderby_direction_maintable":"ASC"
+	},
+
+	"substitutions":[
+		["`#__rsfiles_files`.`FilePath` AS `title`,","COALESCE(NULLIF(`#__rsfiles_files`.`FileName`, '') , `#__rsfiles_files`.`FilePath`) AS `title`,"],
+		["`#__rsfiles_files`.`FilePath` ASC","`title` ASC"]
+	],
+
+	"querystringlinkparams":{
+		"additionalquerystring":"layout=download",
+		"guess_sef_itemid":"1"
+	}
+}

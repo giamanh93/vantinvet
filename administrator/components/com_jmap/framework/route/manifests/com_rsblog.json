@@ -1,0 +1,5 @@
+{
+	"categories_table":"#__rsblog_categories",
+	"categories_table_id_field":"id",
+	"fallback_views":["posts"]
+}

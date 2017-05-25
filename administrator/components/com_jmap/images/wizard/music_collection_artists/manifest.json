@@ -1,0 +1,14 @@
+{
+	"postfields":{
+		"option":"com_muscol",
+		"table_maintable":"#__muscol_artists",
+		"titlefield":"artist_name",
+		"id":"id",
+		"orderby_maintable":"artist_name",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"artist"
+	}
+}

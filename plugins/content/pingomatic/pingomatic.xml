@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>Content - JSitemap Pingomatic</name>
+	<author>Joomla! Extensions Store</author>
+	<creationDate>August 2016</creationDate>
+	<copyright>Copyright (C) 2016 - Joomla! Extensions Store. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@storejextensions.org</authorEmail>
+	<authorUrl>http://storejextensions.org</authorUrl>
+	<version>4.2</version>
+	<description>JSitemap Pingomatic plugin</description>
+	
+	<files>
+		<filename plugin="pingomatic">pingomatic.php</filename>
+		<filename>index.html</filename>
+	</files>
+ 
+	<params>
+		
+	</params>
+
+</extension>

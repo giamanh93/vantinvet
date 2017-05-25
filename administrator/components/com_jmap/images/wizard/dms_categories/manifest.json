@@ -1,0 +1,14 @@
+{
+	"postfields":{
+		"option":"com_dms",
+		"table_maintable":"#__dms_categories",
+		"titlefield":"name",
+		"id":"id",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"category"
+	}
+}

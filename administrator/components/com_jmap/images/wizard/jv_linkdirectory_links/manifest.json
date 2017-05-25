@@ -1,0 +1,33 @@
+{
+	"postfields":{
+		"option":"com_jvld",
+		"table_maintable":"#__jvld_links",
+		"titlefield":"partner_title",
+		"id":"id",
+		"idfield_as":"lid",
+		"where1_maintable":"link_status",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"partner_title",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__jvld_links",
+		"table_joinwith_jointable1":"#__jvld_catlinks",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"lid",
+		"table_joinfrom_jointable2":"#__jvld_catlinks",
+		"table_joinwith_jointable2":"#__categories",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"cid",
+		"field_joinwith_jointable2":"id",
+		"field_select_jointable2":"title",
+		"use_category_title_jointable2":"1",
+		"where1_jointable2":"published",
+		"where1_value_jointable2":"1",
+		"orderby_jointable2":"lft",
+		"orderby_direction_jointable2":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"detail"
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"postfields":{
+		"option":"com_icagenda",
+		"table_maintable":"#__icagenda_events",
+		"titlefield":"title",
+		"id":"id",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__icagenda_events",
+		"table_joinwith_jointable1":"#__icagenda_category",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"catid",
+		"field_joinwith_jointable1":"id",
+		"field_select_jointable1":"title",
+		"field_as_jointable1":"cattitle",
+		"use_category_title_jointable1":"1",
+		"where1_jointable1":"state",
+		"where1_value_jointable1":"1",
+		"orderby_jointable1":"title",
+		"orderby_direction_jointable1":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"list",
+		"additionalquerystring":"layout=event",
+		"guess_sef_itemid":"1"
+	}
+}

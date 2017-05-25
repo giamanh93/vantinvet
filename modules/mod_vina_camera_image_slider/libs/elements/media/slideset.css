@@ -1,0 +1,99 @@
+/*
+# ------------------------------------------------------------------------
+# TCVN Rotating Image Module for Joomla 2.5
+# ------------------------------------------------------------------------
+# Copyright(C) 2008-2012 www.Thecoders.vn. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: Thecoders.vn
+# Websites: http://Thecoders.com
+# ------------------------------------------------------------------------
+*/
+
+.pane-slider{overflow: visible !important;}
+.clr {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+#tcvnSlideSet {
+	border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+	max-width: 600px;
+}
+#tcvnSlideSet .tcvnSlideSet-control{text-align: center; width: 100%; font-size: 130%; margin: 5px 0 10px;}
+#tcvnSlideSet #tcvnSlideSet-source{
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 130%;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.tcvnSlideSet-item{width:100%;}
+.tcvnSlideSet-item .tcvnSlideSet-title{
+    background-image: -moz-linear-gradient(center top , #FFFFFF 20%, #F6F6F6 50%, #EEEEEE 52%, #F4F4F4 100%);
+    border: 1px solid #AAAAAA;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 3px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #444444;
+    cursor: pointer;
+    display: block;
+    line-height: 16px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+}
+.tcvnSlideSet-item .tcvnSlideSet-inputs{width:100%;}
+.tcvnSlideSet-item .tcvnSlideSet-input{margin:10px;}
+.tcvnSlideSet-item .tcvnSlideSet-input input{
+    background-image: -moz-linear-gradient(center top , #FFFFFF 20%, #F6F6F6 50%, #EEEEEE 52%, #F4F4F4 100%);
+    border: 1px solid #AAAAAA;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 3px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #444444;
+    display: block;
+    height: 23px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 0 8px;
+    width: 560px;
+}
+.tcvnSlideSet-item .tcvnSlideSet-input textarea{
+    background-image: -moz-linear-gradient(center top , #FFFFFF 20%, #F6F6F6 50%, #EEEEEE 52%, #F4F4F4 100%);
+    border: 1px solid #AAAAAA;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 3px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    display: block;
+    font-size: 12px;
+    height: 100px;
+    line-height: 15px;
+    padding: 5px;
+    width: 567px;
+}
+.tcvnSlideSet-item .tcvnSlideSet-input label{
+    font-weight: bold;
+    line-height: 24px;
+    min-width: 84px !important;
+    padding-left: 8px;
+}
+#tcvnSlideSet-art .tcvnSlideSet-item .tcvnSlideSet-input select, .tcvnSlideSet-easing{width:100%}
+.tcvnSlideSet-handle{
+	border-right: 1px solid #137AAF;
+    cursor: move;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    width: 20px;
+}
+.tcvnSlideSet-title-control{position: absolute; right:0; top: -2px;}
+a.tcvnSlideSet-button{display:block; width:17px; margin: 5px;}
+.tcvnSlideSet-buttontext{margin: 0 4px; font-size: 12px; font-weight: normal;}
+
+ul.chzn-results{
+    overflow: visible !important;
+}
+#tcvnSlideSet-art .chzn-container-single-nosearch .chzn-search input { position: static !important; }
+.chzn-drop{
+    overflow-y: auto;
+    overflow-x: hidden;
+}

@@ -1,0 +1,11 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"adiacency",
+	"categories_table":"#__mt_cats",
+	"category2category_table":"#__mt_cats",
+	"category_table_id_field":"cat_id",
+	"category_table_name_field":"cat_name",
+ 	"parent_field":"cat_parent",
+ 	"child_field":"cat_id",
+ 	"category_condition":["`#__mt_cats`.`cat_approved` = '1'"]
+}

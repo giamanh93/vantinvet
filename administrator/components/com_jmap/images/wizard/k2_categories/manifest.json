@@ -1,0 +1,18 @@
+{
+	"postfields":{
+		"option":"com_k2",
+		"table_maintable":"#__k2_categories",
+		"titlefield":"name",
+		"id":"id",
+		"use_alias":"1",
+		"where1_maintable":"trash",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"itemlist",
+		"additionalquerystring":"task=category"
+	}
+}

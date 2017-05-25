@@ -1,0 +1,20 @@
+{
+	"postfields":{
+		"option":"com_jomdirectory",
+		"table_maintable":"#__cddir_categories",
+		"titlefield":"title",
+		"id":"id",
+		"idfield_as":"categories_id",
+		"use_alias":"1",
+		"where1_maintable":"trash",
+		"where1_value_maintable":"0",
+		"where1_maintable":"extension",
+		"where1_value_maintable":"com_jomdirectory.jomdirectory",
+		"orderby_maintable":"lft",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"items"
+	}
+}

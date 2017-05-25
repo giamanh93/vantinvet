@@ -1,0 +1,27 @@
+{
+	"postfields":{
+		"option":"com_eshop",
+		"table_maintable":"#__eshop_categorydetails",
+		"titlefield":"category_name",
+		"id":"category_id",
+		"idfield_as":"id",
+		"additionalparams_maintable":"language",
+		"orderby_maintable":"category_name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__eshop_categorydetails",
+		"table_joinwith_jointable1":"#__eshop_categories",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"category_id",
+		"field_joinwith_jointable1":"id",
+		"where1_jointable1":"published",
+		"where1_value_jointable1":"1"
+	},
+		
+	 "substitutions":[
+		["{langtag}","{languagetag}"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"category"
+	}
+}

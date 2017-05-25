@@ -1,0 +1,6 @@
+{
+	"categories_table":"#__joomgallery_catg",
+	"categories_table_id_field":"cid",
+	"categories_parent_id":"parent_id",
+	"fallback_views":["gallery"]
+}

@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="9.2.7"
+	method="upgrade"
+	>
+	<name>mod_qlform</name>
+	<author>ql.de</author>
+	<creationDate>January 2014</creationDate>
+	<copyright>Copyright (C) 2014 ql.de</copyright>
+	<license>GNU Lesser General Public License (LGPL); see LICENSE.txt</license>
+	<authorEmail>mareike.riegel@ql.de</authorEmail>
+	<authorUrl>ql.de</authorUrl>
+	<version>9.2.7</version>
+	<description>qlform generates a form; form fields are defined via J!-form generation. You'll love it!</description>
+	<files>
+		<filename module="mod_qlform">mod_qlform.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+        <filename>license.txt</filename>
+		<folder>tmpl</folder>
+		<folder>classes</folder>
+		<folder>captcha</folder>
+		<folder>language</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_qlform.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_qlform.sys.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.mod_qlform.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.mod_qlform.sys.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_qlform.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_qlform.sys.ini</language>
+        <language tag="pt-BR">language/pt-BR/pt-BR.mod_qlform.ini</language>
+        <language tag="pt-BR">language/pt-BR/pt-BR.mod_qlform.sys.ini</language>
+        <language tag="it-IT">language/it-IT/it-IT.mod_qlform.ini</language>
+        <language tag="it-IT">language/it-IT/it-IT.mod_qlform.sys.ini</language>
+        <language tag="tr-TR">language/tr-TR/tr-TR.mod_qlform.ini</language>
+        <language tag="tr-TR">language/tr-TR/tr-TR.mod_qlform.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.mod_qlform.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.mod_qlform.sys.ini</language>
+    </languages>
+
+	<config>
+		<fields name="params">
+			
+			<fieldset name="basic">
+				<field
+                        addfieldpath="/modules/mod_qlform/classes/fields"
+                        addrulepath="/modules/mod_qlform/classes/rules"
+                        name="xml"
+                        type="xml"
+                        validate="xml"
+                        cols="70"
+                        rows="20"
+                        label="MOD_QLFORM_XML_LABEL"
+                        description="MOD_QLFORM_XML_DESC"
+                        default='[form]&#13;&#10; [fieldset name="fieldset1"]&#13;&#10;  [field name="name" label="Name" type="text"  size="50" required="true" /]&#13;&#10;  [field name="email" label="Email" type="email" size="50" required="true" validate="email" /]&#13;&#10;  [field name="subject" label="Subject" type="text" size="50" /]&#13;&#10;  [field name="message" label="Message" type="textarea" cols="50" rows="20" required="true" /]&#13;&#10; [/fieldset] &#13;&#10;[/form]'
+                        required="true">
+                </field>
+                <field
+					name="todoEmail"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_TODOSENDEMAIL_LABEL"
+					description="MOD_QLFORM_TODOSENDEMAIL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="todoDatabase"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_TODODATABASE_LABEL"
+					description="MOD_QLFORM_TODODATABASE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+                <field
+                        name="todoDatabaseExternal"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_TODODATABASEEXTERNAL_LABEL"
+                        description="MOD_QLFORM_TODODATABASEEXTERNAL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="todoSendAdminmessage"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_TODOSENDADMINMESSAGE_LABEL"
+                        description="MOD_QLFORM_TODOSENDADMINMESSAGE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field
+					name="todoSomethingElse"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_TODOSOMETHINGELSE_LABEL"
+					description="MOD_QLFORM_TODOSOMETHINGELSE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>				
+				<field
+					name="todoSomethingCompletelyDifferent"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_TODOSOMETHINGCOMPLETELYDIFFERENT_LABEL"
+					description="MOD_QLFORM_TODOSOMETHINGCOMPLETELYDIFFERENT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field
+					name="emailcloak"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_EMAILCLOAK_LABEL"
+					description="MOD_QLFORM_EMAILCLOAK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+                <field
+                        name="show_data_sent"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_SHOWDATASENT_LABEL"
+                        description="MOD_QLFORM_SHOWDATASENT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="basicoptions2">
+                <field
+                    name="messageType"
+                    type="list"
+                    default="1"
+                    label="MOD_QLFORM_MESSAGETYPE_LABEL"
+                    description="MOD_QLFORM_MESSAGETYPE_DESC">
+                    <option value="0">JNONE</option>
+                    <option value="1">MOD_QLFORM_MESSAGETYPE_MESSAGE_VIA_MODULE</option>
+                    <option value="2">MOD_QLFORM_MESSAGETYPE_MESSAGE_VIA_JOOMLA</option>
+                    <option value="3">MOD_QLFORM_MESSAGETYPE_MESSAGE_VIA_MODULE_AND_JOOMLA</option>
+                </field>
+                <field
+                    name="submit"
+                    type="text"
+                    size="30"
+                    label="MOD_QLFORM_SUBMIT_LABEL"
+                    description="MOD_QLFORM_SUBMIT_DESC"
+                    default="Submit">
+                </field>
+            </fieldset>
+            <fieldset name="sendcopy">
+                <field
+                        name="sendcopy"
+                        type="list"
+                        label="MOD_QLFORM_SENDCOPYBOOL_LABEL"
+                        description="MOD_QLFORM_SENDCOPYBOOl_DESC"
+                        default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="sendcopyfieldname"
+                        type="text"
+                        label="MOD_QLFORM_SENDCOPYFIELD_LABEL"
+                        description="MOD_QLFORM_SENDCOPYFIELD_DESC"
+                        default="email"
+                        required="true">
+                </field>
+                <field
+                        name="sendcopyemailreplyto"
+                        type="email"
+                        validate="email"
+                        size="30"
+                        label="MOD_QLFORM_SENDCOPYEMAILREPLYTO_LABEL"
+                        description="MOD_QLFORM_SENDCOPYEMAILREPLYTO_DESC"
+                        default="">
+                </field>
+                <field
+                        name="sendcopypretext"
+                        type="textarea"
+                        rows="10" cols="100"
+                        label="MOD_QLFORM_SENDCOPYPRETEXT_LABEL"
+                        description="MOD_QLFORM_SENDCOPYPRETEXT_DESC">
+                </field>
+                <field
+                        name="sendcopylabels"
+                        type="list"
+                        label="MOD_QLFORM_SENDCOPYLABELS_LABEL"
+                        description="MOD_QLFORM_SENDCOPYLABELS_DESC"
+                        default="1"
+                        >
+                    <option value="1">MOD_QLFORM_SENDCOPYLABELS_FORMLABELS</option>
+                    <option value="2">MOD_QLFORM_SENDCOPYLABELS_FIELDNAMES</option>
+                </field>
+            </fieldset>
+            <fieldset name="additionalfields">
+                <field
+                        name="backbool"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_BACKBOOL_LABEL"
+                        description="MOD_QLFORM_BACKBOOL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                        name="fieldModuleId"
+                        type="list"
+                        default="1"
+                        label="MOD_QLFORM_MODULEID_LABEL"
+                        description="MOD_QLFORM_MODULEID_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field
+					name="user_id"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_USERID_LABEL"
+					description="MOD_QLFORM_USERID_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="user_id"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_USERID_LABEL"
+					description="MOD_QLFORM_USERID_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="user_email"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_USEREMAIL_LABEL"
+					description="MOD_QLFORM_USEREMAIL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="article_id"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_ARTICLEID_LABEL"
+					description="MOD_QLFORM_ARTICLEID_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="article_title"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_ARTICLETITLE_LABEL"
+					description="MOD_QLFORM_ARTICLETITLE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+                <field
+                        name="server_data"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_SERVERDATA_LABEL"
+                        description="MOD_QLFORM_SERVERDATA_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="server_data_jsonify"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_SERVERDATAJSONIFY_LABEL"
+                        description="MOD_QLFORM_SERVERDATAJSONIFY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="server_data_ip_anonymize"
+                        type="list"
+                        default="1"
+                        label="MOD_QLFORM_SERVERDATAIPANONYMIZE_LABEL"
+                        description="MOD_QLFORM_SERVERDATAIPANONYMIZE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+				<field type="spacer" />
+			</fieldset>
+			<fieldset name="captcha">
+				<field
+					name="captcha"
+					type="list"
+					label="MOD_QLFORM_CAPTCHA_LABEL"
+					description="MOD_QLFORM_CAPTCHA_DESC"
+					default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+                <field
+                        name="captchaadded"
+                        type="list"
+                        label="MOD_QLFORM_CAPTCHAADDED_LABEL"
+                        description="MOD_QLFORM_CAPTCHAADDED_DESC"
+                        default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field
+					name="captchalabel"
+					type="text"
+					size="70"
+					label="MOD_QLFORM_CAPTCHALABEL_LABEL"
+					description="MOD_QLFORM_CAPTCHALABEL_DESC">
+				</field>
+                <field
+					name="captchadesc"
+					type="text"
+					size="70"
+					label="MOD_QLFORM_CAPTCHADESC_LABEL"
+					description="MOD_QLFORM_CAPTCHADESC_DESC">
+				</field>
+                <field
+                        name="captcha_intTextLenght"
+                        type="text"
+                        size="70"
+                        default="4"
+                        label="MOD_QLFORM_CAPTCHA_INTTEXTLENGTH_LABEL"
+                        description="MOD_QLFORM_CAPTCHA_INTTEXTLENGTH_DESC">
+                </field>
+                <field
+                        name="captcha_intFontSize"
+                        type="text"
+                        size="70"
+                        default="26"
+                        label="MOD_QLFORM_CAPTCHA_INTFONTSIZE_LABEL"
+                        description="MOD_QLFORM_CAPTCHA_INTFONTSIZE_DESC">
+                </field>
+                <field
+                        name="captcha_intIMGWidth"
+                        type="text"
+                        size="70"
+                        default="160"
+                        label="MOD_QLFORM_CAPTCHA_INTIMAGEWIDTH_LABEL"
+                        description="MOD_QLFORM_CAPTCHA_INTIMAGEWIDTH_DESC">
+                </field>
+                <field
+                        name="captcha_intIMGHeight"
+                        type="text"
+                        size="70"
+                        default="60"
+                        label="MOD_QLFORM_CAPTCHA_INTIMAGEHEIGHT_LABEL"
+                        description="MOD_QLFORM_CAPTCHA_INTIMAGEHEIGHT_DESC">
+                </field>
+                <field
+                        name="captcha_arrBGColor"
+                        type="color"
+                        size="70"
+                        default="#ffffff"
+                        label="MOD_QLFORM_CAPTCHA_COLORBG_LABEL"
+                        description="MOD_QLFORM_CAPTCHA_COLORBG_DESC">
+                </field>
+                <field
+                        name="captcha_arrTextColor"
+                        type="color"
+                        size="70"
+                        default="#000000"
+                        label="MOD_QLFORM_CAPTCHA_COLORTXT_LABEL"
+                        description="MOD_QLFORM_CAPTCHA_COLORTXT_DESC">
+                </field>
+                <field
+                        name="captcha_intFontAngel"
+                        type="integer"
+                        default="7"
+                        step="6"
+                        first="0"
+                        last="360"
+                        label="MOD_QLFORM_CAPTCHA_INTFONTANGEL_LABEL"
+                        description="MOD_QLFORM_CAPTCHA_INTFONTANGEL_DESC">
+                </field>
+			</fieldset>
+			<fieldset name="email">
+                <field
+                        name="emailrecipient"
+                        type="textarea"
+                        cols="70"
+                        rows="4"
+                        label="MOD_QLFORM_EMAILRECIPIENT_LABEL"
+                        description="MOD_QLFORM_EMAILRECIPIENT_DESC"
+                        required="true">
+                </field>
+                <field
+                        name="emaillabels"
+                        type="list"
+                        label="MOD_QLFORM_EMAILLABELS_LABEL"
+                        description="MOD_QLFORM_EMAILLABELS_DESC"
+                        default="1"
+                        >
+                    <option value="1">MOD_QLFORM_EMAILLABELS_FORMLABELS</option>
+                    <option value="2">MOD_QLFORM_EMAILLABELS_FIELDNAMES</option>
+                </field>
+                <field
+                        name="emailseparator"
+                        type="list"
+                        label="MOD_QLFORM_EMAILSEPARATOR_LABEL"
+                        description="MOD_QLFORM_EMAILSEPARATOR_DESC"
+                        default="1"
+                        >
+                    <option value="1">MOD_QLFORM_EMAILSEPARATOR_COLON</option>
+                    <option value="2">MOD_QLFORM_EMAILSEPARATOR_NEWLINE</option>
+                </field>
+                <field
+                        name="emailseparator2"
+                        type="list"
+                        label="MOD_QLFORM_EMAILSEPARATOR2_LABEL"
+                        description="MOD_QLFORM_EMAILSEPARATOR2_DESC"
+                        default="1"
+                        >
+                    <option value="1">MOD_QLFORM_EMAILSEPARATOR2_NEWLINE</option>
+                    <option value="2">MOD_QLFORM_EMAILSEPARATOR2_2NEWLINES</option>
+                </field>
+                <field
+                        name="emailsubject"
+                        type="text"
+                        size="30"
+                        label="MOD_QLFORM_SUBJECT_LABEL"
+                        description="MOD_QLFORM_SUBJECT_DESC"
+                        default="Mail from website">
+                </field>
+                <field
+                        name="emailsubject2"
+                        type="text"
+                        size="30"
+                        label="MOD_QLFORM_SUBJECT2_LABEL"
+                        description="MOD_QLFORM_SUBJECT2_DESC"
+                        default="email">
+                </field>
+                <field
+                        name="emailsender"
+                        type="text"
+                        size="30"
+                        label="MOD_QLFORM_EMAILSENDER_LABEL"
+                        description="MOD_QLFORM_EMAILSENDER_DESC"
+                        >
+                </field>
+                <field
+                        name="emailreplyto"
+                        type="text"
+                        size="30"
+                        label="MOD_QLFORM_EMAILREPLYTO_LABEL"
+                        description="MOD_QLFORM_EMAILREPLYTO_DESC"
+                        >
+                </field>
+
+            </fieldset>
+			<fieldset name="database">
+				<field
+					name="databasetable"
+					type="text"
+					default="#__qlform_survey1"
+					label="MOD_QLFORM_DATABASETABLE_LABEL"
+					description="MOD_QLFORM_DATABASETABLE_DESC"
+					size="70">
+				</field>
+				<field
+					name="databaseaddcreated"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_DATABASEADDCREATED_LABEL"
+					description="MOD_QLFORM_DATABASEADDCREATED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="showDatabaseFormError"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_SHOWDATABASEFORMERROR_LABEL"
+					description="MOD_QLFORM_SHOWDATABASEFORMERROR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+                <field
+                        name="showDataSavedToDatabase"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_SHOWDATASAVEDTODATABASE_LABEL"
+                        description="MOD_QLFORM_SHOWDATASAVEDTODATABASE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+			</fieldset>
+            <fieldset name="databaseexternal">
+                <field
+                        name="databaseexternaldriver"
+                        type="list"
+                        default="mysqli"
+                        label="MOD_QLFORM_DATABASEEXTERNALDRIVER_LABEL"
+                        description="MOD_QLFORM_DATABASEEXTERNALDRIVER_DESC"
+                        >
+                    <option value="">JNO</option>
+                    <option value="mysql">MOD_QLFORM_DATABASEEXTERNALDRIVER_MYSQL</option>
+                    <option value="mysqli">MOD_QLFORM_DATABASEEXTERNALDRIVER_MYSQLI</option>
+                    <option value="postgre">MOD_QLFORM_DATABASEEXTERNALDRIVER_POSTGRE</option>
+                </field>
+                <field
+                        name="databaseexternalhost"
+                        type="text"
+                        label="MOD_QLFORM_DATABASEEXTERNALHOST_LABEL"
+                        description="MOD_QLFORM_DATABASEEXTERNALHOST_DESC"
+                        size="70"
+                        >
+                </field>
+                <field
+                        name="databaseexternaluser"
+                        type="text"
+                        label="MOD_QLFORM_DATABASEEXTERNALUSER_LABEL"
+                        description="MOD_QLFORM_DATABASEEXTERNALUSER_DESC"
+                        size="70"
+                        >
+                </field>
+                <field
+                        name="databaseexternalpassword"
+                        type="text"
+                        label="MOD_QLFORM_DATABASEEXTERNALPASSWORD_LABEL"
+                        description="MOD_QLFORM_DATABASEEXTERNALPASSWORD_DESC"
+                        size="70"
+                        >
+                </field>
+                <field
+                        name="databaseexternaldatabase"
+                        type="text"
+                        label="MOD_QLFORM_DATABASEEXTERNALDATABASE_LABEL"
+                        description="MOD_QLFORM_DATABASEEXTERNALDATABASE_DESC"
+                        size="70"
+                        >
+                </field>
+                <field
+                        name="databaseexternaltable"
+                        type="text"
+                        default="qlform_survey1"
+                        label="MOD_QLFORM_DATABASETABLE_LABEL"
+                        description="MOD_QLFORM_DATABASETABLE_DESC"
+                        size="70"
+                        >
+                </field>
+                <field
+                        name="databaseexternalprefix"
+                        type="text"
+                        default=""
+                        label="MOD_QLFORM_DATABASEEXTERNALPREFIX_LABEL"
+                        description="MOD_QLFORM_DATABASEEXTERNALPREFIX_DESC"
+                        size="10"
+                        >
+                </field>
+                <field
+                        name="databaseexternaladdcreated"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_DATABASEADDCREATED_LABEL"
+                        description="MOD_QLFORM_DATABASEADDCREATED_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="showDatabaseexternalFormError"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_SHOWDATABASEFORMERROR_LABEL"
+                        description="MOD_QLFORM_SHOWDATABASEFORMERROR_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="showDataSavedToDatabaseexternal"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_SHOWDATASAVEDTODATABASE_LABEL"
+                        description="MOD_QLFORM_SHOWDATASAVEDTODATABASE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="adminmessage">
+                <field
+                        name="adminmessagerecipient"
+                        type="user"
+                        label="MOD_QLFORM_ADMINMESSAGERECIPIENT_LABEL"
+                        description="MOD_QLFORM_ADMINMESSAGERECIPIENT_DESC"
+                        >
+                </field>
+                <field
+                        name="adminmessagesender"
+                        type="user"
+                        label="MOD_QLFORM_ADMINMESSAGESENDER_LABEL"
+                        description="MOD_QLFORM_ADMINMESSAGESENDER_DESC"
+                        >
+                </field>
+                <field
+                        name="adminmessagesubject"
+                        type="text"
+                        size="30"
+                        label="MOD_QLFORM_ADMINMESSAGESUBJECT_LABEL"
+                        description="MOD_QLFORM_ADMINMESSAGESUBJECT_DESC"
+                        default="Message via qlform">
+                </field>
+                <field type="spacer" label="MOD_QLFORM_ADMINMESSAGECOMMENT" />
+                <field
+                        name="adminmessagetemplateoverride"
+                        type="list"
+                        label="MOD_QLFORM_ADMINMESSAGETEMPLATEOVERRIDE_LABEL"
+                        description="MOD_QLFORM_ADMINMESSAGETEMPLATEOVERRIDE_DESC"
+                        default="0">
+                    <option value="0">MOD_QLFORM_ADMINMESSAGETEMPLATEOVERRIDE_NOPE</option>
+                    <option value="1">MOD_QLFORM_ADMINMESSAGETEMPLATEOVERRIDE_YES</option>
+                </field>
+            </fieldset>
+            <!--fieldset name="sms">
+                <field
+                        name="smsrecipient"
+                        type="text"
+                        label="MOD_QLFORM_SMSRECIPIENT_LABEL"
+                        description="MOD_QLFORM_SMSRECIPIENT_DESC"
+                        size="70">
+                </field>
+                <field
+                        name="smsuser"
+                        type="text"
+                        label="MOD_QLFORM_SMSUSER_LABEL"
+                        description="MOD_QLFORM_SMSUSER_DESC"
+                        size="70"
+                        >
+                </field>
+                <field
+                        name="smspassword"
+                        type="text"
+                        label="MOD_QLFORM_SMSPASSWORD_LABEL"
+                        description="MOD_QLFORM_SMSPASSWORD_DESC"
+                        size="70"
+                        >
+                </field>
+                <field
+                        name="smstelephonenumber"
+                        type="text"
+                        label="MOD_QLFORM_SMSTELEPHONENUMBER_LABEL"
+                        description="MOD_QLFORM_SMSTELEPHONENUMBER_DESC"
+                        size="70"
+                        >
+                </field>
+            </fieldset-->
+			<fieldset name="cascade">
+				<field
+					name="action"
+					type="text"
+					size="100"
+					label="MOD_QLFORM_CASCADEACTION_LABEL"
+					description="MOD_QLFORM_CASCADEACTION_DESC"
+					default="#">
+				</field>
+				<field
+					name="addPostToForm"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_CASCADEADDPOST_LABEL"
+					description="MOD_QLFORM_CASCADEADDPOST_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+			<fieldset name="message">
+
+				<field
+					name="locationbool"
+					type="list"
+					label="MOD_QLFORM_LOCATIONBOOL_LABEL"
+					description="MOD_QLFORM_LOCATIONBOOl_DESC"
+					default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field
+					name="location"
+					type="text"
+					size="100"
+					label="MOD_QLFORM_LOCATION_LABEL"
+					description="MOD_QLFORM_LOCATION_DESC"
+					default="#">
+				</field>
+
+				<field type="spacer" />
+				<field
+					name="message"
+					type="editor"
+					width="210"
+					label="MOD_QLFORM_MESSAGE_LABEL"
+					description="MOD_QLFORM_MESSAGE_DESC"
+					filter="safehtml"
+					default="Thank you!">
+				</field>
+				<field type="spacer" />			
+				<field
+					name="hideform"
+					type="list"
+					label="MOD_QLFORM_HIDEFORM_LABEL"
+					description="MOD_QLFORM_HIDEFORM_DESC"
+					default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>					
+				<field
+					name="showpretext"
+					type="list"
+					default="0"
+					label="MOD_QLFORM_PRETEXTSHOW_LABEL"
+					description="MOD_QLFORM_PRETEXTSHOW_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field type="spacer" />
+				<field
+					name="pretext"
+					type="editor"
+					width="210"
+					label="MOD_QLFORM_PRETEXT_LABEL"
+					description="MOD_QLFORM_PRETEXT_DESC"
+					filter="safehtml">
+				</field>
+				<field type="spacer" />
+			</fieldset>		
+
+            <fieldset name="styles">
+                <field
+                        name="stylesHtmltemplate"
+                        type="list"
+                        default="htmlpure"
+                        label="MOD_QLFORM_STYLES_HTMLTEMPLATE_LABEL"
+                        description="MOD_QLFORM_STYLES_HTMLTEMPLATE_DESC">
+                    <option value="bootstrap">MOD_QLFORM_STYLES_HTMLTEMPLATE_BOOTSTRAP</option>
+                    <option value="htmlpure">MOD_QLFORM_STYLES_HTMLTEMPLATE_HTMLPURE</option>
+                </field>
+                <field
+                        name="stylesActive"
+                        type="list"
+                        default="0"
+                        label="MOD_QLFORM_STYLES_ACTIVE_LABEL"
+                        description="MOD_QLFORM_STYLES_ACTIVE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        type="spacer"
+                        label="MOD_QLFORM_STYLES_SPACERFORM_LABEL"
+                        description="MOD_QLFORM_STYLES_SPACERFORM_DESC" />
+                <field
+                        name="stylesFormborderwidth"
+                        type="integer"
+                        default="0"
+                        first="0"
+                        last="15"
+                        step="1"
+                        label="MOD_QLFORM_STYLES_FORMBORDERWIDTH_LABEL"
+                        description="MOD_QLFORM_STYLES_FORMBORDERWIDTH_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFormborderstyle"
+                        type="list"
+                        label="MOD_QLFORM_STYLES_FORMBORDERSTYLE_LABEL"
+                        description="MOD_QLFORM_STYLES_FORMBORDERSTYLE_DESC"
+                        >
+                    <option value="solid">MOD_QLFORM_STYLES_FORMBORDERSTYLE_SOLID</option>
+                    <option value="dotted">MOD_QLFORM_STYLES_FORMBORDERSTYLE_DOTTED</option>
+                    <option value="dashed">MOD_QLFORM_STYLES_FORMBORDERSTYLE_DASHED</option>
+                </field>
+                <field
+                        name="stylesFormbordercolor"
+                        type="color"
+                        default="#000000"
+                        label="MOD_QLFORM_STYLES_FORMBORDERCOLOR_LABEL"
+                        description="MOD_QLFORM_STYLES_FORMBORDERCOLOR_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFormborderradius"
+                        type="integer"
+                        default="0"
+                        first="0"
+                        last="15"
+                        step="1"
+                        label="MOD_QLFORM_STYLES_FORMBORDERRADIUS_LABEL"
+                        description="MOD_QLFORM_STYLES_FORMBORDERRADIUS_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFormbackground"
+                        default="#ffffff"
+                        type="color"
+                        label="MOD_QLFORM_STYLES_FORMBACKGROUND_LABEL"
+                        description="MOD_QLFORM_STYLES_FORMBACKGROUND_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesComposition"
+                        type="list"
+                        default="row"
+                        label="MOD_QLFORM_STYLES_COMPOSITION_LABEL"
+                        description="MOD_QLFORM_STYLES_COMPOSITION_DESC"
+                        >
+                    <option value="row">MOD_QLFORM_STYLES_COMPOSITION_ROW</option>
+                    <option value="column">MOD_QLFORM_STYLES_COMPOSITION_COLUMN</option>
+                </field>
+                <field
+                        name="stylesCompositionLabelwidth"
+                        type="text"
+                        label="MOD_QLFORM_STYLES_COMPOSITIONLABELWIDTH_LABEL"
+                        description="MOD_QLFORM_STYLES_COMPOSITIONLABELWIDTH_DESC"
+                        >
+                </field>
+                <field
+                        type="spacer"
+                        label="MOD_QLFORM_STYLES_SPACERFIELDSETS_LABEL"
+                        description="MOD_QLFORM_STYLES_SPACERFIELDSETS_DESC" />
+                <field
+                        name="stylesFieldsetborderwidth"
+                        type="integer"
+                        default="0"
+                        first="0"
+                        last="15"
+                        step="1"
+                        label="MOD_QLFORM_STYLES_FIELDSETBORDERWIDTH_LABEL"
+                        description="MOD_QLFORM_STYLES_FIELDSETBORDERWIDTH_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFieldsetborderstyle"
+                        type="list"
+                        label="MOD_QLFORM_STYLES_FIELDSETBORDERSTYLE_LABEL"
+                        description="MOD_QLFORM_STYLES_FIELDSETBORDERSTYLE_DESC"
+                        >
+                    <option value="solid">MOD_QLFORM_STYLES_FIELDSETBORDERSTYLE_SOLID</option>
+                    <option value="dotted">MOD_QLFORM_STYLES_FIELDSETBORDERSTYLE_DOTTED</option>
+                    <option value="dashed">MOD_QLFORM_STYLES_FIELDSETBORDERSTYLE_DASHED</option>
+                </field>
+                <field
+                        name="stylesFieldsetbordercolor"
+                        type="color"
+                        default="#000000"
+                        label="MOD_QLFORM_STYLES_FIELDSETBORDERCOLOR_LABEL"
+                        description="MOD_QLFORM_STYLES_FIELDSETBORDERCOLOR_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFieldsetborderradius"
+                        type="integer"
+                        default="0"
+                        first="0"
+                        last="15"
+                        step="1"
+                        label="MOD_QLFORM_STYLES_FIELDSETBORDERRADIUS_LABEL"
+                        description="MOD_QLFORM_STYLES_FIELDSETBORDERRADIUS_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFieldsetbackground"
+                        default="#ffffff"
+                        type="color"
+                        label="MOD_QLFORM_STYLES_FIELDSETBACKGROUND_LABEL"
+                        description="MOD_QLFORM_STYLES_FIELDSETBACKGROUND_DESC"
+                        >
+                </field>
+                <field
+                        type="spacer"
+                        label="MOD_QLFORM_STYLES_SPACERFONT_LABEL"
+                        description="MOD_QLFORM_STYLES_SPACERFONT_DESC" />
+                <field
+                        name="stylesFontcolor"
+                        type="color"
+                        default="#000000"
+                        label="MOD_QLFORM_STYLES_FONTCOLOR_LABEL"
+                        description="MOD_QLFORM_STYLES_FONTCOLOR_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFontsize"
+                        type="integer"
+                        default="15"
+                        first="5"
+                        last="40"
+                        step="1"
+                        label="MOD_QLFORM_STYLES_FONTSIZE_LABEL"
+                        description="MOD_QLFORM_STYLES_FONTSIZE_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesFontfamily"
+                        type="list"
+                        default=""
+                        label="MOD_QLFORM_STYLES_FONTFAMILY_LABEL"
+                        description="MOD_QLFORM_STYLES_FONTFAMILY_DESC"
+                        >
+                    <option value="">JNONE</option>
+                    <option value="Arial">MOD_QLFORM_STYLES_FONTFAMILY_ARIAL</option>
+                    <option value="Times New Roman">MOD_QLFORM_STYLES_FONTFAMILY_TIMESNEWROMAN</option>
+                    <option value="Verdana">MOD_QLFORM_STYLES_FONTFAMILY_VERDANA</option>
+                </field>
+                <field
+                        type="spacer"
+                        label="MOD_QLFORM_STYLES_SPACERINPUT_LABEL"
+                        description="MOD_QLFORM_STYLES_SPACERINPUT_DESC" />
+                <field
+                        name="stylesInputwidth"
+                        type="integer"
+                        default="60"
+                        first="10"
+                        last="400"
+                        step="15"
+                        label="MOD_QLFORM_STYLES_INPUTWIDTH_LABEL"
+                        description="MOD_QLFORM_STYLES_INPUTWIDTH_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesInputborderwidth"
+                        type="integer"
+                        default="0"
+                        first="0"
+                        last="15"
+                        step="1"
+                        label="MOD_QLFORM_STYLES_INPUTBORDERWIDTH_LABEL"
+                        description="MOD_QLFORM_STYLES_INPUTBORDERWIDTH_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesInputborderstyle"
+                        type="list"
+                        label="MOD_QLFORM_STYLES_INPUTBORDERSTYLE_LABEL"
+                        description="MOD_QLFORM_STYLES_INPUTBORDERSTYLE_DESC"
+                        >
+                    <option value="solid">MOD_QLFORM_STYLES_INPUTBORDERSTYLE_SOLID</option>
+                    <option value="dotted">MOD_QLFORM_STYLES_INPUTBORDERSTYLE_DOTTED</option>
+                    <option value="dashed">MOD_QLFORM_STYLES_INPUTBORDERSTYLE_DASHED</option>
+                </field>
+                <field
+                        name="stylesInputbordercolor"
+                        type="color"
+                        default="#000000"
+                        label="MOD_QLFORM_STYLES_INPUTBORDERCOLOR_LABEL"
+                        description="MOD_QLFORM_STYLES_INPUTBORDERCOLOR_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesInputborderradius"
+                        type="integer"
+                        default="0"
+                        first="0"
+                        last="15"
+                        step="1"
+                        label="MOD_QLFORM_STYLES_INPUTBORDERRADIUS_LABEL"
+                        description="MOD_QLFORM_STYLES_INPUTBORDERRADIUS_DESC"
+                        >
+                </field>
+                <field
+                        name="stylesInputbackground"
+                        type="color"
+                        default="#ffffff"
+                        label="MOD_QLFORM_STYLES_INPUTBACKGROUND_LABEL"
+                        description="MOD_QLFORM_STYLES_INPUTBACKGROUND_DESC"
+                        >
+                </field>
+                <field
+                        type="spacer"
+                        label="MOD_QLFORM_STYLES_SPACERADDITIONALSTYLES_LABEL"
+                        description="MOD_QLFORM_STYLES_SPACERADDITIONALSTYLES_DESC" />
+                <field
+                        name="stylesAdditionalstyles"
+                        type="textarea"
+                        default=""
+                        cols="50"
+                        rows="7"
+                        label="MOD_QLFORM_STYLES_ADDITIONALSTYLES_LABEL"
+                        description="MOD_QLFORM_STYLES_ADDITIONALSTYLES_DESC"
+                        >
+                </field>
+
+            </fieldset>
+
+            <fieldset name="author">
+                <field
+                        name="authorbool"
+                        type="list"
+                        default="1"
+                        label="MOD_QLFORM_AUTHORBOOL_LABEL"
+                        description="MOD_QLFORM_AUTHORBOOL_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+
+			<fieldset
+				name="advanced">
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

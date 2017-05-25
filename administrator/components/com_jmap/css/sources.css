@@ -1,0 +1,188 @@
+#adminForm {
+	min-width: 1440px;
+}
+
+.sqlquerier {
+	position: relative;
+}
+
+.sqlquerier .panel-heading {
+	padding: 3px 8px;
+}
+
+#accordion_datasource_sqlquery div.controls label {
+	padding: 4px 6px;
+}
+
+#accordion_datasource_sqlquery td.right_details input[type=text]{
+	min-width: 160px !important;
+}
+
+
+#accordion_datasource_sqlquery fieldset.radio.btn-group label {
+	margin-top: -4px !important;
+}
+
+.sqlquerier label.order {
+	padding: .3em .5em .3em;
+}
+
+.sqlquerier select.right_select {
+	float: none;
+	margin-left: 0;
+	display: inline-block;
+}
+
+.sqlquerier label.largealignment {
+	margin-left: 35px;
+	margin-right: 35px;
+	display: inline-block;
+	width: 40px;
+}
+
+.sqlquerier select.intermediate {
+	width: 141px;
+}
+
+.sqlquerier select.intermediate_small {
+	width: 110px;
+}
+
+.sqlquerier select.table_joinfrom,.sqlquerier select.field_joinfrom {
+	color: #B68023 !important;
+}
+
+.sqlquerier select.table_maintable,.sqlquerier select.table_joinwith,.sqlquerier select.field_joinwith
+	{
+	color: #266FAF !important;
+}
+
+span.jointable_resetter {
+	float: right;
+	font-size: 180%;
+	cursor: pointer;
+	color: #3a87ad;
+}
+
+#dialog_trigger {
+	cursor: pointer;
+	color: #3a87ad;
+}
+
+div.modal-body {
+	padding: 0;
+	min-height: 500px;
+}
+
+#sqlquery_rawparams {
+	width: 300px !important;
+}
+
+textarea#sqlquery {
+	width: 100% !important;
+	height: 300px;
+	font-size: 11px;
+	border: 1px solid silver;
+	line-height: 1.4em;
+}
+
+#backtop {
+	font-size: 11px;
+	position: fixed;
+	bottom: 75px;
+	right: 40px;
+	cursor: pointer;
+	width: 100px;
+}
+
+#gobottom {
+	font-size: 11px;
+	position: fixed;
+	bottom: 50px;
+	right: 40px;
+	cursor: pointer;
+	width: 100px;
+}
+
+#articleexclusion optgroup {
+	background-color: #EEE;
+}
+
+#articleexclusion option {
+	background-color: #F7F7F7;
+}
+
+table.admintable td select.where_condition_operator {
+	background-color: #428bca !important;
+	color: #FFF !important;
+	width: 50px;
+	font-weight: bold;
+}
+
+table.admintable td select.where_condition_operator option {
+	background-color: #428bca !important;
+}
+
+#controls_grouper {
+	float: left;
+}
+
+div.alert-priority {
+	margin: 10px 0 0 0;
+}
+
+option.haspriority {
+	background-color: #BBB;
+	font-weight: bold;
+	color: #333;
+}
+
+table.admintable.rawlinks_table {
+	width: 100%;
+}
+
+table.admintable.rawlinks_table ul.errorlist {
+	padding: 0;
+}
+
+table.admintable.rawlinks_table td.left_title {
+	width: 15% !important;
+}
+
+table.admintable.rawlinks_table td.right_details {
+	width: 85% !important;
+}
+
+table.admintable input.sitemap_rawtitle {
+	width: 25% !important;
+}
+
+table.admintable input.sitemap_rawlink {
+	width: 55% !important;
+}
+
+div#rawlink_controls_grouper {
+	float: right;
+}
+
+table.admintable.rawlinks_table {
+	clear: both;
+}
+
+table.admintable.rawlinks_table td input[type=checkbox] {
+	min-width: 0 !important;
+	margin: 0 10px 0 0;
+}
+
+table.admintable.rawlinks_table td label.title_label {
+	margin: 0 10px 0 0;
+}
+
+table.admintable.rawlinks_table td ul.errorlist {
+	float: none;
+	display: inline-block;
+}
+
+#language_flag_image {
+    margin-top: 8px;
+}

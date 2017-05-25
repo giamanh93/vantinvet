@@ -1,0 +1,29 @@
+{
+	"postfields":{
+		"option":"com_comprofiler",
+		"table_maintable":"#__users",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"user",
+		"where1_maintable":"block",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__users",
+		"table_joinwith_jointable1":"#__comprofiler",
+		"jointype_jointable1":"LEFT",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"user_id",
+		"where1_jointable1":"approved",
+		"where1_value_jointable1":"1",
+		"where2_jointable1":"confirmed",
+		"where2_value_jointable1":"1"
+	},
+	"substitutions":[
+		["`#__users`.`name`,","CASE WHEN CONCAT_WS(' ', `#__comprofiler`.`firstname`, `#__comprofiler`.`lastname`) = ' ' THEN  `#__users`.`name` ELSE CONCAT_WS(' ', `#__comprofiler`.`firstname`, `#__comprofiler`.`lastname`) END AS `name`,"]
+	],
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"task=userprofile"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"postfields":{
+		"option":"com_joomgallery",
+		"table_maintable":"#__joomgallery_catg",
+		"titlefield":"name",
+		"id":"cid",
+		"idfield_as":"catid",
+		"where1_maintable":"parent_id",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"lft",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"substitutions":[
+		["`#__joomgallery_catg`.`parent_id` = '0'","`#__joomgallery_catg`.`parent_id` > '0'"]
+	],
+		
+	"querystringlinkparams":{
+		"view":"category",
+		"guess_sef_itemid":"1"
+	}
+}

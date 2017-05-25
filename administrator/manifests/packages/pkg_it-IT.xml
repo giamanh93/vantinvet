@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.4" method="upgrade">
+	<name>Italian Language Pack</name>
+	<packagename>it-IT</packagename>
+	<version>3.4.1.1</version>
+	<creationDate>12 marzo 2015</creationDate>
+	<author>Italian translation team : joomla.it</author>
+	<authorEmail>info@joomla.it</authorEmail>
+	<authorUrl>www.joomla.it</authorUrl>
+	<copyright>Copyright (C) 2005 - 2015 joomla.it e Open Source Matters. Tutti i diritti riservati</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<url></url>
+	<packager>Joomla! Italia</packager>
+	<packagerurl>www.joomla.it</packagerurl>
+	<description>Joomla! 3.4 Full Italian (it-IT) Language Package - Version 3.4.1v1</description>
+	<files>
+        <file type="language" client="site" id="it-IT">site_it-IT.zip</file>
+        <file type="language" client="administrator" id="it-IT">admin_it-IT.zip</file>
+	</files>
+	<updateservers>
+        <server type="collection" priority="1" name="Accredited Joomla! Translations">http://update.joomla.org/language/translationlist_3.xml</server>
+    </updateservers>
+</extension>

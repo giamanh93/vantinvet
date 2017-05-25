@@ -1,0 +1,17 @@
+{
+	"postfields":{
+		"option":"com_phocagallery",
+		"table_maintable":"#__phocagallery_categories",
+		"titlefield":"title",
+		"id":"id",
+		"use_alias":"1",
+		"where1_maintable":"approved",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"category"
+	}
+}

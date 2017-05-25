@@ -1,0 +1,21 @@
+{
+	"postfields":{
+		"option":"com_djclassifieds",
+		"table_maintable":"#__djcf_categories",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"cid",
+		"use_alias":"1",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"substitutions":[
+		["`#__djcf_categories`.`access` IN {aid}","(`#__djcf_categories`.`access` IN {aid} OR `#__djcf_categories`.`access` = 0)"]
+	],	 
+		 
+	"querystringlinkparams":{
+		"view":"items",
+		"guess_sef_itemid":"1"
+	}
+}

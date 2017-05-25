@@ -1,0 +1,98 @@
+body {
+  background: #f5f5f5;
+}
+body #error-page {
+  background: url(../images/404-error.png) no-repeat 100% 0;
+  min-height: 400px;
+  max-width: 650px;
+  padding: 19px 29px 29px;
+  margin: 100px auto 20px;
+}
+body #error-page >div {
+  float: right;
+  margin-right: 320px;
+  text-align: right;
+}
+body #error-page h1.error-code {
+  font-family: Impact;
+  font-size: 180px;
+  line-height: 180px;
+  color: #f5acac;
+  text-shadow: 0 1px #944040;
+}
+body #error-page p.error-message {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #999;
+  text-shadow: 0 1px #fff;
+  margin-right: 10px;
+}
+body #error-page a {
+  text-decoration: none;
+  color: #44c5ef;
+}
+body #error-page a:hover {
+  text-decoration: none;
+  color: #62d3f8;
+}
+@media (max-width: 767px) {
+  body.responsive #error-page {
+    background-size: 260px auto;
+  }
+  body.responsive #error-page > div {
+    margin-right: 250px;
+  }
+  body.responsive #error-page h1.error-code {
+    font-size: 130px;
+    line-height: 160px;
+  }
+}
+@media (max-width: 599px) {
+  body.responsive #error-page {
+    background-size: 190px auto;
+  }
+  body.responsive #error-page > div {
+    margin-right: 185px;
+  }
+  body.responsive #error-page h1.error-code {
+    font-size: 99px;
+    line-height: 100px;
+  }
+  body.responsive #error-page p.error-message {
+    font-size: 18px;
+  }
+}
+@media (max-width: 479px) {
+  body.responsive #error-page {
+    background-size: 120px auto;
+  }
+  body.responsive #error-page > div {
+    margin-right: 103px;
+  }
+  body.responsive #error-page h1.error-code {
+    font-size: 70px;
+    line-height: 50px;
+  }
+  body.responsive #error-page p.error-message {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 319px) {
+  body.responsive #error-page {
+    background-size: 80px auto;
+  }
+  body.responsive #error-page > div {
+    margin-right: 60px;
+  }
+  body.responsive #error-page h1.error-code {
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: -38px;
+  }
+  body.responsive #error-page p.error-message {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

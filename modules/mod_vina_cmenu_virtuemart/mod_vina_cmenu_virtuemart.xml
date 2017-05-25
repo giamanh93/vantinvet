@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+
+<!-- Author Block -->
+	<name>Vina Category Menu for VirtueMart</name>
+	<author>VinaGecko.com</author>
+	<creationDate>December 01, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>admin@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.0.1</version>
+
+<!-- Description Block -->
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+			A good module for <strong>Joomla 3.x and VirtueMart 3.x</strong> allows you to show all categories of <strong>VirtueMart 3.x Component</strong> in <strong>Vertical or Horizontal menu</strong>. You can set the root category and sort category by Category Name or Ordering to display in menu.<br>
+			<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_cmenu_virtuemart">mod_vina_cmenu_virtuemart.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_cmenu_virtuemart.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params">
+			<!-- Basic Block -->
+			<fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+                <field 
+					name="parentCategoryID" 
+					type="vmcategories" 
+					value_field="category_name" 
+					label="VINA_CMENU_VMART_PARENT_CATEGORY" 
+					description="VINA_CMENU_VMART_PARENT_CATEGORY_DESC" />
+				<field
+                    name="sort"
+                    type="list"
+                    default="id"
+                    label="VINA_CMENU_VMART_SORT"
+                    description="VINA_CMENU_VMART_SORT_DESC">
+						<option value="category_name">VINA_CMENU_VMART_NAME</option>
+						<option value="category_description">VINA_CMENU_VMART_DESC</option>
+						<option value="c.ordering">VINA_CMENU_VMART_ORDERING</option>
+						<option value="c.category_shared">VINA_CMENU_VMART_SHARED</option>
+						<option value="c.published">VINA_CMENU_VMART_PUBLISHED</option>
+                </field>                
+                <field
+                    name="ordering"
+                    type="radio"
+					class="btn-group btn-group-yesno"
+                    default="asc"
+                    label="VINA_CMENU_VMART_ORDERING"
+                    description="VINA_CMENU_VMART_ORDERING_DESC">
+						<option value="asc">VINA_CMENU_VMART_ASCENDING</option>
+						<option	value="desc">VINA_CMENU_VMART_DESCENDING</option>
+                </field>
+				<field 
+					name="showCountItems" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CMENU_VMART_COUNT_ITEMS" 
+					description="VINA_CMENU_VMART_COUNT_ITEMS_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field 
+					name="useCache" 
+					type="radio" 
+					default="0" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CMENU_VMART_USE_CACHE" 
+					description="VINA_CMENU_VMART_USE_CACHE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				
+				<field type="spacer" name="@style" hr="true" />
+				<field 
+					name="showHomeMenu" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CMENU_VMART_HOME" 
+					description="VINA_CMENU_VMART_HOME_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+                </field>
+				<field
+					name="menuItemId"
+					type="text"
+					default=""
+					label="VINA_CMENU_VMART_ITEMID"
+					description="VINA_CMENU_VMART_ITEMID_DESC" />
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				
+				<field type="spacer" name="@mainmenu" hr="true" />
+				<field
+					name="bgColor"
+					type="color" 
+					label="VINA_CMENU_VMART_BGCOLOR" 
+					description="VINA_CMENU_VMART_BGCOLOR_DESC" 
+					size="30"
+					default="#fba026" />
+				<field
+					name="mainWidth"
+					type="text"
+					default="auto"
+					label="VINA_CMENU_VMART_MAIN_WIDTH"
+					description="VINA_CMENU_VMART_MAIN_WIDTH_DESC" />
+				<field 
+					name="mainAlign" 
+					type="list" 
+					default="align-left" 
+					class="btn-group btn-group-yesno"
+					label="VINA_CMENU_VMART_MAIN_ALIGN" 
+					description="VINA_CMENU_VMART_MAIN_ALIGN_DESC">
+						<option value="align-left">Left</option>
+						<option value="align-center">Center</option>
+						<option value="align-right">Right</option>
+                </field>
+				<field
+					name="mainFontSize"
+					type="text"
+					default="14px"
+					label="VINA_CMENU_VMART_MAIN_FONT_SIZE"
+					description="VINA_CMENU_VMART_MAIN_FONT_SIZE_DESC" />
+				<field
+					name="mainTextColor"
+					type="color" 
+					label="VINA_CMENU_VMART_MAIN_TEXT_COLOR" 
+					description="VINA_CMENU_VMART_MAIN_TEXT_COLOR_DESC" 
+					size="30"
+					default="#ffffff" />
+				<field
+					name="mainTextHover"
+					type="color" 
+					label="VINA_CMENU_VMART_MAIN_TEXT_HOVER" 
+					description="VINA_CMENU_VMART_MAIN_TEXT_HOVER_DESC" 
+					size="30"
+					default="#ffffff" />
+				<field
+					name="mainBackground"
+					type="color" 
+					label="VINA_CMENU_VMART_MAIN_BACKGROUND" 
+					description="VINA_CMENU_VMART_MAIN_BACKGROUND_DESC" 
+					size="30"
+					default="#fac51c" />
+					
+				<field type="spacer" name="@submenu" hr="true" />
+				<field
+					name="subWidth"
+					type="text"
+					default="150"
+					label="VINA_CMENU_VMART_SUB_WIDTH"
+					description="VINA_CMENU_VMART_SUB_WIDTH_DESC" />
+				<field
+					name="subFontSize"
+					type="text"
+					default="12px"
+					label="VINA_CMENU_VMART_SUB_FONT_SIZE"
+					description="VINA_CMENU_VMART_SUB_FONT_SIZE_DESC" />
+				<field
+					name="subTextColor"
+					type="color" 
+					label="VINA_CMENU_VMART_SUB_TEXT_COLOR" 
+					description="VINA_CMENU_VMART_SUB_TEXT_COLOR_DESC" 
+					size="30"
+					default="#10120d" />
+				<field
+					name="subBackground"
+					type="color" 
+					label="VINA_CMENU_VMART_SUB_BACKGROUND" 
+					description="VINA_CMENU_VMART_SUB_BACKGROUND_DESC" 
+					size="30"
+					default="#ffffff" />
+				<field
+					name="subTextHover"
+					type="color" 
+					label="VINA_CMENU_VMART_SUB_TEXT_HOVER" 
+					description="VINA_CMENU_VMART_SUB_TEXT_HOVER_DESC" 
+					size="30"
+					default="#ffffff" />
+				<field
+					name="subBackgroundHover"
+					type="color" 
+					label="VINA_CMENU_VMART_SUB_BACKGROUND_HOVER" 
+					description="VINA_CMENU_VMART_SUB_BACKGROUND_HOVER_DESC" 
+					size="30"
+					default="#fac51c" />
+				<field
+					name="subBorder"
+					type="color" 
+					label="VINA_CMENU_VMART_SUB_BORDER" 
+					description="VINA_CMENU_VMART_SUB_BORDER_DESC" 
+					size="30"
+					default="#eeeeee" />
+			</fieldset>
+			
+			<!-- Advanced Block -->
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

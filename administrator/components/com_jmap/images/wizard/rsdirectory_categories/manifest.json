@@ -1,0 +1,19 @@
+{
+	"postfields":{
+		"option":"com_rsdirectory",
+		"table_maintable":"#__categories",
+		"titlefield":"title",
+		"id":"id",
+		"idfield_as":"category",
+		"use_alias":"1",
+		"where1_maintable":"extension",
+		"where1_value_maintable":"com_rsdirectory",
+		"orderby_maintable":"lft",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"entries",
+		"guess_sef_itemid":"1"
+	}
+}

@@ -1,0 +1,84 @@
+/* Admin generic styles */
+
+table.adminlist th {
+	font-size: 12px;
+}
+
+table.adminlist tbody tr td {
+	font-size: 11px;
+	position: relative;
+} 
+
+#details_dialog {
+    position: fixed;
+    margin-left: 50%;
+    top: 100px;
+    left: -25%;
+    width: 50%;
+	font-size: 13px;
+}
+
+#details_dialog div.panel-body {
+	min-height: 200px;
+    max-height: 600px;
+    overflow: auto;
+}
+
+label.closedialog {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+div.trigger_dialog:not(.noduplicates) {
+	cursor: pointer;
+}
+
+ul.seospider_duplicate {
+	margin: 0;
+	padding: 0;
+}
+
+li.seospider_duplicate {
+	padding: 5px;
+    border-bottom: 1px solid #DDDDDD;
+    font-style: italic;
+	list-style-type: none;
+}
+
+div.panel-heading {
+	cursor: move;
+}
+
+a[data-role=link] {
+	display: block;
+	padding-right: 15px;
+}
+
+span.seospider_indicator {
+	position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+	animation: blinker 0.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+}
+
+table.adminlist div.tooltip * {
+	text-align: center;
+}
+
+@keyframes blinker {  
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+table.adminlist td div[data-bind*=title],
+table.adminlist td div[data-bind*=desc],
+table.adminlist td div[data-bind*=h1],
+table.adminlist td div[data-bind*=h2],
+table.adminlist td div[data-bind*=h3] {
+	max-height: 200px;
+	overflow: auto;
+}

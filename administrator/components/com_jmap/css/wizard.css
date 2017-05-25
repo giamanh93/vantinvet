@@ -1,0 +1,21 @@
+div#cpanel {
+	float: left;
+	width: 100%;
+}
+
+.modal-backdrop.fade.in {
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+}
+
+#progressModal2 div.modal-dialog {
+	left: 50%;
+	right: auto;
+	width: 600px;
+	padding-top: 230px;
+	padding-bottom: 30px;
+}
+
+h4.modal-title {
+	padding-left: 10px;
+}

@@ -1,0 +1,32 @@
+{
+	"postfields":{
+		"option":"com_hwdmediashare",
+		"table_maintable":"#__hwdms_media",
+		"titlefield":"title",
+		"id":"id",
+		"use_alias":"1",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__hwdms_media",
+		"table_joinwith_jointable1":"#__hwdms_category_map",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"element_id",
+		"table_joinfrom_jointable2":"#__hwdms_category_map",
+		"table_joinwith_jointable2":"#__categories",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"category_id",
+		"field_joinwith_jointable2":"id",
+		"field_select_jointable2":"title",
+		"field_as_jointable2":"catname",
+		"use_category_title_jointable2":"1",
+		"where1_jointable2":"published",
+		"where1_value_jointable2":"1",
+		"orderby_jointable2":"lft",
+		"orderby_direction_jointable2":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"mediaitem"
+	}
+}

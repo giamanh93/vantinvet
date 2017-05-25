@@ -1,0 +1,1510 @@
+/**
+ * @package Sample Joomshopping
+ * @author VinaGecko.com http://VinaGecko.com
+ * @copyright Copyright (C) 2014 www.VinaGecko.com
+ * @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+*/
+
+@import 'variables';
+@import 'mixins';
+
+// Buttons
+.btn-primary, button, input[type='submit'], input[type='button'], submit {	
+	background-color: @link_color;	
+}
+//Link color
+a:not(.btn) {
+	color: @text_color;
+	&:hover {
+		color: @link_color;
+	}
+}
+ul {
+	&.link-follow {		
+		li {			
+			a {
+				&:hover {
+					color: @white;
+					background-color: @link_color;
+				}
+			}
+		}
+	}
+}
+.chzn-container {	
+	.chzn-results {			
+		.highlighted,
+		.result-selected {			
+			color: @link_color;
+		}
+	}
+}
+input.highlight-button,
+input[type='submit'].highlight-button {
+	&:hover {
+		background-color: @link_color !important;
+	}
+}
+ /* Menu */
+#sp-main-menu {
+	li{
+		li:not(.sp-menu-group) {		
+			a {			
+				background: url(../../images/presets/@{preset}/black-dot.png) no-repeat 0 14px;
+			}
+		}
+	}
+}
+#checkoutForm,
+.cart-view,
+.vmshop-cart-account {	
+	button,
+	input.details-button,
+	button.details-button,
+	button.btn-login,
+	input.btn-login {
+		&:hover {
+			background-color: @link_color;
+		}
+	}
+}
+.module.mod_top_menu,
+#sp-bottom-wrapper {
+	ul {
+		&.nav {
+			li {
+				&.active {
+					a {
+						color: @link_color !important;
+					}
+				}
+			}
+		}
+	}
+}
+// Bottom Wrapper
+&.custom_link_follow3,	
+&.custom_contact_us {		
+	.custom-content {
+		.shapes {									
+			background-color: @link_color;
+		}
+	}
+}
+ul {
+	&.gallery {		
+		.gallery-caption {			
+			.caption-body {						
+				a {					
+					&:hover {
+						color: @link_color;
+						border: 1px solid @link_color;
+					}
+				}
+			}
+		}
+	}
+}
+div.gallery-filters {
+	a {				
+		&.active,
+		&:hover {			
+			background-color: @link_color;
+		}
+	}
+}
+.vina-title h1.header,
+h1.page-user-title,
+h2.page-user-title {
+	color: @link_color;
+}
+.vm-product-rating-container {
+	.amount {		
+		a {
+			&:hover {
+				color: @link_color !important;
+			}
+		}
+	}
+}
+
+// Mini Cart
+.block-mini-cart {
+	.mini-cart {
+		.mini-cart-content {
+			.show_cart {				
+				a {
+					&:hover {
+						background-color: @link_color;
+					}
+				}
+			}
+		}
+	}
+	&:hover {
+		.icon-cart {			
+			background-color: @link_color;
+			border-color: @link_color;
+		}	
+	}
+}
+
+body {
+	color:@text_color;
+	&.bg {
+		background-color:@white;
+	}
+}
+/* Slide Show */
+.vina-camera-slider-wrapper {
+	.camera_caption {
+		.content-slideshow {
+			a {
+				&.btn-buy {
+					&:hover {
+						border: 1px solid @link_color;
+						background-color: @link_color;
+					}
+				}
+			}
+		}
+	}
+}
+/* Slide Show Layout 2 */
+.module {
+	&.mode_slider_home2 {
+		.vina-camera-slider-wrapper {
+			.vina-camera-slider {
+				.camera_wrap {
+					.camera_pag {
+						.camera_pag_ul {
+							li {								
+								&.cameracurrent {
+									> span {
+										background: url(../../images/presets/@{preset}/sequence_act.png) no-repeat;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.camera_caption {
+				.content-slideshow {
+					a {
+						&.btn-buy {
+							&:hover {
+								background-color: @link_color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+  
+/* Style Header Module Layout 1 */
+.module {
+	h3 {
+		&.vina-header {			
+			span {								
+				background-color: @link_color;
+			}
+		}
+	}
+}
+.module .vina-manufacturers-virtuemart .vina-prev,
+.module	.vina-manufacturers-virtuemart .vina-next,
+#vina_related_product .buttons a#prev_FredSel,
+#vina_related_product .buttons a#next_FredSel {		
+	background: url(../../images/presets/@{preset}/btn-slider.png) no-repeat;
+	background-position: 100% 0;
+}
+.module {	
+	// Tabs Style 1
+	&.mod-style1 {
+		.moduletable .vina-carousel-virtuemart,
+		.vina-carousel-content {		
+			&.owl-theme {
+				.owl-controls {											
+					.owl-prev,
+					.owl-next {
+						background: url(../../images/presets/@{preset}/btn-slider.png) no-repeat;
+						background-position: 100% 0;
+					}						
+				}
+			}
+		}	
+	}
+}
+// Tabs Style 1
+.module {
+	.tab {
+		ul{
+			&.nav-tabs {				
+				li {					
+					&:hover,
+					&.active {
+						a {							
+							background-color: @link_color !important;
+						}
+					}					
+				}
+			}
+		}
+	}
+}
+
+/* Top Wrapper */
+#sp-top-wrapper {
+	a {
+		&:hover {
+			color: @link_color;
+		}
+	}
+}
+// Mod Currency
+#cur_form,
+.mod-languages {
+	.bootstrap-select {
+		.dropdown-menu {						
+			li {								
+				&.selected {
+					>a {
+						span.text {
+							color: @link_color;
+						}						
+					}
+				}				
+			}		
+			>li {
+				>a {
+					&:hover,
+					&:focus {						
+						span.text {
+							color: @link_color;	
+						}
+					}
+				}
+			}			
+		}
+		&:hover {
+			button {
+				span {
+					color: @link_color;					
+				}
+			}
+		}
+	}
+}
+.module {
+	&.custom_language {		
+		.btn {							
+			&:hover {
+				a {
+					color: @link_color !important;
+				}
+				.caret {									
+					border-top: 4px solid @link_color;
+				}
+			}
+		}		
+		.dropdown-menu>li>a:hover,
+		.dropdown-menu>li>a:focus,
+		.dropdown-submenu:hover>a,
+		.dropdown-submenu:focus>a,
+		.dropdown-menu li.result-selected a{
+			color: @link_color !important;							
+		}		
+	}
+}
+
+// Mod Currency
+#cur_form {
+	.bootstrap-select {
+		.dropdown-menu {						
+			li {								
+				&.selected {
+					>a {
+						span.text {
+							color: @link_color;
+						}						
+					}
+				}				
+			}		
+			>li {
+				>a {
+					&:hover,
+					&:focus {						
+						span.text {
+							color: @link_color;	
+						}
+					}
+				}
+			}			
+		}
+		&:hover {
+			button {
+				span {
+					color: @link_color;
+					&.caret {
+						border-top: 4px solid @link_color;
+					}
+				}
+			}
+		}
+	}
+}
+/* Breadcrumb */
+.breadcrumb {	
+	> li {		
+		> span {
+			&:last-child {
+				color: @link_color;
+			}
+		}
+	}
+}
+
+// Order + Pagination + Display number
+.vm-pagination {	
+	ul {			
+		li {				
+			&.pagination-active {
+				a {						
+					color: @link_color;
+				}
+			}
+		}
+	}
+}
+
+/* Vina Carousel Virtuemart */
+.vina-carousel-virtuemart {	
+	.item {
+		a {			
+			&:hover {
+				color: @link_color !important;
+			}
+		}
+		.vm-details-button {
+			a {
+				color: @link_color !important;
+				&:hover {
+					color: @white !important;
+				}
+			}
+		}
+	}
+}
+
+/* Product */
+.product-price {
+	.vm-display {
+		span {			
+			&.PricesalesPrice {				
+				color: @link_color;
+			}
+		}
+	}
+}
+.product {	
+	.actions {
+		.vm-addtocart-button {			
+			.addtocart-area {								
+				.addtocart-bar {
+					span {
+						&.addtocart-button {							
+							input {
+								&.addtocart-button {									
+									border: 1px solid @link_color;
+									color: @link_color;
+									&:hover {
+										color: @white;
+										background-color: @link_color;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.vm-details-button {				
+			a {
+				border: 1px solid @link_color;
+				color: @link_color;
+				&:hover {
+					color: @white;
+					background-color: @link_color;
+				}
+			}
+		}
+	}
+}
+
+/* Detail Product */
+span.addtocart-button input.addtocart-button,
+span.addtocart-button input.notify-button {
+	&:hover {
+		background-color: @link_color;
+	}
+}
+.productdetails {
+	.tab-block {
+		ul {
+			&.nav {				
+				li {					
+					&.active,
+					&:hover {
+						a {							
+							background-color: @link_color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.vm-product-media-container {	
+	.additional-images {
+		.additional-images-inner {			
+			&:hover {				
+				background: url(../../images/presets/@{preset}/zoom_thumbnail.png) no-repeat center top;
+				img {								
+					border: 3px solid @link_color;			
+				}
+			}
+		}
+	}
+}
+.vm-product-details-container {	
+	.vm-product-details-inner {			
+		.manufacturer {
+			a {
+				color: @link_color;
+			}
+		}
+	}
+}
+.vm-product-details-container {
+	.icons {
+		a,
+		a:not(.btn) {
+			&:hover {
+				background-color: @link_color;
+			}
+		}
+	}
+}
+/*Header start here */
+#sp-header-wrapper {
+	#gradient > .vertical(lighten(@header_color,20%),@header_color);
+	
+	//Logo
+	.logo{
+		background-image:url(../../images/presets/@{preset}/logo.png);
+	}
+}
+// Header Block
+.box-col-inner {
+	&:hover {
+		.pull-left {			
+			background-color: @link_color;
+			border-color: @link_color;
+		}
+	}
+}
+
+/* Menu */
+#sp-main-menu {
+ 	ul { 		
+ 		&.level-0 {
+ 			> li {				
+				&:hover,
+				&.active {
+					background-color: @link_color;										
+				}
+			}
+		}
+	}
+}
+//Menu Items for Dropdown
+#sp-main-menu {
+	li{
+		li:not(.sp-menu-group) {					
+ 			//Hover and active
+ 			&:hover,
+ 			&.active{
+				> a {
+					color: @link_color !important;
+				}
+ 			}
+		}
+		&.sp-menu-group {
+			&.active{
+				.sp-menu-group {
+					a {
+						&.active {
+							color: @link_color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.sp-submenu {
+	.sp-submenu-wrap{		
+		border-bottom: 3px solid @link_color;
+	}
+}
+/* Feature Wrapper - Slide Show */
+#sp-feature-wrapper{	
+	#feature{
+		color: @link_color;
+	}
+}
+/* Banner */
+a.expand {
+	&:hover {
+		color: @link_color!important;
+	}	
+}
+.module {
+	&.mod_search_product {				
+		.btn_search {			
+			&:hover {
+				color: @link_color;
+			}
+		}
+	}
+	// Bottom Wrapper
+	&.custom_contact_us {		
+		.custom-content {
+			ul {
+				li {					
+					span {										
+						background: @link_color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Latest Blog */
+.vina-carousel-content {
+	.item {
+		.text-block {
+			h3 {
+				&.title {
+					a {
+						&:hover {
+							color: @link_color !important;
+						}
+					}
+				}
+			}
+			span.readmore a {				
+				color: @link_color !important;				
+			}
+		}
+	}
+}
+
+#sp-left,
+#sp-right {
+	.module {
+		.tagspopular {
+			ul {				
+				li {
+					a {
+						&:hover {							
+							border-color: @link_color;
+							text-decoration: none;
+							color: @white;
+							background-color: @link_color;
+						}
+					}
+				}
+			}
+		}
+		.mod-content {
+			.vina-ticker-virtuemart {
+				.vina-item {
+					a {
+						&:hover {
+							color: @link_color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#sp-left,
+#sp-right {
+	.module {		
+		&.mod_carousel_content {			
+			.vina-carousel-content {								
+				&.owl-theme {
+					.owl-controls {						
+						.owl-prev,
+						.owl-next {							
+							&:hover {
+								background-color: @link_color;							
+								border: 1px solid @link_color;
+							}
+						}						
+					}
+				}
+			}
+		}
+	}
+}
+//Widgets
+.module {
+	&.highlighted {
+		background:#3498DB;
+		a{
+			color:#fff !important;
+		}
+	}
+}
+
+/** Joomla Content **/
+#sp-our-team,
+.our-project,
+.our-partners {
+	.carousel-control {
+		&:hover {
+			border: 1px solid @link_color!important;
+			background: @link_color!important;
+			i {
+				color: @white !important;
+			}			
+		}
+	}
+}
+.testimonials-partners #carousel-testimonials .carousel-control,
+.carousel-control {
+	&:hover {		
+		background: @link_color!important;
+		i {
+			color: @white !important;
+		}
+	}
+}
+.page-header {
+	color: @link_color;
+	a {
+		color: @link_color;
+	}
+}
+.progress-striped .bar {
+	background-color: @link_color;
+}
+#vina_about_us {
+	.carousel {
+		.item {
+			.incon_bg {
+				background: @link_color;
+			}
+		}
+		.carousel-control {
+			color: @link_color;
+		}			
+		.carousel-control {
+			&:hover {
+				background: @link_color;
+			}
+		}			
+	}
+	.skill {
+		ul {
+			li {
+				border-left: 2px solid @link_color;;
+			}
+		}
+	}
+}
+#vina_company {
+	.img-polaroid {
+		.info_team {
+			ul {
+				li {
+					a {
+						&:hover {
+							background: @link_color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#vina_pricing_table {
+	.pricing_table {
+		.thumbnail {
+			button {
+				background: @link_color;
+			}
+		}
+	}
+}
+#vina_contact_us {
+	ul.social {
+		li {
+			a {
+				border: 4px solid lighten(@link_color, 30%);
+				background: @link_color;
+				&:hover {
+					border: 4px solid @link_color;
+					em {
+						color: @link_color;
+					}
+				}
+			}
+		}
+	}
+	.map {
+		span {
+			em {
+				color: @link_color;
+			}
+		}
+	}
+}
+	
+/** Joomla Content End **/
+
+div.vina-treeview-virtuemart .treeview .hover {
+	color: @link_color !important;
+}
+
+.sp-mobile-menu {
+	background: @black;
+	ul {
+		li {
+			a {
+				color: @white;
+				&:hover ,&.active {
+					color: @link_color;
+				}
+			}
+		}
+	}
+}
+
+.icon-color {
+	&:before {
+		color: @link_color;
+	}
+}
+
+.sp-border {
+	border-top:1px solid darken(@link_color, 40%);
+	&::after {
+		background:darken(@link_color, 23%);
+	}
+}
+
+#fancybox-content {	
+	div {		
+		> a {			
+			background-color: @link_color;
+		}
+	}
+}
+.acysubbuttons {
+	input {
+		&.subbutton {
+			&:hover {
+				background-color: @link_color;
+			}
+		}
+	}
+}
+/*Cart + Checkout */
+.vmshop-account {		
+	h1 {
+		&.header {			
+			color: @link_color;			
+		}
+	}
+}
+.vmshop-account {
+	&.account-login,
+	&.account-logout {
+		.buttons-set {
+			.vina-button,
+			input {
+				&:hover {
+					background-color: @link_color;
+				}
+			}
+		}
+	}
+}
+a.link-registration {
+	color: @link_color;
+}
+#checkoutForm {
+	button {
+		&:hover {
+			background-color: @link_color;
+		}
+	}	
+	.vm-continue-shopping {	
+		.continue_link {
+			&:hover {
+				background-color: @link_color;
+			}
+		}
+	}	
+	.billto-shipto {
+		i {
+			background: @link_color;
+		}
+	}	
+	.cart-summary {
+		tbody {
+			.tb-total {
+				.vm-continue-shopping {
+					.continue_link:hover {
+						color: @white;
+						background-color: @link_color;
+					}
+				}
+			}
+		}
+		tfoot {			
+			width: 100%;
+			.box-sizing(border-box);
+			a {
+				color: @link_color !important;
+			}
+		}
+	}
+	.checkout-button-top {
+		button {
+			&:hover {
+				background: @link_color;
+			}
+		}
+	}
+	.billto-shipto {
+		a {
+			&.details {
+				color: @link_color !important;
+			}
+		}
+	}
+	.fieldset-customer {
+		.vm-fieldset-tos {
+			div.terms-of-service {
+				a {
+					color: @link_color !important;
+				}
+			}
+		}
+	}
+}
+#form-login,
+#com-form-login {
+	input[type='submit'],
+	input.btn-login {
+		&:hover {
+			background: @link_color;
+		}					
+	}
+}
+#userForm , #paymentForm, #adminForm{
+	button {
+		&:hover {
+			background: @link_color;
+		}	
+	}
+}
+
+#user-registration {
+	button {
+		&:hover {
+			background: @link_color;
+		}	
+	}
+}
+div.login, div.logout  {
+	button {
+		&:hover {
+			background: @link_color;
+		}	
+	}
+	a {
+		color: @link_color !important;
+	}
+}
+div.profile  {
+	.btn-toolbar {
+		a.btn {
+			&:hover {
+				background: @link_color;
+			}	
+		}
+	}
+}
+/*End Cart*/
+.virtuemart_search {
+	.button {
+		&:hover {
+			background-color: @link_color;
+		}
+	}
+}
+#searchForm {
+	.btn-group {
+		.btn {
+			&:hover {
+				background-color: @link_color;
+			}
+		}
+	}
+}
+//Back to Top
+#sp-footer-wrapper {
+	.sp-totop{		
+		&:hover {
+			background: @link_color;
+		}
+	}
+}
+#footer {	
+	.copyright {
+		a {
+			color: @link_color;			
+		}
+	}
+}
+/* VirtueMart */
+.additional-images {	
+	img {		
+		&:hover {
+			border: 1px solid @link_color;
+		}
+	}
+}
+
+/* Layout2 */
+/* Product Layout2 */
+.style-layout2,
+.style-layout3 {
+	.vina-carousel-virtuemart {
+		.item.product {						
+			&:hover {
+				border: 1px solid @link_color;
+			}
+		}
+	}
+	.product {		
+		&.vm-col {
+			&:hover {
+				border: 1px solid @link_color;
+			}
+		}
+	}
+}
+/* Latest Layout 2 */   
+.module {
+	&.mod-style2 {
+		.vina-carousel-content {
+			.item {
+				border-bottom: 2px solid @link_color;
+				.text-block {
+					div {
+						&.blog-time {							
+							color: @link_color;
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+/* Left, Right Style Layout 3 */
+#sp-left,
+#sp-right {
+	.module {
+		.mod-content {		
+			div {
+				&.vina-treeview-virtuemart {				
+					.treeview {																									
+						li {							
+							> a {								
+								&.hover {
+									color: @link_color !important;
+								}
+							}
+						}
+					}
+					ul.level0 {
+						> li {														
+							&:hover,
+							&.collapsable {
+								> a {
+									color: @link_color !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+/* Product Layout 3 */
+.style-layout3 {
+	.product {
+		.actions {						
+			.vm-addtocart-button {				
+				.addtocart-area {
+					.addtocart-bar {
+						span {
+							&.addtocart-button {
+								input {
+									&.addtocart-button {
+										&:hover {
+											border: 2px solid @link_color;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Layout 3, Layout 4 */
+/* Module Style3, Module Style4 */
+#sp-left,
+#sp-right {
+	.module {
+		&.mod-style3 {
+			&.mod_treeview_vm3 {
+				h3 {
+					&.header {
+						background-color: @link_color !important;
+					}
+				}
+				.mod-content {
+					padding: 0;
+					div {
+						&.vina-treeview-virtuemart {				
+							.treeview {																									
+								li {									
+									> a {										
+										&.hover {
+											color: @link_color !important;
+										}
+									}
+								}
+							}
+							ul.level0 {
+								> li {																									
+									&:hover,
+									&.collapsable {
+										> a {
+											color: @link_color !important;
+											border-left-color: @link_color !important;															
+										}
+									}																	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.module {											
+	&.mod-style3,
+	&.mod-style4 {
+		.vina-carousel-virtuemart,
+		.vina-carousel-content {
+			&.owl-theme {
+				.owl-controls {
+					.owl-prev,
+					.owl-next {
+						background-color: @link_color;
+					}
+				}
+			}
+		}
+		.vina-manufacturers-virtuemart {
+			.vina-prev,
+			.vina-next {
+				background-color: @link_color;
+			}
+		}
+	}
+}
+.style-layout4 {
+	#sp-left,
+	#sp-right {
+		.module {
+			h3 {
+				&.header {
+					background-color: @link_color ;
+				}
+			}
+			.mod-content {			
+				.vina-carousel-virtuemart {
+					.owl-controls {	
+						.owl-next,
+						.owl-prev {
+							background-color: @link_color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Blog */
+.pagination {
+	ul {
+		li {
+			&.pagination-active {
+				a {
+					color: @link_color;
+				}
+			}
+		}
+	}
+}
+.tags {
+	span {
+		a,
+		.label-info[href],
+		.badge-info[href] {
+			&:hover {
+				background-color: @link_color;
+			}
+		}
+	}
+}
+#comments-form .btn div,
+#comments-report-form .btn div {
+	&:hover {
+		background-color: @link_color;		
+	}
+}
+#adminForm #ui-tabs button {	
+	&.reset-value {
+		&:hover {
+			background-color: @link_color;
+		}
+	}
+}
+#member-registration,
+#member-profile,
+#contact-form {		
+	.form-actions .btn,
+	.form-actions .btn-primary,
+	button,
+	.btn,
+	.btn-danger {
+		&:hover {
+			background-color: @link_color;
+		}		
+	}
+}
+#login-form {
+	.control-group {		
+		button,
+		.btn {
+			&:hover {
+				background-color: @link_color;
+			}
+		}
+	}
+}
+.cart-view {
+	form.inline {
+		td {			
+			input.button {								
+				&:hover {
+					background-color: @link_color;
+				}
+			}
+		}
+	}
+}
+/* Filter Left */
+#sp-left,
+#sp-right {	
+	.module {
+		.cf_wrapp_all {		
+			.cf_wrapper_inner {
+				.cf_filters_list {
+					li {
+						&:hover {
+							a {
+								color: @link_color;
+							}
+						}
+						.cf_sel_opt {
+							color: @link_color;
+						}
+					} 
+				}
+			}
+		}
+	}
+}
+
+/* Page */
+.vina-button-3 {	
+	color: @link_color !important;
+	&:hover {
+		color: @white !important;
+		border: 1px solid @link_color;
+		background-color: @link_color;
+	}
+}
+
+/* Our Team */
+.our-team {
+	.team-item {
+		.team-social-link {
+			ul {
+				li {
+					a {
+						&:hover {
+							border: 1px solid @link_color;	
+							color: @link_color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Our Experience */
+#sp-our-experience {
+	.mod-inner {
+		.custom {
+			.bg-opacity {
+				&:before {				
+					background-color: @link_color;				
+				}
+			}
+		}
+	}
+}
+
+/* Our Working */
+.vina-our-work {
+	.list-work {
+		.work-item {
+			&:hover {
+				background: @link_color;
+			}
+		}
+	}
+}
+
+/* Services Page */
+.vina-list-1 {	
+	.list-item {
+		&:hover {
+			.list-img {			
+				background-color: @link_color;						
+				&:before {				
+					border-bottom: 40.5px solid @link_color;
+				}
+
+				&:after {				
+					border-top: 40.5px solid @link_color;
+				}						
+			}
+		}
+	}
+}
+.vina-list-2 {	
+	.list-left-item,
+	.list-right-item {
+		&:hover {			
+			.list-2-img {
+				&:before {
+					background: @link_color;
+				}
+			}			
+		}
+	}
+}
+
+/* Services Page */
+.our-price {	
+	.price-item {	
+		h3 {				
+			sub {
+				color: @link_color;
+				background: #fff;
+			}
+		}		
+		&:hover {
+			h3 {
+				color: #fff;
+				background: @link_color;
+				sub {
+					color: #fff;
+					background: #323232;
+				}
+			}
+			ul {
+				li {
+					&.buy {
+						.vina-button-2 {
+							background: @link_color !important;
+						}
+					}
+				}
+			}			
+		}
+	}
+}
+
+/* Contact us Page */
+#vina_contact_us {
+	.contact_us {
+		h3 {
+			border-left: 2px solid @link_color;
+		}
+		.qlform {
+			input {
+				&.submit {
+					&:hover {
+						background: @link_color;
+					}									
+				}
+			}	
+		}
+	}
+	.vina-title {
+		border-left: 2px solid @link_color;
+	}
+	ul {			
+		li {				
+			a {
+				&:hover {
+					border: 1px solid @link_color;
+				}
+			}
+		}
+	}
+	ul.social {
+		li {
+			a {
+				border: 4px solid lighten(@link_color, 30%);
+				background: @link_color;
+				&:hover {
+					border: 4px solid @link_color;
+					em {
+						color: @link_color;
+					}
+				}
+			}
+		}
+	}
+	.map {
+		span {
+			em {
+				color: @link_color;
+			}
+		}
+	}
+}
+.rtl {	 
+	#sp-main-menu {
+		li{
+			li:not(.sp-menu-group) {		
+				a {			
+					background: url(../../images/presets/@{preset}/black-dot-rtl.png) no-repeat 100% 14px;
+					&:hover,
+					&.active {
+						background-position: 100% -8px !important;
+					}
+				}				
+			}
+		}
+	}
+}
+
+/* ------------------------------ Wishlist & Compare Virtuemart ------------------------------ */
+.vm-wishlist button,
+.vm-wishlist .addtofav_aws_icon,
+.vm-details-icon a {	
+	border: 1px solid @link_color;
+	color: @link_color;			
+	&:hover {
+		background-color: @link_color;		
+	}
+}
+.vm-wishlist .addtofav_aws_icon_active {
+	background-color: @link_color;
+}
+.vina-carousel-virtuemart {
+	.item {
+		.vm-details-icon {
+			a {			
+				color: @link_color !important;									
+			}
+		}
+	}
+}
+.vm-product-details-container {
+	.btn-wishlist .addtofav_aws_icon_active {
+		background-color: @link_color;
+	}
+	div#vmcompare,
+	.btn-wishlist .addtofav_aws_icon {
+		&:hover {
+			background-color: @link_color;
+		}
+	}	
+}
+.vm-product-details-container span.addtocart-button {
+	&:hover {
+		background-color: @link_color;
+		input {
+			background-color: @link_color;
+		}
+	}
+}
+.fav_table {	
+	button.art-button {
+		&:hover {
+			background-color: @link_color;
+		}		
+	}
+}
+/*.responsive {
+	@media (min-width: 979px) and (max-width: 1200px) {
+		.style-layout2 {
+			.vina-carousel-virtuemart .item .vm-details-icon a {
+				&:hover {
+					color: @link_color !important;
+				}				
+			}			
+		}
+	}
+}*/

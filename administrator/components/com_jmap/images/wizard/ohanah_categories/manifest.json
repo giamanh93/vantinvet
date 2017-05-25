@@ -1,0 +1,17 @@
+{
+	"postfields":{
+		"option":"com_ohanah",
+		"table_maintable":"#__ohanah_categories",
+		"titlefield":"title",
+		"id":"ohanah_category_id",
+		"where1_maintable":"enabled",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"events",
+		"guess_sef_itemid":"1"
+	}
+}

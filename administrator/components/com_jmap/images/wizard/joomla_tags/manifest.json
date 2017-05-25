@@ -1,0 +1,18 @@
+{
+	"postfields":{
+		"option":"com_tags",
+		"table_maintable":"#__tags",
+		"titlefield":"title",
+		"id":"id",
+		"use_alias":"1",
+		"where1_maintable":"id",
+		"where1_operator_maintable":"!=",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"tag"
+	}
+}

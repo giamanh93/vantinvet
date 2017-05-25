@@ -1,0 +1,24 @@
+{
+	"postfields":{
+		"option":"com_virtuemart",
+		"table_maintable":"#__virtuemart_categories_{langtag}",
+		"titlefield":"category_name",
+		"id":"virtuemart_category_id",
+		"table_joinfrom_jointable1":"#__virtuemart_categories_{langtag}",
+		"table_joinwith_jointable1":"#__virtuemart_categories",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"virtuemart_category_id",
+		"field_joinwith_jointable1":"virtuemart_category_id",
+		"where1_jointable1":"published",
+		"where1_value_jointable1":"1",
+		"orderby_jointable1":"ordering",
+		"orderby_direction_jointable1":"ASC"
+	},
+	"placeholders":{
+		"table_maintable":["{langtag}","language"],
+		"table_joinfrom_jointable1":["{langtag}","language"]
+	},
+	"querystringlinkparams":{
+		"view":"category"
+	}
+}

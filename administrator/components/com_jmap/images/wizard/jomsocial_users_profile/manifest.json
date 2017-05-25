@@ -1,0 +1,17 @@
+{
+	"postfields":{
+		"option":"com_community",
+		"table_maintable":"#__users",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"userid",
+		"where1_maintable":"block",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"profile"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"adiacency",
+	"categories_table":"#__mijoevents_categories",
+	"category2category_table":"#__mijoevents_categories",
+	"category_table_id_field":"id",
+	"category_table_name_field":"title",
+ 	"parent_field":"parent",
+ 	"child_field":"id"
+}

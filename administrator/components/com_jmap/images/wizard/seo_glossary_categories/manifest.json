@@ -1,0 +1,15 @@
+{
+	"postfields":{
+		"option":"com_seoglossary",
+		"table_maintable":"#__seoglossaries",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"catid",
+		"orderby_maintable":"ordering",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"glossaries"
+	}
+}

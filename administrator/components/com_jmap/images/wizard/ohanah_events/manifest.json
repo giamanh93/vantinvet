@@ -1,0 +1,37 @@
+{
+	"postfields":{
+		"option":"com_ohanah",
+		"table_maintable":"#__ohanah_events",
+		"titlefield":"title",
+		"id":"ohanah_event_id",
+		"idfield_as":"id",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__ohanah_events",
+		"table_joinwith_jointable1":"#__ohanah_categories",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"ohanah_category_id",
+		"field_joinwith_jointable1":"ohanah_category_id",
+		"field_select_jointable1":"title",
+		"field_as_jointable1":"cattitle",
+		"use_category_title_jointable1":"1",
+		"orderby_jointable1":"title",
+		"orderby_direction_jointable1":"ASC",
+		"table_joinfrom_jointable2":"#__ohanah_events",
+		"table_joinwith_jointable2":"#__ohanah_dates",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"ohanah_event_id",
+		"field_joinwith_jointable2":"ohanah_event_id",
+		"where1_jointable2":"enabled",
+		"where1_value_jointable2":"1"
+	},
+	
+	"substitutions":[
+		["\n AND `#__ohanah_events`.`state` = '1'",""]
+	],
+		
+	"querystringlinkparams":{
+		"view":"event",
+		"guess_sef_itemid":"1"
+	}
+}

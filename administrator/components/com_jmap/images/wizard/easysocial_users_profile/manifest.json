@@ -1,0 +1,21 @@
+{
+	"postfields":{
+		"option":"com_easysocial",
+		"table_maintable":"#__users",
+		"titlefield":"name",
+		"id":"id",
+		"url_filter_id":"1",
+		"where1_maintable":"block",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"substitutions":[
+		["`#__users`.`id`","CONCAT_WS(':',  `#__users`.`id`,  `#__users`.`name`) AS `id`"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"profile"
+	}
+}

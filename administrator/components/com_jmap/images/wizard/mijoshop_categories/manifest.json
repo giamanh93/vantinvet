@@ -1,0 +1,34 @@
+{
+	"postfields":{
+		"option":"com_mijoshop",
+		"table_maintable":"#__mijoshop_category_description",
+		"titlefield":"name",
+		"id":"category_id",
+		"idfield_as":"path",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__mijoshop_category_description",
+		"table_joinwith_jointable1":"#__mijoshop_category",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"category_id",
+		"field_joinwith_jointable1":"category_id",
+		"where1_jointable1":"status",
+		"where1_value_jointable1":"1",
+		"table_joinfrom_jointable2":"#__mijoshop_category_description",
+		"table_joinwith_jointable2":"#__languages",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable2":"language_id",
+		"field_joinwith_jointable2":"lang_id",
+		"where1_jointable2":"lang_code",
+		"where1_value_jointable2":"{languagetag}"
+	},
+	
+	 "substitutions":[
+		["'{languagetag}'","{languagetag}"]
+	],
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"route=product/category",
+		"guess_sef_itemid":"1"
+	}
+}

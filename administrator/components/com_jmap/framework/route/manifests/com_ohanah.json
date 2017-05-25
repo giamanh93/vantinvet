@@ -1,0 +1,6 @@
+{
+	"categories_table":"#__ohanah_categories",
+	"categories_table_id_field":"ohanah_category_id",
+	"name_params":{"events":"ohanah_category_id", "event":"id"},
+	"additional_categories_needles":"events"
+}

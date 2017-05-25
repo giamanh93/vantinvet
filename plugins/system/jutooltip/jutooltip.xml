@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - JU Tooltip</name>
+	<author>JoomUltra</author>
+	<creationDate>Sep 2012</creationDate>
+	<copyright>Copyright (C) 2010 - 2012 JoomUltra. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>admin@joomultra.com</authorEmail>
+	<authorUrl>www.joomlultra.com</authorUrl>
+	<version>2.5.0</version>
+	<description>
+		<![CDATA[
+		<div style='font-weight: normal'>
+		<h2 style='color: #0A71A5;'>JU Tooltip Plugin</strong></h2>
+		<span style='color: #ff0000;'><strong>Features:</strong></span>
+		<br/>
+		Load tooltip for any element.
+		<br/><br/>
+		<strong><span style='color: #ff0000;'>Usage Instructions:</span></strong><br />
+		Requirements: Joomla! 2.5.x, Joomla! 3.0.x<br/>
+		This module require jQuery javascript library to work. If jQuery has not been loaded on your site, you should install <b>Plugin JU Load jQuery</b>.<br/><br/>
+		Add <strong>class="jutooltip" title="your tooltip content"</strong> for the html tag you want to display tooltip.
+		<br /><br />
+		<strong>Example:</strong><br/>
+		<ol>
+		  <li>1. Load tooltip from title attribute. HTML: <i>&lt;a class="jutooltip" title="This is my tooltip"&gt;Hover me&lt;/a&gt;</i></li>
+		  <li>2. Load manual html tooltip, by don't set title attribute then use content of next tag as tooltip. By this way, you can use any html for tooltip. HTML: <i>&lt;a class="jutooltip">Hover me&lt;/a&gt; &lt;div style="display: none;"&gt;Manual &lt;b&gt;html tag&lt;/b&gt; next the &lt;strong>tooltip&lt;/strong&gt; will be display as tooltip&lt;/div&gt;</i></li>
+		  <li>3. Use single tooltip for multi trigger elements, by this way, you can re-format html for tooltip use defined id/class CSS. For example, if you set <strong>Single tooltip: .myredtip</strong>. HTML: <i>&lt;a class="jutooltip" title="This is my tooltip"&gt;Hover me&lt;/a&gt;&lt;div class="myredtip"&gt;Title attribute will be loaded here, you can use class myredtip to re-format this tag&lt;/div&gt;</i></li>
+		</ol>
+		<br /><br />
+		<strong><span style='color: #ff0000;'>Upgrade Methods:</span><br /></strong>
+		<ol>
+		  <li>Standard joomla uninstall / reinstall method. Module supports upgrade method. </li>
+		  <li>You can install new version directly over this version. Uninstallation is not required. </li>
+		  <li>Backup any customized file before upgrading.</li>
+		</ol>
+		<br /><br />
+		If you use JU Tooltip, please post a review for <a href="http://extensions.joomla.org/extensions/news-display/article-elements/tooltips/22717" target="_blank" title="Post a review for JU Tooltip">JU Tooltip on JED</a>
+		<p>Copyright 2010 - 2013 <a href='http://www.joomultra.com/' title='Visit JoomUltra.com!'>JoomUltra.com</a>.</p>
+		</div>
+		]]>
+	</description>
+	<files>
+		<filename plugin="jutooltip">jutooltip.php</filename>
+		<filename>index.html</filename>
+		<folder>admin</folder>
+		<folder>assets</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_jutooltip.ini</language>
+	</languages>
+	<config>
+	
+		<fields name="params">
+		<fieldset name="basic" addfieldpath="/plugins/system/jutooltip/admin/elements/">
+			<field 
+				name="juformstyle" 
+				type="juformstyle" />
+				
+			<field name="loadjquery"
+				type="list"
+				default="2"
+				label="LOAD_JQUERY"
+				description="LOAD_JQUERY_DESC">
+				<option
+					value="1">ALWAYS</option>
+				<option
+					value="2">WHEN_NOT_EXISTS</option>
+				<option
+					value="0">JNO</option>
+			</field>
+			
+			<field name="loadjqueryfrom"
+				type="list"
+				default="1"
+				label="LOAD_JQUERY_FROM"
+				description="LOAD_JQUERY_FROM_DESC">
+				<option
+					value="1">LOCAL_FILE</option>
+				<option
+					value="2">GOOGLE_CDN</option>
+			</field>
+			
+			<field name="theme" type="folderlist"
+				directory="plugins/system/jutooltip/assets/themes/"
+				label="TOOLTIP_THEME"
+				default = "default"
+				hide_none="true"
+				hide_default="true"
+				description="TOOLTIP_THEME_DESC"
+			/>
+			
+			<field name="showtooltipwhen"
+				type="list"
+				default="mouseenter"
+				label="SHOW_TOOLTIP_WHEN"
+				description="SHOW_TOOLTIP_WHEN_DESC">
+				<option
+					value="mouseenter">MOUSE_ENTER</option>
+				<option
+					value="click">CLICK</option>
+			</field>
+			
+			<field name="effect"
+				type="list"
+				default="toggle"
+				label="EFFECT"
+				description="EFFECT_DESC">
+				<option
+					value="toggle">TOOGLE</option>
+				<option
+					value="fade">FADE</option>
+				<option
+					value="slide">SLIDE</option>
+			</field>
+			
+			<field name="slide_direction"
+				type="list"
+				default="up"
+				label="SLIDE_EFFECT_DIRECTION"
+				description="SLIDE_EFFECT_DIRECTION_DESC">
+				<option
+					value="up">UP</option>
+				<option
+					value="down">DOWN</option>
+				<option
+					value="left">LEFT</option>
+				<option
+					value="right">RIGHT</option>
+			</field>
+			
+			<field name="slide_bounce"
+				type="radio"
+				default="false"
+				class="radio btn-group"
+				label="SLIDE_EFFECT_BOUNCE"
+				description="SLIDE_EFFECT_BOUNCE_DESC" >
+				<option
+					value="true">JYES</option>
+				<option
+					value="false">JNO</option>
+			</field>
+			
+			<field name="slideOffset"
+				type="text"
+				default="10"
+				filter="integer"
+				class="validate-numeric"
+				label="SLIDE_EFFECT_OFFSET"
+				description="SLIDE_EFFECT_OFFSET_DESC" />
+			
+			<field name="showDuration"
+				type="text"
+				default="200"
+				filter="integer"
+				class="validate-numeric"
+				label="SHOW_DURATION"
+				description="SHOW_DURATION_DESC" />
+							
+			<field name="hideDuration"
+				type="text"
+				default="200"
+				filter="integer"
+				class="validate-numeric"
+				label="HIDE_DURATION"
+				description="HIDE_DURATION_DESC" />
+				
+			<field name="easing"
+				type="list"
+				default="linear"
+				label="EASING"
+				description="EASING_DESC">
+				<option
+					value="linear">Linear</option>
+				<option
+					value="swing">Swing</option>
+				<option
+					value="easeInQuad">easeInQuad</option>
+				<option
+					value="easeOutQuad">easeOutQuad</option>
+				<option
+					value="easeInOutQuad">easeInOutQuad</option>
+				<option
+					value="easeInCubic">easeInCubic</option>
+				<option
+					value="easeOutCubic">easeOutCubic</option>
+				<option
+					value="easeInOutCubic">easeInOutCubic</option>
+				<option
+					value="easeInQuart">easeInQuart</option>
+				<option
+					value="easeOutQuart">easeOutQuart</option>
+				<option
+					value="easeInOutQuart">easeInOutQuart</option>
+				<option
+					value="easeInQuint">easeInQuint</option>
+				<option
+					value="easeOutQuint">easeOutQuint</option>
+				<option
+					value="easeInOutQuint">easeInOutQuint</option>
+				<option
+					value="easeInSine">easeInSine</option>
+				<option
+					value="easeOutSine">easeOutSine</option>
+				<option
+					value="easeInOutSine">easeInOutSine</option>
+				<option
+					value="easeInExpo">easeInExpo</option>
+				<option
+					value="easeOutExpo">easeOutExpo</option>
+				<option
+					value="easeInOutExpo">easeInOutExpo</option>
+				<option
+					value="easeInCirc">easeInCirc</option>
+				<option
+					value="easeOutCirc">easeOutCirc</option>
+				<option
+					value="easeInOutCirc">easeInOutCirc</option>
+				<option
+					value="easeInElastic">easeInElastic</option>
+				<option
+					value="easeOutElastic">easeOutElastic</option>
+				<option
+					value="easeInOutElastic">easeInOutElastic</option>
+				<option
+					value="easeInBack">easeInBack</option>
+				<option
+					value="easeOutBack">easeOutBack</option>
+				<option
+					value="easeInOutBack">easeInOutBack</option>
+				<option
+					value="easeInBounce">easeInBounce</option>
+				<option
+					value="easeOutBounce">easeOutBounce</option>
+				<option
+					value="easeInOutBounce">easeInOutBounce</option>
+			</field>
+			
+			<field name="predelay"
+				type="text"
+				default="0"
+				filter="integer"
+				class="validate-numeric"
+				label="PREDELAY"
+				description="PREDELAY_DESC" />
+				
+			<field name="delay"
+				type="text"
+				default="30"
+				filter="integer"
+				class="validate-numeric"
+				label="DELAY"
+				description="DELAY_DESC" />
+				
+			<field name="opacity"
+				type="text"
+				default="1"
+				label="OPACITY"
+				description="OPACITY_DESC" />
+				
+			<field name="tip"
+				type="text"
+				default=""
+				label="SINGLE_TOOLTIP"
+				description="SINGLE_TOOLTIP_DESC" />
+				
+			<field name="fadeIE"
+				type="radio"
+				default="false"
+				class="radio btn-group"
+				label="FADE_IE"
+				description="FADE_IE_DESC" >
+				<option
+					value="true">JYES</option>
+				<option
+					value="false">JNO</option>
+			</field>
+			
+			<field name="horizontal"
+				type="radio"
+				default="center"
+				class="radio btn-group"
+				label="HORIZONTAL_POSITION"
+				description="HORIZONTAL_POSITION_DESC">
+				<option
+					value="left">LEFT</option>
+				<option
+					value="center">CENTER</option>
+				<option
+					value="right">RIGHT</option>
+			</field>
+			
+			<field name="vertical"
+				type="radio"
+				default="top"
+				class="radio btn-group"
+				label="VERTICAL_POSITION"
+				description="VERTICAL_POSITION_DESC">
+				<option
+					value="top">TOP</option>
+				<option 
+					value="center">CENTER</option>
+				<option 
+					value="bottom">BOTTOM</option>
+			</field>
+			
+			<field name="offset"
+				type="text"
+				default="[0, 0]"
+				label="OFFSET"
+				description="OFFSET_DESC" />
+			
+			<field name="cancelDefault"
+				type="radio"
+				default="true"
+				class="radio btn-group"
+				label="CANCELDEFAULT"
+				description="CANCELDEFAULT_DESC">
+				<option
+					value="true">JYES</option>
+				<option
+					value="false">JNO</option>
+			</field>
+			
+			<field name="manualCloseTooltip"
+				type="radio"
+				default="false"
+				class="radio btn-group"
+				label="MANUALCLOSETOOLTIP"
+				description="MANUALCLOSETOOLTIP_DESC">
+				<option
+					value="true">JYES</option>
+				<option
+					value="false">JNO</option>
+			</field>
+			
+		</fieldset>
+		</fields>
+	</config>
+</extension>

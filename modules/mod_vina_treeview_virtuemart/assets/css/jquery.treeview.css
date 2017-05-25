@@ -1,0 +1,125 @@
+/*
+# ------------------------------------------------------------------------
+# Module: Vina Treeview for VirtueMart
+# ------------------------------------------------------------------------
+# Copyright (C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://VinaGecko.com
+# ------------------------------------------------------------------------
+*/
+
+div.vina-treeview-virtuemart .treeview,
+div.vina-treeview-virtuemart .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+div.vina-treeview-virtuemart .treeview ul {
+	background-color: white;
+	margin-top: 4px;
+}
+div.vina-treeview-virtuemart .treeview .hitarea {
+	background: url(../images/treeview-default.gif) -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+div.vina-treeview-virtuemart .treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+div.vina-treeview-virtuemart .treeview a.selected {
+	background-color: #eee;
+}
+div.vina-treeview-virtuemart .treecontrol { 
+	margin: 1em 0;
+	display: none; 
+}
+div.vina-treeview-virtuemart .treeview .hover { 
+	color: red;
+	cursor: pointer;
+}
+div.vina-treeview-virtuemart .treeview li { 
+	background: url(../images/treeview-default-line.gif) 0 0 no-repeat;
+}
+div.vina-treeview-virtuemart .treeview li.collapsable, 
+div.vina-treeview-virtuemart .treeview li.expandable {
+	background-position: 0 -176px;
+}
+
+div.vina-treeview-virtuemart .treeview .expandable-hitarea {
+	background-position: -80px -3px;
+}
+div.vina-treeview-virtuemart .treeview li.last {
+	background-position: 0 -1766px 
+}
+div.vina-treeview-virtuemart .treeview li.lastCollapsable, 
+div.vina-treeview-virtuemart .treeview li.lastExpandable { 
+	background-image: url(../images/treeview-default.gif);
+}  
+div.vina-treeview-virtuemart .treeview li.lastCollapsable {
+	background-position: 0 -111px;
+}
+div.vina-treeview-virtuemart .treeview li.lastExpandable {
+	background-position: -32px -67px;
+}
+div.vina-treeview-virtuemart .treeview div.lastCollapsable-hitarea, 
+div.vina-treeview-virtuemart .treeview div.lastExpandable-hitarea { 
+	background-position: 0;
+}
+div.vina-treeview-virtuemart .treeview-red li { 
+	background-image: url(../images/treeview-red-line.gif);
+}
+div.vina-treeview-virtuemart .treeview-red .hitarea, 
+div.vina-treeview-virtuemart .treeview-red li.lastCollapsable, 
+div.vina-treeview-virtuemart .treeview-red li.lastExpandable { 
+	background-image: url(../images/treeview-red.gif);
+} 
+div.vina-treeview-virtuemart .treeview-black li { 
+	background-image: url(../images/treeview-black-line.gif);
+}
+div.vina-treeview-virtuemart .treeview-black .hitarea, 
+div.vina-treeview-virtuemart .treeview-black li.lastCollapsable, 
+div.vina-treeview-virtuemart .treeview-black li.lastExpandable { 
+	background-image: url(../images/treeview-black.gif);
+}
+div.vina-treeview-virtuemart .treeview-gray li { 
+	background-image: url(../images/treeview-gray-line.gif);
+}
+div.vina-treeview-virtuemart .treeview-gray .hitarea, 
+div.vina-treeview-virtuemart .treeview-gray li.lastCollapsable, 
+div.vina-treeview-virtuemart .treeview-gray li.lastExpandable {
+	background-image: url(../images/treeview-gray.gif);
+} 
+div.vina-treeview-virtuemart .treeview-famfamfam li { 
+	background-image: url(../images/treeview-famfamfam-line.gif);
+}
+div.vina-treeview-virtuemart .treeview-famfamfam .hitarea, 
+div.vina-treeview-virtuemart .treeview-famfamfam li.lastCollapsable, 
+div.vina-treeview-virtuemart .treeview-famfamfam li.lastExpandable { 
+	background-image: url(../images/treeview-famfamfam.gif);
+} 
+div.vina-treeview-virtuemart .filetree li {
+	padding: 3px 0 2px 16px;
+}
+div.vina-treeview-virtuemart .filetree span.folder, 
+div.vina-treeview-virtuemart .filetree span.file { 
+	padding: 1px 0 1px 16px; display: block;
+}
+div.vina-treeview-virtuemart .filetree span.folder { 
+	background: url(../images/folder.gif) 0 0 no-repeat;
+}
+div.vina-treeview-virtuemart .filetree li.expandable span.folder {
+	background: url(../images/folder-closed.gif) 0 0 no-repeat;
+}
+div.vina-treeview-virtuemart .filetree span.file {
+	background: url(../images/file.gif) 0 0 no-repeat;
+}

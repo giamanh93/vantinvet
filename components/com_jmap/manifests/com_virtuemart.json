@@ -1,0 +1,14 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"multiadiacency",
+	"item2category_table":"#__virtuemart_product_categories",
+	"item2category_catid_field":"virtuemart_category_id",
+	"categories_table":"#__virtuemart_categories",
+	"additional_categories_table":"#__virtuemart_categories$$$",
+	"additional_categories_table_on_catid_field":"virtuemart_category_id",
+	"category2category_table":"#__virtuemart_category_categories",
+	"category_table_id_field":"virtuemart_category_id",
+	"category_table_name_field":"category_name",
+ 	"parent_field":"category_parent_id",
+ 	"child_field":"category_child_id"
+}

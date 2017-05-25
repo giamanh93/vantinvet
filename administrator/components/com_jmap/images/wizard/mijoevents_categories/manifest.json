@@ -1,0 +1,16 @@
+{
+	"postfields":{
+		"option":"com_mijoevents",
+		"table_maintable":"#__mijoevents_categories",
+		"titlefield":"title",
+		"id":"id",
+		"idfield_as":"category_id",
+		"orderby_maintable":"ordering",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"view":"category",
+		"guess_sef_itemid":"1"
+	}
+}

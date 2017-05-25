@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Login2">
+		<message><![CDATA[COM_VIRTUEMART_USER_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+	<state>
+		<name>login2</name>
+		<description><![CDATA[COM_VIRTUEMART_USER_VIEW_DEFAULT_DESC]]></description>
+	</state>
+</metadata>

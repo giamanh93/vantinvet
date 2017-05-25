@@ -1,0 +1,312 @@
+@font-face {
+	font-family: 'HelveticaNeueLTStd55Roman';
+	src: url('../fonts/helveticaneueltstd-roman.eot') format('embedded-opentype'),
+	url('../fonts/helveticaneueltstd-roman.woff2') format('woff2'),
+	url('../fonts/helveticaneueltstd-roman.woff') format('woff'),
+	url('../fonts/helveticaneueltstd-roman.ttf') format('truetype'),
+	url('../fonts/helveticaneueltstd-roman.svg#HelveticaNeueLTStd55Roman') format('svg');
+}
+#sp-main-body-wrapper.style-layout2 {	
+	background: url(../images/background.jpg) !important;
+	background-color: transparent;
+}
+.style-layout2 {
+	background: url(../images/background.jpg) !important;	
+	h1, h2, h3, h4, h5, h6 {		
+		line-height: 1.35;
+		font-family: HelveticaNeueLTStd55Roman;
+	}
+	.container {
+		background-color: @white;		
+	}
+	#top {
+		padding: 0 10px;
+		background-color: #343a3c;
+		.box-sizing(border-box);
+	}
+	.logo-wrapper {
+		padding: 0 15px;
+		.box-sizing(border-box);
+	}
+	#header {
+		background-color: @white;
+	}
+	#sp-mini-cart {
+		padding: 5px 0 0 0;
+	}
+	#main-menu {
+		padding: 0 10px 0 0;
+		background-color: #000;
+		.box-sizing(border-box);
+	}
+	#sp-main-menu ul.level-0 > li >a {
+		padding: 15px 20px;
+		text-decoration: none;				
+		font-size: 14px;
+		font-family: HelveticaNeueLTStd55Roman;			
+	}
+	#sp-left,
+	#sp-right {
+		.module {
+			h3 {
+				&.header {
+					font-size: 18px;								
+					font-family: HelveticaNeueLTStd55Roman;							
+				}
+			}			
+			.mod-wrapper {
+				border: 1px solid #ebebeb;
+			}
+		}
+	}
+	.vm-icons-block {
+		margin: 0;
+	}
+	.vm-wishlist button,
+	.vm-wishlist .addtofav_aws_icon,
+	.vm-wishlist .addtofav_aws_icon_active,
+	.vm-details-icon a {		
+		height: 45px;
+		line-height: 45px;
+		color: #000;		
+		border: 1px solid #ebebeb;
+	}
+	.vina-carousel-virtuemart .item .vm-details-icon a {
+		color: #000 !important;
+		&:hover {
+			color: #fff !important;
+		}
+	}
+}
+#sp-top-wrapper,
+#sp-header-wrapper,
+#sp-main-menu-wrapper,
+#sp-link-follow-wrapper,
+#sp-footer-wrapper {
+	&.style-layout2 {
+		background-color: transparent;		
+	}
+}
+#sp-banner-top-wrapper {
+	&.style-layout2 {
+		.container {
+			background-color: #fff;
+		}
+	}
+}
+#sp-link-follow-wrapper {
+	&.style-layout2 {
+		.container {
+			background-color: #f1f1f1;
+		}
+	}
+}
+#sp-footer-wrapper {
+	&.style-layout2 {
+		.container {
+			background-color: #f0f2f3;
+		}
+	}
+}
+
+/* Module Style2 */
+.module {		
+	&.mod-style2 {
+		h3 {
+			&.vina-header {
+				border: 0px;
+				border-bottom: 1px solid #ddd;
+				span {					
+					font-size: 17px;					
+					padding: 10px 20px 9px;
+				}
+			}
+		}
+		.tab {
+			ul {
+				&.nav-tabs {
+					li {
+						a {																																										
+							font-size: 16px;														
+							font-family: HelveticaNeueLTStd55Roman;	
+							padding: 10px 15px 9px;
+						}
+					}
+				}
+			}
+		}
+		.moduletable .vina-carousel-virtuemart,
+		.vina-carousel-content {		
+			&.owl-theme {
+				.owl-controls {											
+					.owl-prev,
+					.owl-next {					
+						background: #f7f5f5 url(../images/btn-slider.png) no-repeat;															
+						border: 1px solid #eee;	
+						background-position: 100% 0;
+					}						
+				}
+			}
+		}
+		.vina-manufacturers-virtuemart {
+			.vina-prev,
+			.vina-next {		
+				background: #f7f5f5 url(../images/btn-slider.png) no-repeat;
+				border: 1px solid #eee;
+				background-position: 100% 0;
+			}
+		}
+		.tab-content .vina-carousel-virtuemart.owl-theme .owl-controls .owl-buttons .owl-next,		
+		.vina-carousel-content.owl-theme .owl-controls .owl-buttons .owl-next,		
+		.vina-manufacturers-virtuemart .vina-next {
+			&:hover {
+				background-position: 100% 100%;
+				background-color: #000;				
+			}
+		}
+		.tab-content .vina-carousel-virtuemart.owl-theme .owl-controls .owl-buttons .owl-prev,
+		.vina-carousel-content.owl-theme .owl-controls .owl-buttons .owl-prev,
+		.vina-manufacturers-virtuemart .vina-prev {
+			margin-right: 3px;
+			background-position: 0 0;
+			&:hover {
+				background-position: 0 100%;
+				background-color: #000;				
+			}
+		}		
+	}	
+}
+/* Product Layout 2 */
+.style-layout2 {
+	.vina-carousel-virtuemart {
+		.product-title, {
+			text-align: left;
+		}		
+		.item.product {			
+			border: 1px solid transparent;	
+			.button-group.actions {
+				height: auto !important;
+			}
+			.vm-details-button {
+				a {
+					color: #000 !important;
+					&:hover {
+						color: #fff !important;
+					}
+				}
+			}
+			.button-group {
+				padding: 0;				
+			}
+			.product-price {
+				margin: 0;
+			}
+		}
+	}
+	.item.product {
+		padding: 0 15px 5px !important;
+	}	
+	.product {
+		padding: 0 15px 10px !important;
+		text-align: left;
+		form.product {
+			padding: 0 !important;
+		}
+		&.vm-col {
+			border: 1px solid transparent;
+		}
+		h2,
+		h3 {
+			&.product-title {
+				a {
+					font-size: 15px;
+					text-transform: capitalize;
+					font-family: Open sans;
+				}
+			}
+		}	
+		.vm-product-media-container {
+			background-color: #fff;
+			margin: 0 -15px 15px;
+			.box-sizing(border-box);
+		}
+		.actions {			
+			position: static;			
+			bottom: 0;			
+			padding: 0;
+			margin: 10px 0 0;
+			height: auto !important;
+			.vm-details-button {
+				width: 48%;
+				a {
+					margin: 0;
+					color: #000;
+					border: 1px solid #ebebeb;	
+					padding: 14px 15px;
+					font: normal 14px/1.1em tahoma, Arial, Helvetica, sans-serif;			
+				}
+			}			
+			.vm-addtocart-button {
+				width: 48%;
+				margin: 0;
+				.addtocart-area {
+					.addtocart-bar {
+						span {
+							&.addtocart-button {
+								input {
+									&.addtocart-button {
+										color: #000;
+										height: auto !important;
+										border: 1px solid #ebebeb;	
+										padding: 14px 15px;
+										font: normal 14px/1.1em tahoma, Arial, Helvetica, sans-serif;																		
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}		 
+	}
+	.product-price {
+		margin: 0;
+		font-family: BebasNeuewebfont;
+		.vm-display {			
+			span {
+				&.vm-price-desc {
+					display: none;
+				}
+				&.PricebasePrice {
+					color: #888;					
+					font-size: 14px;
+					line-height: 15px;
+					margin-right: 5px;
+					font-family: BebasNeuewebfont;
+				}
+				&.PricesalesPrice {
+					font-family: BebasNeuewebfont;
+				}				
+			}
+		}
+	}		
+}
+
+/* Latest Layout 2 */   
+.module {
+	&.mod-style2 {
+		.vina-carousel-content {
+			.item {
+				.text-block {
+					div {
+						&.blog-time {											
+							font-style: italic;
+							margin: 5px 0 10px;
+							border-bottom: 1px solid #ddd;							
+						}
+					}
+				}
+			}
+		}	
+	}
+} 

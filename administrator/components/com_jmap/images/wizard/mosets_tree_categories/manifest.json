@@ -1,0 +1,19 @@
+{
+	"postfields":{
+		"option":"com_mtree",
+		"table_maintable":"#__mt_cats",
+		"titlefield":"cat_name",
+		"id":"cat_id",
+		"use_alias":"1",
+		"where1_maintable":"cat_published",
+		"where1_value_maintable":"1",
+		"where2_maintable":"cat_approved",
+		"where2_value_maintable":"1",
+		"orderby_maintable":"cat_name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"additionalquerystring":"task=listcats"
+	}
+}

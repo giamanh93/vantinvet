@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metafile version="3.3.0" client="site">
+	<name>Welsh (United Kingdom)</name>
+	<version>3.3.0.2</version>
+	<creationDate>2014-05-07</creationDate>
+	<author>Joomla! Project</author>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<copyright>Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>cy-GB site language</description>
+	<metadata>
+		<name>Welsh (United Kingdom)</name>
+		<tag>cy-GB</tag>
+		<rtl>0</rtl>
+		<locale>cy_GB.utf8, cy_GB.UTF-8, cy_GB, eng_GB, cy, cymraeg, welsh, welsh-uk, uk, gbr, britain, england, great britain, uk, united kingdom, united-kingdom, cymru</locale>
+		<firstDay>1</firstDay>
+		<weekEnd>0,6</weekEnd>
+	</metadata>
+	<params />
+</metafile>

@@ -1,0 +1,25 @@
+{
+	"postfields":{
+		"option":"com_rpl",
+		"table_maintable":"#__rpl_properties",
+		"titlefield":"property_title",
+		"id":"id",
+		"idfield_as":"pid",
+		"where1_maintable":"access",
+		"where1_value_maintable":"1",
+		"where2_maintable":"confirm",
+		"where2_value_maintable":"1",
+		"where3_maintable":"finalized",
+		"where3_value_maintable":"1",
+		"orderby_maintable":"property_title",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"substitutions":[
+		["AND `#__rpl_properties`.`finalized` = '1'","AND `#__rpl_properties`.`finalized` = '1' AND `#__rpl_properties`.`deleted` = '0'"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"propertyshow"
+	}
+}

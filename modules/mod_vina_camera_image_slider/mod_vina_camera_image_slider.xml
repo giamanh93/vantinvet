@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+	
+<!-- Author Block -->
+	<name>Vina Camera Image Slider</name>
+	<author>VinaGecko.com</author>
+	<creationDate>April 22, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>support@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.1.0</version>
+	
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+		<strong>Vina Camera Image Slider</strong> is a free responsive slider for Joomla 3 with many features: 30 Transition Effects, 32 Skin Type to Set, Unlimited Image... It uses a light version of jQuery mobile, you can navigate the slides by swiping with your fingers. Being compatible with most of the browsers Vina Camera Image Slider is a perfect choice for your portfolio banner.<br>
+		<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_camera_image_slider">mod_vina_camera_image_slider.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>samples</folder>
+		<folder>libs</folder>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_camera_image_slider.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_vina_camera_image_slider/libs/elements">
+			<fieldset name="basic">
+				<field
+					name="moduleWidth"
+					type="text"
+					default="100%"
+					label="VINA_CAMERA_MODULE_WIDTH"
+					description="VINA_CAMERA_MODULE_WIDTH_DESC" />
+				<field
+					name="maxWidth"
+					type="text"
+					default="100%"
+					label="VINA_CAMERA_MODULE_MAX_WIDTH"
+					description="VINA_CAMERA_MODULE_MAX_WIDTH_DESC" />
+				<field
+					name="moduleHeight"
+					type="text"
+					default="50%"
+					label="VINA_CAMERA_MODULE_HEIGHT"
+					description="VINA_CAMERA_MODULE_HEIGHT_DESC" />
+				<field 
+                    name="moduleStyle" 
+                    type="list" 
+                    default="camera_amber_skin" 
+                    label="VINA_CAMERA_MODULE_STYLE" 
+                    description="VINA_CAMERA_MODULE_STYLE_DESC">
+                        <option value="camera_amber_skin">AMBER SKIN</option>
+						<option value="camera_ash_skin">ASH SKIN</option>
+                        <option value="camera_azure_skin">AZURE SKIN</option>
+						<option value="camera_beige_skin">BEIGE SKIN</option>
+						<option value="camera_black_skin">BLACK SKIN</option>
+						<option value="camera_blue_skin">BLUE SKIN</option>
+						<option value="camera_brown_skin">BROWN SKIN</option>
+						<option value="camera_burgundy_skin">BURGUNDY SKIN</option>
+						<option value="camera_charcoal_skin">CHARCOAL SKIN</option>
+						<option value="camera_chocolate_skin">CHOCOLATE SKIN</option>
+						<option value="camera_coffee_skin">COFFEE SKIN</option>
+						<option value="camera_cyan_skin">CYAN SKIN</option>
+						<option value="camera_fuchsia_skin">FUCHSIA SKIN</option>
+						<option value="camera_gold_skin">GOLD SKIN</option>
+						<option value="camera_green_skin">GREEN SKIN</option>
+						<option value="camera_grey_skin">GREY SKIN</option>
+						<option value="camera_indigo_skin">INDIGO SKIN</option>
+						<option value="camera_khaki_skin">KHAKI SKIN</option>
+						<option value="camera_lime_skin">LIME SKIN</option>
+						<option value="camera_magenta_skin">MAGENTA SKIN</option>
+						<option value="camera_maroon_skin">MAROON SKIN</option>
+						<option value="camera_orange_skin">ORANGE SKIN</option>
+						<option value="camera_olive_skin">OLIVE SKIN</option>
+						<option value="camera_pink_skin">PINK SKIN</option>
+						<option value="camera_pistachio_skin">PISTACHIO SKIN</option>
+						<option value="camera_red_skin">RED SKIN</option>
+						<option value="camera_tangerine_skin">TANGERINE SKIN</option>
+						<option value="camera_turquoise_skin">TURQUOISE SKIN</option>
+						<option value="camera_violet_skin">VIOLET SKIN</option>
+						<option value="camera_white_skin">WHITE SKIN</option>
+						<option value="camera_yellow_skin">YELLOW SKIN</option>
+                </field>
+				<field 
+                    name="displayCaptions" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_DISPLAY_CAPTIONS" 
+                    description="VINA_CAMERA_DISPLAY_CAPTIONS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="resizeImage" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_RESIZE_IMAGE" 
+                    description="VINA_CAMERA_RESIZE_IMAGE_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="imageWidth"
+					type="text"
+					default="600"
+					label="VINA_CAMERA_IMAGE_WIDTH"
+					description="VINA_CAMERA_IMAGE_WIDTH_DESC" />
+				<field
+					name="imageHeight"
+					type="text"
+					default="300"
+					label="VINA_CAMERA_IMAGE_HEIGHT"
+					description="VINA_CAMERA_IMAGE_HEIGHT_DESC" />
+				<field 
+                    name="loaderStyle" 
+                    type="list" 
+                    default="pie" 
+                    label="VINA_CAMERA_LOADER_STYLE" 
+                    description="VINA_CAMERA_LOADER_STYLE_DESC">
+                        <option value="none">None</option>
+						<option value="pie">Pie</option>
+                        <option value="bar">Bar</option>
+                </field>
+				<field 
+                    name="piePosition" 
+                    type="list" 
+                    default="rightTop" 
+                    label="VINA_CAMERA_PIE_POSITION" 
+                    description="VINA_CAMERA_PIE_POSITION_DESC">
+                        <option value="rightTop">Right Top</option>
+						<option value="leftTop">Left Top</option>
+                        <option value="leftBottom">Left Bottom</option>
+						<option value="rightBottom">Right Bottom</option>
+                </field>
+				<field 
+                    name="barPosition" 
+                    type="list" 
+                    default="bottom" 
+                    label="VINA_CAMERA_BAR_POSITION" 
+                    description="VINA_CAMERA_BAR_POSITION_DESC">
+                        <option value="bottom">Bottom</option>
+						<option value="left">Left</option>
+                        <option value="top">Top</option>
+						<option value="right">Right</option>
+                </field>
+				<field 
+                    name="barDirection" 
+                    type="list" 
+                    default="leftToRight" 
+                    label="VINA_CAMERA_BAR_DIRECTION" 
+                    description="VINA_CAMERA_BAR_DIRECTION_DESC">
+                        <option value="leftToRight">Left To Right</option>
+						<option value="rightToLeft">Right To Left</option>
+                        <option value="topToBottom">Top To Bottom</option>
+						<option value="bottomToTop">Bottom To Top</option>
+                </field>
+				<field 
+                    name="fx" 
+                    type="list" 
+                    default="random" 
+                    label="VINA_CAMERA_FX" 
+                    description="VINA_CAMERA_FX_DESC">
+                        <option value="random">Random</option>
+						<option value="simpleFade">simpleFade</option>
+						<option value="curtainTopLeft">curtainTopLeft</option>
+						<option value="curtainTopRight">curtainTopRight</option>
+						<option value="curtainBottomLeft">curtainBottomLeft</option>
+						<option value="curtainBottomRight">curtainBottomRight</option>
+						<option value="curtainSliceLeft">curtainSliceLeft</option>
+						<option value="curtainSliceRight">curtainSliceRight</option>
+						<option value="blindCurtainTopLeft">blindCurtainTopLeft</option>
+						<option value="blindCurtainTopRight">blindCurtainTopRight</option>
+						<option value="blindCurtainBottomLeft">blindCurtainBottomLeft</option>
+						<option value="blindCurtainBottomRight">blindCurtainBottomRight</option>
+						<option value="blindCurtainSliceBottom">blindCurtainSliceBottom</option>
+						<option value="blindCurtainSliceTop">blindCurtainSliceTop</option>
+						<option value="stampede">stampede</option>
+						<option value="mosaic">mosaic</option>
+						<option value="mosaicReverse">mosaicReverse</option>
+						<option value="mosaicRandom">mosaicRandom</option>
+						<option value="mosaicSpiral">mosaicSpiral</option>
+						<option value="mosaicSpiralReverse">mosaicSpiralReverse</option>
+						<option value="topLeftBottomRight">topLeftBottomRight</option>
+						<option value="bottomRightTopLeft">bottomRightTopLeft</option>
+						<option value="bottomLeftTopRight">bottomLeftTopRight</option>
+						<option value="bottomLeftTopRight">bottomLeftTopRight</option>
+                </field>
+				<field 
+                    name="pauseHover" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_PAUSE_ON_HOVER" 
+                    description="VINA_CAMERA_PAUSE_ON_HOVER_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="pauseOnClick" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_PAUSE_ON_CLICK" 
+                    description="VINA_CAMERA_PAUSE_ON_CLICK_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="navigation" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_DISPLAY_NAVIGATION" 
+                    description="VINA_CAMERA_DISPLAY_NAVIGATION_DESC">
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+				<field 
+                    name="navigationHover" 
+                    type="list" 
+                    default="1" 
+                    label="VINA_CAMERA_NAVIGATION_HOVER" 
+                    description="VINA_CAMERA_NAVIGATION_HOVER_DESC">
+                        <option value="0">Always Show</option>
+                        <option value="1">Show when Mouse Hover</option>
+                </field>
+				<field 
+                    name="playPause" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_DISPLAY_PLAYPAUSE" 
+                    description="VINA_CAMERA_DISPLAY_PLAYPAUSE_DESC">
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+				<field 
+                    name="pagination" 
+                    type="radio" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_DISPLAY_PAGINATION" 
+                    description="VINA_CAMERA_DISPLAY_PAGINATION_DESC">
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+				<field 
+                    name="thumbnails" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_DISPLAY_THUMBNAILS" 
+                    description="VINA_CAMERA_DISPLAY_THUMBNAILS_DESC">
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+				<field
+					name="thumbnailWidth"
+					type="text"
+					default="100"
+					label="VINA_CAMERA_THUMBNAIL_IMAGE_WIDTH"
+					description="VINA_CAMERA_THUMBNAIL_IMAGE_WIDTH_DESC" />
+				<field
+					name="thumbnailHeight"
+					type="text"
+					default="75"
+					label="VINA_CAMERA_THUMBNAIL_IMAGE_HEIGHT"
+					description="VINA_CAMERA_THUMBNAIL_IMAGE_HEIGHT_DESC" />
+				<field
+					name="duration"
+					type="text"
+					default="7000"
+					label="VINA_CAMERA_SLIDE_DURATION"
+					description="VINA_CAMERA_SLIDE_DURATION_DESC" />
+				<field
+					name="transPeriod"
+					type="text"
+					default="1500"
+					label="VINA_CAMERA_TRANSACTION_DURATION"
+					description="VINA_CAMERA_TRANSACTION_DURATION_DESC" />
+			</fieldset>
+			
+			<fieldset name="slider">
+				<field name="slides" type="data" label="Slides" description="" filter="raw" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field 
+                    name="copyRightText" 
+                    type="radio" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_CAMERA_SHOW_COPYRIGHT_TEXT" 
+                    description="VINA_CAMERA_SHOW_COPYRIGHT_TEXT_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+						<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

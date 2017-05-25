@@ -1,0 +1,16 @@
+{
+	"postfields":{
+		"option":"com_digistore",
+		"table_maintable":"#__digistore_categories",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"cid",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"additionalquerystring":"controller=digistoreProducts&task=list",
+		"guess_sef_itemid":"1"
+	}
+}

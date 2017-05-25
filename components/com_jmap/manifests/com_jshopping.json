@@ -1,0 +1,10 @@
+{
+	"catrecursion":"1",
+	"recursion_type":"adiacency",
+	"categories_table":"#__jshopping_categories",
+	"category2category_table":"#__jshopping_categories",
+	"category_table_id_field":"category_id",
+	"category_table_name_field":"name_{langtag}",
+ 	"parent_field":"category_parent_id",
+ 	"child_field":"category_id"
+}

@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+.cf-form-search .cf-searchmod-input{
+
+}
+
+.cf-form-search .cf-searchmod-input-small{
+	  font-size: 11.9px;
+	  padding: 2px 6px;
+}
+
+.cf-form-search .cf-searchmod-input-large{
+	  font-size: 17.5px;
+	   padding: 11px 10px;
+}
+
+.cf-form-search .btn-small {
+    border-radius: 3px;
+    font-size: 11.9px;
+    padding: 2px 10px;
+}
+
+.cf-form-search .btn-large {
+    border-radius: 6px;
+    font-size: 17.5px;
+    padding: 11px 19px;
+}
+
+.cf-form-search .input-append input{	
+	display: inline-block;
+    width: auto;
+}
+
+.cf-form-search .input-append .btn{
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	margin-left: -1px;
+}

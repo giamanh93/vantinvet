@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>MyLiveChat</name>
+	<author>MyLiveChat.com</author>
+	<creationDate>July 9, 2013</creationDate>
+	<copyright>Copyright (C) 2013 MyLiveChat.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.txt</license>
+	<authorEmail>info@mylivechat.com</authorEmail>
+	<authorUrl>www.mylivechat.com</authorUrl>
+	<version>2.0.0</version>
+	<description>
+    My LiveChat is a fast, high performance and most user-friendly live chat solution. It allows you to live chat with website visitors, monitor site traffic, and analyze visitors web activities, including their search engine and keyword usage.
+  </description>
+
+	<files>
+		<filename module="mod_mylivechat">mod_mylivechat.php</filename>
+		<filename module="mod_mylivechat">tmpl/default.php</filename>
+		<filename module="mod_mylivechat">tmpl/index.html</filename>
+		<filename module="mod_mylivechat">helper.php</filename>
+		<filename module="mod_mylivechat">index.html</filename>
+ 	</files>
+	<config>
+    <fields name="params">
+      <fieldset name="basic" label="MyLiveChat Settings">
+		<field name="mylivechat_id" type="text" default="0" label="MyLiveChat ID" description="Click the link below to get your free MyLiveChat account." />
+        <field name="@spacer" type="spacer" default="" label="Don't have MyLiveChat account? &lt;a href=&quot;https://www.mylivechat.com/register.aspx&quot; target=&quot;_blank&quot;&gt;Get it for free!&lt;/a&gt;" description=""/>
+		<field name="mylivechat_displaytype" type="list" default="inline" label="Display Type" description="Choose MyLiveChat display type.">
+			<option value="inline">Inline Chat</option>
+			<option value="button">Chat Button</option>
+			<option value="box">Chat Box</option>
+			<option value="link">Chat Text Link</option>
+			<option value="widget">Chat Widget</option>
+		</field>
+		<field name="@spacer2" type="spacer" default="" label="&lt;br/&gt;" description="" />
+		<field name="mylivechat_membership" type="list" default="no" label="Integrate User" description="Integrate Joomla Membership with MyLiveChat.">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</field>
+		<field name="mylivechat_encrymode" type="list" default="none" label="Encryption Mode" description="Select an encryption mode.">
+			<option value="none">None</option>
+			<option value="basic">Basic</option>
+		</field>
+		<field name="mylivechat_encrykey" type="text" default="" label="Encryption Key" description="Set an encryption key with a length greater &lt;b&gt;8&lt;/b&gt;. The encryption key is used to create a secure connection between your customization code and MyLiveChat server, and to avoid man-in-the-middle attacks." />
+		<field name="@spacer3" type="spacer" default="" label="&lt;strong&gt;Encryption key used must be the same as key in MyLiveChat control panel&lt;/strong&gt;" description="" />
+		<field name="@spacer4" type="spacer" default="" label="&lt;br/&gt;" description="" />
+		<field name="@spacer5" type="spacer" default="" label="Read the &lt;a href=&quot;http://www.mylivechat.com/addons/joomla-live-chat.aspx&quot; target=&quot;_blank&quot;&gt;MyLiveChat integration tutorial&lt;/a&gt;." description="" />
+      </fieldset>
+    </fields>
+	</config>
+</extension>

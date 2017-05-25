@@ -1,0 +1,16 @@
+{
+	"postfields":{
+		"option":"com_yendifevents",
+		"table_maintable":"#__yendifevents_categories",
+		"titlefield":"name",
+		"id":"id",
+		"use_alias":"1",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"category",
+		"guess_sef_itemid":"1"
+	}
+}

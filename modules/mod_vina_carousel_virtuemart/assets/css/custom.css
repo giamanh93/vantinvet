@@ -1,0 +1,370 @@
+/*
+# ------------------------------------------------------------------------
+# Vina Product Carousel for VirtueMart for Joomla 3
+# ------------------------------------------------------------------------
+# Copyright(C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://vinagecko.com
+# Forum: http://vinagecko.com/forum/
+# ------------------------------------------------------------------------
+*/
+.round-corners {
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: border-radius;
+	transition-property: border-radius;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.round-corners:hover, .round-corners:focus, .round-corners:active {
+	border-radius: 1em;
+}
+.vina-carousel-virtuemart .image-block {
+	margin-bottom: 10px;
+}
+.vina-carousel-virtuemart .product-title {
+	text-align: center;
+}
+.vina-carousel-virtuemart .product-description {
+	text-align: center;
+}
+.vina-carousel-virtuemart .product-price {
+	float: none;
+	margin: 0px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 24px;
+}
+.vina-carousel-virtuemart .addtocart-area {		
+	margin: 1em 0;	
+}
+.vina-carousel-virtuemart .addtocart-area .addtocart-bar {
+	position: relative;		
+	bottom: 0;	
+}
+.vina-carousel-virtuemart .quantity-controls,
+.vina-carousel-virtuemart .quantity-box {
+	display: none;
+}
+.vina-carousel-virtuemart .button-group {
+	height: 30px;
+    margin-top: 15px;
+    text-align: center;
+}
+.vina-carousel-virtuemart .vm-details-button {
+	float: left;
+	width: 150px;
+}
+.vina-carousel-virtuemart .addtocart {
+	float: right;
+}
+.vina-carousel-virtuemart .addtocart-area,
+.vina-carousel-virtuemart .addtocart-area form {
+	margin: 0;
+}
+.vina-carousel-virtuemart span.addtocart-button input.addtocart-button, 
+.vina-carousel-virtuemart span.addtocart-button input.notify-button,
+.vina-carousel-virtuemart div.vm-details-button a {
+	padding: 5px 14px;
+}
+
+/* VirtueMart Demo 01 */
+.vina-vtm-demo1 .owl-carousel .owl-item .item .image-block {
+	overflow: hidden;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item {
+	border: 1px solid #CCCCCC;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	position: relative;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item:hover {
+	border: 1px solid #f7544a;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item .product-title a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	text-transform: capitalize;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: normal;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item .product-title a:hover {
+	color: #f7544a !important;
+	text-decoration: none;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item .product-price {
+	font-size: 18px;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item div.vm-details-button a {
+	top: 130px;
+	left: 20%;
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	background: #f7544a;
+	color: #fff !important;
+	padding: 10px 10px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 0;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item:hover div.vm-details-button a  {
+	opacity: 1;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item img {
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+}
+.vina-vtm-demo1 .owl-carousel .owl-item .item:hover img {
+	webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	transform: scale(1.05);
+}
+.vina-vtm-demo1 span.addtocart-button input.addtocart-button { 
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	background: url('../images/cart1.png') no-repeat scroll 113px center #fff!important;
+	color: #434343;
+	font-size: 11px;
+	text-align: center;
+	text-transform: uppercase;
+	height: 30px;
+	line-height: 27px;
+	padding: 0 35px 0 25px;
+}
+.vina-vtm-demo1 span.addtocart-button input.addtocart-button:hover {
+	background: url('../images/cart.png') no-repeat scroll 113px center #f7544a !important;
+	color: #fff !important;;
+	border-color: transparent !important;
+}
+.vina-vtm-demo1 span.quantity-controls,
+.vina-vtm-demo1 span.quantity-box {
+	display: none;
+}
+.vina-vtm-demo1 .owl-theme .owl-controls .owl-page.active span, 
+.vina-vtm-demo1 .owl-theme .owl-controls.clickable .owl-page:hover span {
+	background: #f7544a;
+}
+
+/* VirtueMart Demo 02 */
+.vina-vtm-demo2 .owl-carousel .owl-item .item  {
+	overflow: hidden;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item .product-title a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	text-transform: capitalize;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: normal;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item .product-title a:hover {
+	color: #7cbb3e !important;
+	text-decoration: none;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item .product-title {
+	text-align: left;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item .ratingbox {
+	margin-bottom: 5px;
+	margin-left: 0;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item .image-block {
+	padding: 10px;
+	border: 1px solid #ccc;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item:hover .image-block {
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+	-webkit-border-radius: 12px;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item .product-price {
+	font-size: 18px;
+	text-align: left;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item div.vm-details-button a {
+	top: 130px;
+	left: -230px;
+	position: absolute;
+	width: 100%;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	background: #7cbb3e;
+	color: #fff !important;
+	padding: 10px 15px;
+	text-align: center;
+	border: 0;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	width: auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item:hover div.vm-details-button a  {
+	left: 0px;
+}
+.vina-vtm-demo2 span.quantity-controls,
+.vina-vtm-demo2 span.quantity-box {
+	display: none;
+}
+.vina-vtm-demo2 .owl-theme .owl-controls .owl-page.active span, 
+.vina-vtm-demo2 .owl-theme .owl-controls.clickable .owl-page:hover span ,
+.vina-vtm-demo2 .owl-theme .owl-controls.clickable .owl-buttons div:hover {
+	background: #7cbb3e;
+}
+.vina-vtm-demo2 span.addtocart-button input.addtocart-button { 
+	border: 0;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	background: url("../images/cart.png") no-repeat scroll 11px center #575757 !important;
+	color: #fff;
+	font-size: 11px;
+	text-align: center;
+	text-transform: uppercase;
+	height: 33px;
+	line-height: 30px;
+	padding: 0px 11px 0px 40px;
+	letter-spacing: 0;
+	font-size: 13px;
+	opacity: 0.5;
+}
+.vina-vtm-demo2 .owl-carousel .owl-item .item:hover span.addtocart-button input.addtocart-button {
+	opacity: 1;
+}
+.vina-vtm-demo2 span.addtocart-button input.addtocart-button:hover {
+	background: url('../images/cart.png') no-repeat scroll 6px center #7cbb3e !important;
+	border-color: transparent !important;
+}
+.vina-vtm-demo2 .addtocart-bar {
+	text-align: left;
+}
+
+/* VirtueMart Demo 03 */
+.vina-vtm-demo3 .owl-carousel .owl-item .item .product-title a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	text-transform: capitalize;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: normal;
+}
+.vina-vtm-demo3 .owl-carousel .owl-item .item img {
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-ms-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+}
+.vina-vtm-demo3 .owl-carousel .owl-item .item:hover img {
+	transform: rotateY(180deg) ;
+	-webkit-transform: rotateY(180deg) ;
+	-moz-transform: rotateY(180deg) ;
+	-o-transform: rotateY(180deg) ;
+	-ms-transform: rotateY(180deg) ;
+}
+.vina-vtm-demo3 .owl-carousel .owl-item .item .product-price {
+	font-size: 18px;
+}
+.vina-vtm-demo3 span.quantity-controls,
+.vina-vtm-demo3 span.quantity-box {
+	display: none;
+}
+.vina-vtm-demo3 .owl-theme .owl-controls .owl-page.active span, 
+.vina-vtm-demo3 .owl-theme .owl-controls.clickable .owl-page:hover span ,
+.vina-vtm-demo3 .owl-theme .owl-controls.clickable .owl-buttons div:hover {
+	background: #ef7147;
+}
+.vina-vtm-demo3 span.addtocart-button input.addtocart-button { 
+	border: 1px solid #ccc;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+	background: url('../images/cart.png') no-repeat scroll 113px center transparent !important;
+	color: #fff;
+	font-size: 11px;
+	text-align: center;
+	text-transform: uppercase;
+	height: 30px;
+	line-height: 27px;
+	padding: 0 35px 0 25px;
+}
+.vina-vtm-demo3 span.addtocart-button input.addtocart-button:hover {
+	background: url('../images/cart.png') no-repeat scroll 113px center #ef7147 !important;
+	color: #fff !important;;
+	border-color: transparent !important;
+}

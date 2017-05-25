@@ -1,0 +1,41 @@
+{
+	"postfields":{
+		"option":"com_jshopping",
+		"table_maintable":"#__jshopping_products",
+		"titlefield":"name_{langtag}",
+		"id":"product_id",
+		"where1_maintable":"product_publish",
+		"where1_value_maintable":"1",
+		"orderby_maintable":"name_{langtag}",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__jshopping_products",
+		"table_joinwith_jointable1":"#__jshopping_products_to_categories",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"product_id",
+		"field_joinwith_jointable1":"product_id",
+		"field_select_jointable1":"category_id",
+		"table_joinfrom_jointable2":"#__jshopping_products_to_categories",
+		"table_joinwith_jointable2":"#__jshopping_categories",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"category_id",
+		"field_joinwith_jointable2":"category_id",
+		"field_select_jointable2":"name_{langtag}",
+		"field_as_jointable2":"category_name",
+		"use_category_title_jointable2":"1",
+		"where1_jointable2":"category_publish",
+		"where1_value_jointable2":"1",
+		"orderby_jointable2":"ordering",
+		"orderby_direction_jointable2":"ASC"
+	},
+	
+	"placeholders":{
+		"titlefield":["{langtag}","langtag"],
+		"orderby_maintable":["{langtag}","langtag"],
+		"field_select_jointable2":["{langtag}","langtag"]
+	},
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"controller=product,task=view",
+		"guess_sef_itemid":"1"
+	}
+}

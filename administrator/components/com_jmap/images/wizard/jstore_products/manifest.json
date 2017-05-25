@@ -1,0 +1,38 @@
+{
+	"postfields":{
+		"option":"com_jstore",
+		"table_maintable":"#__product_node",
+		"titlefield":"alias",
+		"id":"pid",
+		"idfield_as":"eid",
+		"where1_maintable":"publish",
+		"where1_value_maintable":"1",
+		"where1_maintable":"blocked",
+		"where1_value_maintable":"0",
+		"orderby_maintable":"alias",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__product_node",
+		"table_joinwith_jointable1":"#__productcat_product",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"pid",
+		"field_joinwith_jointable1":"pid",
+		"table_joinfrom_jointable2":"#__productcat_product",
+		"table_joinwith_jointable2":"#__productcat_node",
+		"jointype_jointable2":"",
+		"field_joinfrom_jointable2":"catid",
+		"field_joinwith_jointable2":"catid",
+		"field_select_jointable2":"alias",
+		"field_as_jointable2":"catalias",
+		"use_category_title_jointable2":"1",
+		"where1_jointable2":"publish",
+		"where1_value_jointable2":"1",
+		"where2_jointable2":"blocked",
+		"where2_value_jointable2":"0",
+		"orderby_jointable2":"lft",
+		"orderby_direction_jointable2":"ASC"
+	},
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"controller=catalog&task=show"
+	}
+}

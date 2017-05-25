@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+
+<!-- Author Block -->
+	<name>Vina Product Ticker for VirtueMart</name>
+	<author>VinaGecko.com</author>
+	<creationDate>December 02, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>admin@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.0.0</version>
+
+<!-- Description Block -->
+	<description>
+		<![CDATA[<div style="border: 1px solid red; border-radius: 7px; padding: 10px;">
+			<strong>Vina Product Ticker for VirtueMart</strong> is a great module for Joomla 3.x to display more product of <strong>VirtueMart 3.x Component</strong> in a <strong>Vertical Ticker - Vertical Scroller</strong>, which scrolls the list infinitely.<br>
+			<strong>VinaGecko.com</strong> - Premium <a href="http://vinagecko.com/joomla-modules" target="_blank">Joomla Modules</a>, <a href="http://vinagecko.com/joomla-plugins" target="_blank">Joomla Plugins</a>, <a href="http://vinagecko.com/joomla-templates" target="_blank">Joomla Templates</a>.
+		</div>]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_ticker_virtuemart">mod_vina_ticker_virtuemart.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>libs</folder>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_ticker_virtuemart.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params">
+			<!-- Basic Block -->
+			<fieldset name="basic">
+				<field 
+					name="moduleWidth" 
+					type="text" 
+					size="4" 
+					default="300px" 
+					label="VINA_TICKER_VMART_MODULE_WIDTH" 
+					description="VINA_TICKER_VMART_MODULE_WIDTH_DESC"/>
+				<field 
+					name="moduleHeight" 
+					type="text" 
+					size="4" 
+					default="auto" 
+					label="VINA_TICKER_VMART_MODULE_HEIGHT" 
+					description="VINA_TICKER_VMART_MODULE_HEIGHT_DESC"/>
+				<field
+					name="bgImage"
+					type="media" 
+					label="VINA_TICKER_VMART_BACKGROUND_IMAGE" 
+					description="VINA_TICKER_VMART_BACKGROUND_IMAGE_DESC" 
+					size="30"
+					default="" />
+				<field 
+					name="isBgColor" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TICKER_VMART_USE_BACKGROUND_COLOR" 
+					description="VINA_TICKER_VMART_USE_BACKGROUND_COLOR_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+					name="bgColor"
+					type="color" 
+					label="VINA_TICKER_VMART_BACKGROUND_COLOR" 
+					description="VINA_TICKER_VMART_BACKGROUND_COLOR_DESC" 
+					size="30"
+					default="#43609C" />
+				<field 
+					name="modulePadding" 
+					type="text" 
+					size="4" 
+					default="10px" 
+					label="VINA_TICKER_VMART_PADDING" 
+					description="VINA_TICKER_VMART_PADDING_DESC"/>
+				
+				<field 
+					name="headerBlock" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TICKER_VMART_HEADER_BLOCK" 
+					description="VINA_TICKER_VMART_HEADER_BLOCK_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field 
+					name="headerText" 
+					type="text" 
+					size="4" 
+					default="" 
+					label="VINA_TICKER_VMART_HEADER_TEXT" 
+					description="VINA_TICKER_VMART_HEADER_TEXT_DESC"/>
+				<field
+					name="headerTextColor"
+					type="color" 
+					label="VINA_TICKER_VMART_HEADER_TEXT_COLOR" 
+					description="VINA_TICKER_VMART_HEADER_TEXT_COLOR_DESC" 
+					size="30"
+					default="#FFFFFF" />
+				<field 
+					name="controlButtons" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TICKER_VMART_CONTROL_BUTTONS" 
+					description="VINA_TICKER_VMART_CONTROL_BUTTONS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field 
+					name="isItemBgColor" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TICKER_VMART_USE_ITEM_BACKGROUND_COLOR" 
+					description="VINA_TICKER_VMART_USE_ITEM_BACKGROUND_COLOR_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+				<field
+					name="itemBgColor"
+					type="color" 
+					label="VINA_TICKER_VMART_ITEM_BACKGROUND_COLOR" 
+					description="VINA_TICKER_VMART_ITEM_BACKGROUND_COLOR_DESC" 
+					size="30"
+					default="#FFFFFF" />
+				<field 
+					name="itemPadding" 
+					type="text" 
+					size="4" 
+					default="10px" 
+					label="VINA_TICKER_VMART_ITEM_PADDING" 
+					description="VINA_TICKER_VMART_ITEM_PADDING_DESC"/>
+				<field
+					name="itemTextColor"
+					type="color" 
+					label="VINA_TICKER_VMART_ITEM_TEXT_COLOR" 
+					description="VINA_TICKER_VMART_ITEM_TEXT_COLOR_DESC" 
+					size="30"
+					default="#141823" />
+				<field
+					name="itemLinkColor"
+					type="color" 
+					label="VINA_TICKER_VMART_ITEM_LINK_COLOR" 
+					description="VINA_TICKER_VMART_ITEM_LINK_COLOR_DESC" 
+					size="30"
+					default="#3B5998" />
+				<field 
+					name="direction" 
+					type="list" 
+					default="up" 
+					label="VINA_TICKER_VMART_DIRECTION" 
+					description="VINA_TICKER_VMART_DIRECTION_DESC">
+						<option value="up">Up</option>
+						<option value="down">Down</option>
+                </field>
+				<field 
+					name="easing" 
+					type="list" 
+					default="jswing" 
+					label="VINA_TICKER_VMART_EASING" 
+					description="VINA_TICKER_VMART_EASING_DESC">
+						<option value="jswing">jswing</option>
+						<option value="def">def</option>
+						<option value="easeInQuad">easeInQuad</option>
+						<option value="easeOutQuad">easeOutQuad</option>
+						<option value="easeInOutQuad">easeInOutQuad</option>
+						<option value="easeInCubic">easeInCubic</option>
+						<option value="easeOutCubic">easeOutCubic</option>
+						<option value="easeInOutCubic">easeInOutCubic</option>
+						<option value="easeInQuart">easeInQuart</option>
+						<option value="easeOutQuart">easeOutQuart</option>
+						<option value="easeInOutQuart">easeInOutQuart</option>
+						<option value="easeInQuint">easeInQuint</option>
+						<option value="easeOutQuint">easeOutQuint</option>
+						<option value="easeInOutQuint">easeInOutQuint</option>
+						<option value="easeInSine">easeInSine</option>
+						<option value="easeOutSine">easeOutSine</option>
+						<option value="easeInOutSine">easeInOutSine</option>
+						<option value="easeInExpo">easeInExpo</option>
+						<option value="easeOutExpo">easeOutExpo</option>
+						<option value="easeInOutExpo">easeInOutExpo</option>
+						<option value="easeInCirc">easeInCirc</option>
+						<option value="easeOutCirc">easeOutCirc</option>
+						<option value="easeInOutCirc">easeInOutCirc</option>
+						<option value="easeInElastic">easeInElastic</option>
+						<option value="easeOutElastic">easeOutElastic</option>
+						<option value="easeInOutElastic">easeInOutElastic</option>
+						<option value="easeInBack">easeInBack</option>
+						<option value="easeOutBack">easeOutBack</option>
+						<option value="easeInOutBack">easeInOutBack</option>
+						<option value="easeInBounce">easeInBounce</option>
+						<option value="easeOutBounce">easeOutBounce</option>
+						<option value="easeInOutBounce">easeInOutBounce</option>
+                </field>
+				<field 
+					name="speed" 
+					type="text" 
+					default="slow" 
+					label="VINA_TICKER_VMART_SPEED" 
+					description="VINA_TICKER_VMART_SPEED_DESC" />
+				<field 
+					name="interval" 
+					type="text" 
+					default="5000" 
+					label="VINA_TICKER_VMART_INTERVAL" 
+					description="VINA_TICKER_VMART_INTERVAL_DESC" />
+				<field 
+					name="visible" 
+					type="text" 
+					default="2" 
+					label="VINA_TICKER_VMART_VISIBLE" 
+					description="VINA_TICKER_VMART_VISIBLE_DESC" />
+				<field 
+					name="mousePause" 
+					type="radio" 
+					default="1" 
+					class="btn-group btn-group-yesno"
+					label="VINA_TICKER_VMART_MOUSE_PAUSE" 
+					description="VINA_TICKER_VMART_MOUSE_PAUSE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+                </field>
+			</fieldset>
+			
+			<!-- Source Block -->
+			<fieldset name="source" addfieldpath="/administrator/components/com_virtuemart/fields">
+				<field 
+					name="moduleType" 
+					type="list" 
+					default="latest"
+					label="VINA_TICKER_VMART_MODULE_TYPE"
+					description="VINA_TICKER_VMART_MODULE_TYPE_DESC">
+						<option value="featured">Featured Products</option>
+						<option value="latest">Latest Products</option>
+						<option value="random">Random Products</option>
+						<option value="topten">Best Sales</option>
+						<option value="recent">Recent Products</option>
+				</field>
+				<field 
+					name="maxItems" 
+					type="text" 
+					default="5"
+					label="VINA_TICKER_VMART_MAX_ITEMS"
+					description="VINA_TICKER_VMART_MAX_ITEMS_DESC" />				
+				<field 
+					name="filterCategory" 
+					type="radio"
+					class="btn-group btn-group-yesno"					
+					default="0"
+					label="VINA_TICKER_VMART_FILTER_CATEGORY"
+					description="VINA_TICKER_VMART_FILTER_CATEGORY_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field 
+					name="categoryId" 
+					type="vmcategories" 
+					value_field="category_name" 
+					label="VINA_TICKER_VMART_CATEGORY_ID" 
+					description="VINA_TICKER_VMART_CATEGORY_ID_DESC" />
+				<field 
+					name="productName" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_SHOW_NAME"
+					description="VINA_TICKER_VMART_SHOW_NAME_DESC">						
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field 
+					name="productImage" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_SHOW_IMAGE"
+					description="VINA_TICKER_VMART_SHOW_IMAGE_DESC">						
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field 
+					name="resizeImage" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_RESIZE_IMAGE"
+					description="VINA_TICKER_VMART_RESIZE_IMAGE_DESC">						
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field
+                    name="imageWidth"
+                    type="text"
+                    label="VINA_TICKER_VMART_IMAGE_WIDTH"
+                    default="200"
+                    description="VINA_TICKER_VMART_IMAGE_WIDTH_DESC" />
+				<field
+                    name="imageHeight"
+                    type="text"
+                    label="VINA_TICKER_VMART_IMAGE_HEIGHT"
+                    default="150"
+                    description="VINA_TICKER_VMART_IMAGE_HEIGHT_DESC" />
+				<field 
+					name="productRating" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_SHOW_RATING"
+					description="VINA_TICKER_VMART_SHOW_RATING_DESC">						
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field 
+					name="productStock" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_SHOW_STOCK"
+					description="VINA_TICKER_VMART_SHOW_STOCK_DESC">						
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field 
+					name="productDesc" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="VINA_TICKER_VMART_SHOW_DESCRIPTION"
+					description="VINA_TICKER_VMART_SHOW_DESCRIPTION_DESC">						
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field 
+					name="productPrice" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_SHOW_PRICE"
+					description="VINA_TICKER_VMART_SHOW_PRICE_DESC">						
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field 
+					name="addtocart" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_ADDTOCART_BUTTON"
+					description="VINA_TICKER_VMART_ADDTOCART_BUTTON_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field 
+					name="viewDetails" 
+					type="radio" 
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="VINA_TICKER_VMART_VIEWDETAILS_BUTTON"
+					description="VINA_TICKER_VMART_VIEWDETAILS_BUTTON_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+			</fieldset>
+			
+			<!-- Advanced Block -->
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

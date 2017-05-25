@@ -1,0 +1,47 @@
+{
+	"postfields":{
+		"option":"com_mijoshop",
+		"table_maintable":"#__mijoshop_product_description",
+		"titlefield":"name",
+		"id":"product_id",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__mijoshop_product_description",
+		"table_joinwith_jointable1":"#__mijoshop_product",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"product_id",
+		"field_joinwith_jointable1":"product_id",
+		"where1_jointable1":"status",
+		"where1_value_jointable1":"1",
+		"table_joinfrom_jointable2":"#__mijoshop_product_description",
+		"table_joinwith_jointable2":"#__languages",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable2":"language_id",
+		"field_joinwith_jointable2":"lang_id",
+		"where1_jointable2":"lang_code",
+		"where1_value_jointable2":"{languagetag}",
+		"table_joinfrom_jointable3":"#__mijoshop_product_to_category",
+		"table_joinwith_jointable3":"#__mijoshop_category_description",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable3":"category_id",
+		"field_joinwith_jointable3":"category_id",
+		"field_select_jointable3":"name",
+		"field_as_jointable3":"catname",
+		"use_category_title_jointable3":"1",
+		"additionalparams_jointable3":"category_id AS path",
+		"orderby_jointable3":"name",
+		"orderby_direction_jointable3":"ASC"
+	},
+	
+	 "substitutions":[
+		["'{languagetag}'","{languagetag}"],
+		["AND `#__languages`.`lang_code` = {languagetag}","AND `#__languages`.`lang_code` = {languagetag} AND `#__mijoshop_category_description`.`language_id` =  `#__languages`.`lang_id`"],
+		["JOIN `#__mijoshop_category_description` ON `#__mijoshop_product_to_category`.`category_id` = `#__mijoshop_category_description`.`category_id`",
+		 "JOIN `#__mijoshop_product_to_category` ON `#__mijoshop_product_description`.`product_id` = `#__mijoshop_product_to_category`.`product_id` JOIN `#__mijoshop_category_description` ON `#__mijoshop_product_to_category`.`category_id` = `#__mijoshop_category_description`.`category_id`"]
+	],
+	
+	"querystringlinkparams":{
+		"additionalquerystring":"route=product/product",
+		"guess_sef_itemid":"1"
+	}
+}

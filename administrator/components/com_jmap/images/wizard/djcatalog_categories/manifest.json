@@ -1,0 +1,15 @@
+{
+	"postfields":{
+		"option":"com_djcatalog2",
+		"table_maintable":"#__djc2_categories",
+		"titlefield":"name",
+		"id":"id",
+		"use_alias":"1",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"items"
+	}
+}

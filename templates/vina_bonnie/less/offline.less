@@ -1,0 +1,87 @@
+/**
+ * @package Helix Framework
+ * @author JoomShaper http://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2013 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+body{
+	background:#f5f5f5;
+	#offline-page {
+		margin-top:50px;
+		.form-signin {
+			  max-width: 350px;
+			  padding: 19px 29px 29px;
+			  margin: 0 auto 20px;
+			  background-color: #fff;
+			  border: 1px solid #e5e5e5;
+			
+			.form-signin-heading,
+			.checkbox {
+				margin-bottom: 10px;
+			}
+			.form-signin-heading {
+				text-align: center;
+			}
+			input[type="submit"] {
+				display: block;
+				padding: 8px 15px;
+				font: normal 14px/15px 'Oswald', Arial, Helvetica, sans-serif;
+				text-align: center;
+				white-space: nowrap;
+				text-transform: uppercase;
+				background: transparent !important;
+				color: #393939 !important;
+				border: 3px solid #313131 !important;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				text-shadow: none !important;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				border-radius: 0;
+			}
+			input[type="text"],
+			input[type="password"] {
+				background: #fff;
+				border: 1px solid #ddd;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				border-radius: 0;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				width: 254px;
+				padding: 2px;
+				box-sizing: border-box;
+				height: 30px;
+			}	
+		}
+	}
+	&.responsive {
+		@media (max-width: 479px) {
+			#offline-page {
+				.form-signin {
+					input[type="text"],
+					input[type="password"] {
+						width: 100%;
+					}
+				}
+			}
+		}		
+		@media (max-width: 319px) {
+			#offline-page {
+				.form-signin {
+					padding: 10px;
+					.form-signin-heading {
+						font-size: 28px;
+					}
+					input[type="submit"] {
+						padding: 6px 10px;
+						font-size: 13px;
+					}
+				}
+			}
+		}		
+	}
+}

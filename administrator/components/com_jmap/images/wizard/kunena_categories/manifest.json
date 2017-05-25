@@ -1,0 +1,20 @@
+{
+	"postfields":{
+		"option":"com_kunena",
+		"table_maintable":"#__kunena_categories",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"catid",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+	
+	"substitutions":[
+		["`#__kunena_categories`.`access` IN {aid}","(`#__kunena_categories`.`access` IN {aid} OR `#__kunena_categories`.`access` = 0)"]
+	],
+		
+	"querystringlinkparams":{
+		"view":"category",
+		"guess_sef_itemid":"1"
+	}
+}

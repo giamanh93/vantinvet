@@ -1,0 +1,16 @@
+{
+	"postfields":{
+		"option":"com_easydiscuss",
+		"table_maintable":"#__discuss_category",
+		"titlefield":"title",
+		"id":"id",
+		"idfield_as":"category_id",
+		"orderby_maintable":"title",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"categories",
+		"additionalquerystring":"layout=listings"
+	}
+}

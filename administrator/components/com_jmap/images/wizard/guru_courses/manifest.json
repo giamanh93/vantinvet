@@ -1,0 +1,37 @@
+{
+	"postfields":{
+		"option":"com_guru",
+		"table_maintable":"#__guru_program",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"cid",
+		"use_alias":"1",
+		"where1_maintable":"endpublish",
+		"where1_operator_maintable":">",
+		"where1_value_maintable":"NOW()",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__guru_program",
+		"table_joinwith_jointable1":"#__guru_category",
+		"jointype_jointable1":"",
+		"field_joinfrom_jointable1":"catid",
+		"field_joinwith_jointable1":"id",
+		"field_select_jointable1":"name",
+		"field_as_jointable1":"catname",
+		"use_category_title_jointable1":"1",
+		"where1_jointable1":"published",
+		"where1_value_jointable1":"1",
+		"orderby_jointable1":"name",
+		"orderby_direction_jointable1":"ASC"
+	},
+		
+	"substitutions":[
+		["`#__guru_program`.`endpublish` > 'NOW()'","(`#__guru_program`.`endpublish` > NOW() OR `#__guru_program`.`endpublish` = '0000-00-00 00:00:00')"]
+	],
+	
+	"querystringlinkparams":{
+		"view":"guruPrograms",
+		"additionalquerystring":"task=view",
+		"guess_sef_itemid":"1"
+	}
+}

@@ -1,0 +1,77 @@
+/*
+# ------------------------------------------------------------------------
+# Vina Manufacturers Carousel for VirtueMart for Joomla 3
+# ------------------------------------------------------------------------
+# Copyright(C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://vinagecko.com
+# Forum:    http://vinagecko.com/forum/
+# ------------------------------------------------------------------------
+*/
+.vina-manufacturers-virtuemart {
+    overflow: hidden;
+    position: relative;
+}
+.vina-manufacturers-virtuemart ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.vina-manufacturers-virtuemart li {
+	text-align: center;
+	padding: 0;
+	display: block;
+	float: left;
+	margin: 0 5px;
+	position: relative;
+}
+.vina-manufacturers-virtuemart li:hover {
+	opacity: 0.5;
+}
+.vina-manufacturers-virtuemart .vina-caption {
+    width: 100%;
+}
+.vina-manufacturers-virtuemart .vina-caption a {
+	font-size: 120%;
+	line-height: 30px;
+}
+.vina-manufacturers-virtuemart .vina-prev,
+.vina-manufacturers-virtuemart .vina-next {
+    height: 32px;
+    position: absolute;
+    top: 40%;
+    width: 32px;
+	text-indent: -10000px;
+	outline: medium none;
+	cursor: pointer;
+}
+.vina-manufacturers-virtuemart .vina-prev {
+	background: url("../images/prev-horizontal.png") no-repeat;
+	background-position: 0 -32px;
+}
+.vina-manufacturers-virtuemart .vina-next {
+	right: 0;
+	background: url("../images/next-horizontal.png") no-repeat;
+	background-position: 0 -32px;
+}
+.vina-manufacturers-virtuemart .vina-next:hover,
+.vina-manufacturers-virtuemart .vina-prev:hover,
+.vina-manufacturers-virtuemart .vina-prev.active {
+	background-position: 0 0;
+	border: none;
+}
+.vina-manufacturers-virtuemart .vina-pager {
+	padding: 10px 0;
+    position: relative;
+    text-align: center;
+}
+.vina-manufacturers-virtuemart .vina-pager > a {
+	margin: 0 3px;
+	text-decoration: none;
+}
+.vina-manufacturers-virtuemart .vina-pager > a > span {
+    border-radius: 50px;
+    padding: 1px 5px;
+}

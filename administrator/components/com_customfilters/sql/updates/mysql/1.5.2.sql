@@ -1,0 +1,1 @@
+# ALTER IGNORE TABLE `#__cf_customfields` ADD `params` TEXT NOT NULL 

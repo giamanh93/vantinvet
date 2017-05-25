@@ -1,0 +1,259 @@
+
+
+.jutooltip-box-br {
+	background: url("box-br.png") no-repeat scroll right bottom #FFFFFF;
+	padding: 0px;
+	margin: 14px;
+	display: inline-block;
+}
+
+.jutooltip-box-bl {
+	background: url("box-bl.png") no-repeat scroll left bottom transparent;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+
+.jutooltip-box-tr {
+	background: url("box-tr.png") no-repeat scroll right top transparent;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+
+.jutooltip-box-tl {
+	background: url("box-tl.png") no-repeat scroll left top transparent;
+	color: #333333;
+	padding: 10px;
+	max-width: 380px;
+	max-height: 180px;
+	min-width: 25px;
+	min-height: 5px;
+	display: inline-block;
+}
+
+.jutooltip-center-left .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	background: url("right_arrow.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	top: 50%;
+	margin-top: -14px;
+	left: auto;
+	right: 1px;
+	width: 14px;
+}
+
+.jutooltip-center-left .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+	left: 0px;
+}
+
+.jutooltip-top-left .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	background: url("bottom_arrow.png") no-repeat scroll 0px 0px transparent;
+	height: 14px;
+	width: 27px;
+	bottom: 1px;
+	left: auto;
+	right: 0px;
+	margin-right: 10px;
+	top: auto;
+}
+
+.jutooltip-top-left .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+	left: 0px;
+}
+
+.jutooltip-bottom-left .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	height: 14px;
+	width: 27px;
+	left: auto;
+	right: 0px;
+	background: url("top_arrow.png") no-repeat scroll 0px 0px transparent;
+	top: 1px;
+	margin-right: 10px;
+	margin-top: 0px;
+}
+
+.jutooltip-bottom-left .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+	left: 0px;
+	border: 0px none;
+	top: auto;
+	bottom: 0px;
+}
+
+.jutooltip-center-center .jutooltip-arrow {
+	display: none;
+	left: 50%;
+	margin-left: -14px;
+	position: absolute;
+	width: 27px;
+	height: 14px;
+}
+
+.jutooltip-center-center .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+}
+
+.jutooltip-top-center .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -14px;
+	background: url("bottom_arrow.png") no-repeat scroll 0px 0px transparent;
+	height: 14px;
+	width: 27px;
+	bottom: 1px;
+}
+
+.jutooltip-top-center .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+}
+
+.jutooltip-bottom-center .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -14px;
+	height: 14px;
+	width: 27px;
+	top: 1px;
+	background: url("top_arrow.png") no-repeat scroll 0px 0px transparent;
+}
+
+.jutooltip-bottom-center .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	right: 0px;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+	bottom: 0px;
+	top: auto;
+}
+
+.jutooltip-center-right .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	height: 27px;
+	width: 14px;
+	top: 50%;
+	margin-top: -14px;
+	background: url("left_arrow.png") no-repeat scroll 0px 0px transparent;
+	left: 1px;
+}
+
+.jutooltip-center-right .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+	right: 0px;
+}
+
+.jutooltip-top-right .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	background: url("bottom_arrow.png") no-repeat scroll 0px 0px transparent;
+	height: 14px;
+	width: 27px;
+	bottom: 1px;
+	left: 0px;
+	margin-left: 10px;
+	top: auto;
+}
+
+.jutooltip-top-right .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+	right: 0px;
+}
+
+.jutooltip-bottom-right .jutooltip-arrow {
+	display: block;
+	position: absolute;
+	height: 14px;
+	width: 27px;
+	left: 0px;
+	background: url("top_arrow.png") no-repeat scroll 0px 0px transparent;
+	margin-left: 10px;
+	top: 1px;
+	margin-top: 0px;
+}
+
+.jutooltip-bottom-right .jutooltip-close {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	background: url("close_btn.png") no-repeat scroll 0px 0px transparent;
+	height: 27px;
+	width: 27px;
+	right: 0px;
+	bottom: 0px;
+	top: auto;
+}
+
+.jutooltip-top-left .jutooltip-box-br, .jutooltip-bottom-left .jutooltip-box-br, .jutooltip-center-left.bottom .jutooltip-box-br, .jutooltip-center-left.top .jutooltip-box-br {
+	margin-right: 0px;
+}
+
+.jutooltip-top-right .jutooltip-box-br, .jutooltip-bottom-right .jutooltip-box-br, .jutooltip-center-right.bottom .jutooltip-box-br, .jutooltip-center-right.top .jutooltip-box-br {
+	margin-left: 0px;
+}
+
+.jutooltip-top-left, .jutooltip-top-center, .jutooltip-top-right, .jutooltip-right-top, .jutooltip-right-center, .jutooltip-right-bottom, .jutooltip-bottom-left, .jutooltip-bottom-center, .jutooltip-bottom-right, .jutooltip-bottom-left, .jutooltip-left-top, .jutooltip-left-center, .jutooltip-left-bottom {
+	z-index: 9999;
+}
+
+.jutooltip-top-right, .jutooltip-bottom-right {
+	margin-left:-30px;
+}
+
+.jutooltip-top-left, .jutooltip-bottom-left {
+}

@@ -1,0 +1,17 @@
+{
+	"postfields":{
+		"option":"com_k2",
+		"table_maintable":"#__k2_tags",
+		"titlefield":"name",
+		"id":"name",
+		"idfield_as":"tag",
+		"url_filter_id":"1",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"itemlist",
+		"additionalquerystring":"task=tag"
+	}
+}

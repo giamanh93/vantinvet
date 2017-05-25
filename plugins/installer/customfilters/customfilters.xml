@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="installer" method="upgrade">
+	<name>plg_installer_customfilters</name>
+	<author>Sakis Terzis</author>
+	<authorEmail>sakis@breakdesigns.net</authorEmail>
+	<authorUrl>http://breakdesigns.net</authorUrl>
+	<copyright>Copyright (c)2014 breakdesigns.net</copyright>
+	<license>GNU General Public License version 2, or later</license>
+	<creationDate>2014-07-10</creationDate>
+	<version>1.0</version>
+	<description>PLG_INSTALLER_PRODUCTBUILDER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="customfilters">customfilters.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+	</languages>
+</extension>

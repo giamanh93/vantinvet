@@ -1,0 +1,26 @@
+{
+	"postfields":{
+		"option":"com_sobipro",
+		"table_maintable":"#__sobipro_object",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"sid",
+		"where1_maintable":"oType",
+		"where1_value_maintable":"category",
+		"where2_maintable":"approved",
+		"where2_value_maintable":"1",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC",
+		"table_joinfrom_jointable1":"#__sobipro_object",
+		"table_joinwith_jointable1":"#__sobipro_language",
+		"jointype_jointable1":"LEFT",
+		"field_joinfrom_jointable1":"id",
+		"field_joinwith_jointable1":"id"
+	},
+	
+	 "substitutions":[
+		["`#__sobipro_object`.`id` AS `sid`","CONCAT_WS(':',`#__sobipro_object`.`id`,`#__sobipro_object`.`nid`) AS `sid`"],
+		["`#__sobipro_object`.`name`,","IFNULL(`#__sobipro_language`.`sValue`,  `#__sobipro_object`.`name`)  AS `name`,"],
+		["LEFT JOIN `#__sobipro_language` ON `#__sobipro_object`.`id` = `#__sobipro_language`.`id`", "LEFT JOIN `#__sobipro_language` ON `#__sobipro_object`.`id` = `#__sobipro_language`.`id` AND `#__sobipro_language`.`language` = {languagetag}  AND `#__sobipro_language`.`sKey` = 'name'"]
+	]
+}

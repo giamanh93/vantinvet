@@ -1,0 +1,17 @@
+{
+	"postfields":{
+		"option":"com_zoo",
+		"table_maintable":"#__zoo_category",
+		"titlefield":"name",
+		"id":"id",
+		"idfield_as":"category_id",
+		"orderby_maintable":"name",
+		"orderby_direction_maintable":"ASC"
+	},
+		
+	"querystringlinkparams":{
+		"view":"category",
+		"additionalquerystring":"task=category",
+		"guess_sef_itemid":"1"
+	}
+}

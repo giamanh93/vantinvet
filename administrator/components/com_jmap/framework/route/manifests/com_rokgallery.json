@@ -1,0 +1,7 @@
+{
+	"categories_table":"#__rokgallery_galleries",
+	"categories_table_id_field":"id",
+	"holdon_params":true,
+	"name_params":{"gallery":"gallery_id"},
+	"additional_categories_needles":"gallery"
+}
